@@ -1,0 +1,37 @@
+card
+
+.card {
+    margin-bottom: 1.5rem !important;
+    border-radius: 1.5rem;
+    box-shadow: 13px 13px 52px #d4dbde, -13px -13px 52px #ffffff;
+    border: 0;
+}
+
+.card-title {
+    margin-bottom: 0.75rem;
+    text-transform: inherit;
+    font-weight: 700;
+    color: #333;
+}
+
+.card-body {
+    padding: 1rem 2rem;
+}
+
+.card-img-overlay {
+    position: absolute;
+    top: auto;
+    right: 1rem;
+    bottom: 2rem;
+    left: 1rem;
+    padding: 1.25rem 4rem 1.25rem 1.25rem;
+    /* background: rgba(51, 51, 51, 0.4117647058823529); */
+    /* background: #33333369; */
+    border-radius: .9rem !important;
+    /* height: 3rem; */
+    /* background: #000; */
+}
+
+.card-no-image_block {
+    padding: 2rem;
+}
