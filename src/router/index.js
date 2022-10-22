@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from '../views/pages/HomePage.vue'
 import Contacts from '../views/pages/ContactsPage.vue'
-import PostSingle from '../components/post/PostSingle.vue'
+import PostFull from '../layouts/posts/PostFull.vue'
 
 //router file
 const routes = [
@@ -18,8 +18,8 @@ const routes = [
     },
     {
         path: "/posts/:id",
-        name: "PostSingle",
-        component: PostSingle,
+        name: "PostFull",
+        component: PostFull,
         props: true
     },
 ];

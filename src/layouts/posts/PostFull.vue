@@ -1,9 +1,8 @@
 <script setup>
-import getPageOrPost from '../../composibles/getPageOrPost'
-// import Spinner from "../components/Spinner.vue";
 import { useRoute } from "vue-router";
-import PostHeaderPost from "./PostHeaderPost.vue";
-import PostBody from './PostBody.vue';
+import getPageOrPost from '../../composibles/getPageOrPost'
+import PostHeaderPost from "../../components/posts/PostHeaderPost.vue";
+import PostBody from '../../components/posts/PostBody.vue';
 
 const route = useRoute();
 const { page, load } = getPageOrPost('posts', route.params.id);
