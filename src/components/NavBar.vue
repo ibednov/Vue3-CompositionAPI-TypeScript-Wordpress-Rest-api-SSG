@@ -1,9 +1,14 @@
+<script setup>
+const txt = ({
+    text: 'info',
+    locales: ["ru", "en"]
+})
+</script>
 <template>
     <div class="p-10 pb-20">
         <nav
             class=" bg-stone-100 m-4 md:mt-1 p-2 sm:p-4 rounded-xl dark:bg-gray-900 z-50 fixed bottom-0 left-0 right-0 sm:top-0 sm:bottom-auto">
             <div class="container-xl flex flex-wrap justify-between items-center mx-auto">
-
 
                 <router-link :to="{ name: 'Home' }" class="flex items-center">
                     <span class="self-center text-sm sm:text-xl font-semibold whitespace-nowrap dark:text-white">
@@ -20,7 +25,7 @@
                 <router-link :to="{ name: 'Contacts' }" type="button"
                     class="font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 md:order-last text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     onclick="replain_show(event)">
-                    Contact me !
+                    {{ $t('header.contact_me') }}
                 </router-link>
 
                 <div class="flex items-center md:order-2">
@@ -168,16 +173,3 @@
 
 
 </template>
-
-<script >
-export default {
-    name: 'NavBar',
-    data() {
-        return {
-            text: 'info',
-            locales: ["ru", "en"]
-        }
-    }
-}
-
-</script>
