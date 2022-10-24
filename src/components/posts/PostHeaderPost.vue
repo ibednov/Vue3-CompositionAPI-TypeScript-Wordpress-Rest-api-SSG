@@ -3,6 +3,8 @@ import PostHeaderField from './PostHeaderField.vue'
 import getTeam from '../../composibles/getTeam.js'
 import getCategories from '../../composibles/getCategories.js'
 
+import '../../plugins/wordpress-gutenberg.js'
+
 const props = defineProps({
     page: Object,
 });
@@ -19,13 +21,13 @@ loadCategories();
 <template>
     <div>
         <div class="text-4xl md:text-7xl text-center uppercase font-extrabold py-4">
-            {{ page.title.rendered }}
+            <div v-html="page.title.rendered" />
         </div>
 
         <!-- full_header -->
         <div class="container mx-auto pb-10">
             <div
-                class="bg-gradient-to-br from-sky-200 to-fuchsia-200 dark:from-sky-800 dark:to-fuschia-900 px-10 py-4 rounded-xl">
+                class="bg-gradient-to-br from-sky-200 to-fuchsia-200 dark:from-red-900 dark:to-fuchsia-900 px-10 py-4 rounded-xl">
 
                 <div class="flex flex-col py-4 gap-y-4 gap-x-8">
 
@@ -38,7 +40,7 @@ loadCategories();
                             <div v-for="category in categories">
                                 <a :href="category.link" v-if="category.id === page.categories[0]"
                                     class="text-fuchsia-700 dark:text-violet-400 hover:text-purple-900 ">
-                                    {{ category.name }}
+                                    <div v-html="category.name" />
                                 </a>
                             </div>
                         </div>
@@ -50,7 +52,7 @@ loadCategories();
                             Theory
                         </div>
 
-                        <div class="flex flex-col gap-4 md:flex-row">
+                        <div class=" flex flex-col md:flex-row grow gap-4 ">
                             <PostHeaderField propClass="basis-1/3" fieldName="Project date:"
                                 v-model:fieldValue="page.acf.project_year[0]" />
                             <PostHeaderField propClass="basis-1/3" fieldName="Client:"
@@ -66,7 +68,7 @@ loadCategories();
                             class="basis-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-lime-600 to-cyan-700 dark:from-lime-300 dark:to-cyan-300 ">
                             Practise
                         </div>
-                        <div class="flex flex-col md:flex-row gap-4">
+                        <div class="flex flex-col md:flex-row grow gap-4">
 
                             <div class="basis-1/3 flex flex-col">
                                 <div class="text-lg font-extralight">
@@ -109,9 +111,9 @@ loadCategories();
                             Result
                         </div>
 
-                        <div class="basis-2/3 flex flex-col md:flex-row gap-4">
+                        <div class=" flex flex-col md:flex-row grow gap-4 content-center">
 
-                            <div class="basis-1/3 flex flex-col self-center">
+                            <div class="basis-1/3 flex flex-col content-center">
                                 <a :href="page.acf.project_link" target="_blank"
                                     class=" flex flex-row gap-x-4 text-fuchsia-700 dark:text-violet-400 hover:text-purple-800">
                                     <div>
@@ -133,10 +135,10 @@ loadCategories();
                                 </a>
                             </div>
 
-                            <div class="basis-1/3 flex flex-col self-center">
-                                <a :href="page.acf.project_link" target="_blank"
-                                    class=" flex flex-row gap-x-4 text-fuchsia-700 dark:text-violet-400 hover:text-purple-900 ">
-                                    <div>
+                            <div v-if="page.acf.project_behance" class="basis-1/3 flex flex-col content-center">
+                                <a :href="page.acf.project_behance" target="_blank"
+                                    class=" flex flex-row gap-x-4  content-center text-fuchsia-700 dark:text-violet-400 hover:text-purple-900 ">
+                                    <div class="content-center">
                                         <svg class="w-6 h-6 " viewBox="0 0 2048 1792" fill="currentColor"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -144,10 +146,7 @@ loadCategories();
                                         </svg>
                                     </div>
                                     <div class="text-lg font-semibold">
-                                        <div v-if="page.acf.project_link_name">
-                                            {{ page.acf.project_link_name }}
-                                        </div>
-                                        <div v-else>
+                                        <div>
                                             Ссылка на Behance
                                         </div>
                                     </div>
