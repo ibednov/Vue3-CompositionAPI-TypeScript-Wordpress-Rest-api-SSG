@@ -48,10 +48,9 @@ loadCategories();
 
                     <div class="flex flex-col md:flex-row gap-8 justify-start">
                         <div
-                            class="basis-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r  from-pink-600 to-violet-400 dark:from-pink-300 dark:to-violet-300">
+                            class="basis-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-violet-400 dark:from-pink-300 dark:to-violet-300">
                             Theory
                         </div>
-
                         <div class=" flex flex-col md:flex-row grow gap-4 ">
                             <PostHeaderField propClass="basis-1/3" fieldName="Project date:"
                                 v-model:fieldValue="page.acf.project_year[0]" />
@@ -66,7 +65,7 @@ loadCategories();
                     <div class="flex flex-col md:flex-row gap-8 justify-start">
                         <div
                             class="basis-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-lime-600 to-cyan-700 dark:from-lime-300 dark:to-cyan-300 ">
-                            Practise
+                            Practiсe
                         </div>
                         <div class="flex flex-col md:flex-row grow gap-4">
 

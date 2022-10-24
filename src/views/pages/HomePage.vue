@@ -3,10 +3,39 @@ import Category from "./CategoryById.vue";
 
 import { ref } from 'vue'
 import { Tabs, Tab } from 'flowbite-vue'
+
 const activeTab = ref('uiux')
 </script>
 
 <template>
+
+  <main class="container mx-auto p-4">
+    <tabs variant="pills" v-model="activeTab" class="py-5">
+      <tab name="uiux" title="UI/UX design" class="">
+        <KeepAlive>
+          <Category :cat="14" />
+        </KeepAlive>
+      </tab>
+      <tab name="brand" title="Brand & marketing design">
+        <KeepAlive>
+          <Category :cat="87" />
+        </KeepAlive>
+      </tab>
+      <tab name="front" title="Frontend & backend development">
+        <KeepAlive>
+          <Category :cat="13" />
+        </KeepAlive>
+      </tab>
+      <tab name="gamedev" title="GameDev" :disabled="true">
+
+      </tab>
+      <tab name="blog" title="Blog">
+        <KeepAlive>
+          <Category :cat="2" />
+        </KeepAlive>
+      </tab>
+    </tabs>
+  </main>
 
   <!-- <section class="flex flex-row">
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -31,22 +60,7 @@ const activeTab = ref('uiux')
     </svg>
   </section> -->
 
-  <main class="container mx-auto p-4">
-    <tabs variant="pills" v-model="activeTab" class="py-5">
-      <tab name="uiux" title="UI/UX design">
-        <Category :cat="14" />
-      </tab>
-      <tab name="brand" title="Brand & marketing design">
-        <Category :cat="87" />
-      </tab>
-      <tab name="front" title="Frontend & backend development">
-        <Category :cat="13" />
-      </tab>
-      <tab name="blog" title="Blog">
-        <Category :cat="2" />
-      </tab>
-    </tabs>
-  </main>
+
 
 </template>
 
