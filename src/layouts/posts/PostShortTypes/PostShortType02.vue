@@ -12,7 +12,7 @@ const snippet = computed(() => {
 
 <template>
     <div>
-        short type 1
+        short type 2
     </div>
     <div class="flex flex-col justify-start dark:bg-stone-800 shadow-xl rounded-xl max-h-full" id="short_type_1">
         <div class="grid">
@@ -20,7 +20,7 @@ const snippet = computed(() => {
                 :alt="post.title.rendered" />
         </div>
         <div class="p-5 text-gray-700 dark:text-white">
-            <h2 class="py-4 text-3xl font-bold tracking-tight break-word text-gray-900 dark:text-gray-200">
+            <h2 class="py-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-200">
                 <div v-html="post.title.rendered" />
             </h2>
             <router-link :to="{ name: 'PostFull', params: { id: post.id, post: post } }">
