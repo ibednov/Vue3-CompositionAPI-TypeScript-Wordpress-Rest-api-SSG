@@ -10,8 +10,11 @@ const props = defineProps({
 </script>
 
 <template>
-    <PostShortType01 v-if="post.acf.short_type === 'short_type_1'" :post="post" />
-    <PostShortType02 v-else-if="post.acf.short_type === 'short_type_2'" :post="post" />
-    <PostShortType03 v-else-if="post.acf.short_type === 'short_type_3'" :post="post" />
+    <div v-if="post.acf.disable_title === false">
+        <PostShortType01 v-if="post.acf.short_type === 'short_type_1'" :post="post" />
+        <PostShortType02 v-else-if="post.acf.short_type === 'short_type_2'" :post="post" />
+        <PostShortType03 v-else="post.acf.short_type === 'short_type_3'" :post="post" />
+    </div>
+
     <PostShortType04 v-else :post="post" />
 </template>
