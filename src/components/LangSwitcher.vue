@@ -1,16 +1,10 @@
-<script>
+<script setup>
 import { useStore } from 'vuex';
 
-export default {
-    setup() {
-        const store = useStore()
-        // console.log(store)
-        return {
-            handleChangeLocaleRu: () => store.dispatch('setLocale', 'ru'),
-            handleChangeLocaleEn: () => store.dispatch('setLocale', 'en')
-        }
-    }
-}
+const store = useStore()
+const handleChangeLocaleRu = () => store.dispatch('setLocale', 'ru')
+const handleChangeLocaleEn = () => store.dispatch('setLocale', 'en')
+
 </script>
 
 <template>
