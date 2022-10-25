@@ -1,4 +1,7 @@
 {
+    "global": {
+        "site_name": "Alexbednov.work"
+    },
     "header": {
         "home": "Дом",
         "open_menu": "Открыть меню",
@@ -9,14 +12,12 @@
         "development": "Разработка",
         "uiux": "UI/UX дизайн",
         "design": "Бренд и маркетинг дизайн",
-        "gamedev": "Гейм-дев"
+        "gamedev": "Гейм-дев",
+        "cv": "CV / Резюме"
     },
-    "langSwitcher": {
+    "langs": {
         "en": "English",
         "ru": "Русский"
-    },
-    "posts": {
-        "read_more": "Подробнее"
     },
     "categories": {
         "uiux": "UI/UX design",
@@ -24,5 +25,37 @@
         "development": "Frontend & backend development",
         "gamedev": "Game Dev.",
         "blog": "Blog"
+    },
+    "posts": {
+        "full": {
+            "project": {
+                "cat": "Категория проекта:",
+                "theory": "Теория",
+                "date": "Дата разработки:",
+                "client": "Клиент",
+                "purpose": "Цель проекта:",
+                "practice": "Практика",
+                "stack": "Стэк технологий:",
+                "team": "Команда:",
+                "result": "Результат",
+                "link": "Ссылка на проект",
+                "behance": "Ссылка на Behance"
+            }
+        },
+        "short": {
+            "read_more": "Подробнее"
+        }
+    },
+    "pages": {
+        "contacts": {
+            "alex_name": "Алексей Беднов",
+            "job_title": "Designer & full-stack developer",
+            "website": "Сайт",
+            "instagram": "Instagram",
+            "telegram": "Telegram",
+            "whatsapp": "WhatsApp",
+            "behance": "Behance",
+            "cv": "CV"
+        }
     }
 }

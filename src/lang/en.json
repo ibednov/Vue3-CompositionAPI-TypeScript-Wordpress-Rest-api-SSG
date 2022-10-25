@@ -1,4 +1,7 @@
 {
+    "global": {
+        "site_name" : "Alexbednov.work"
+    },
     "header": {
         "home": "Дом",
         "open_menu": "Open menu",
@@ -9,14 +12,12 @@
         "development": "Frontend & backend development",
         "uiux": "UI/UX design",
         "design": "Brand & marketing design",
-        "gamedev": "Game Dev."
+        "gamedev": "Game Dev.",
+        "cv":"CV"
     },
-    "langSwitcher": {
+    "langs": {
         "en": "English",
         "ru": "Русский"
-    },
-    "posts": {
-        "read_more": "Read more"
     },
     "categories": {
         "uiux": "UI/UX design",
@@ -24,5 +25,25 @@
         "development": "Frontend & backend development",
         "gamedev": "Game Dev.",
         "blog": "Blog"
+    },
+    "posts": {
+        "full": {
+            "project": {
+                "cat": "Project category:",
+                "theory": "Theory",
+                "date": "Project date:",
+                "client": "Client",
+                "purpose": "Project purpose:",
+                "practice": "Practice",
+                "stack": "Technology stack:",
+                "team": "Team:",
+                "result": "Result",
+                "link": "Link to project",
+                "behance": "Link to Behance"
+            }
+        },
+        "short": {
+            "read_more": "Read more"
+        }
     }
 }
