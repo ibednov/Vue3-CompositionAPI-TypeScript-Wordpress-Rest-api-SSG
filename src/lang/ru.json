@@ -1,11 +1,28 @@
 {
     "header": {
         "home": "Дом",
-        "contact_me" : "Contact me !",
-        "" : ""
-
+        "open_menu": "Открыть меню",
+        "contact_me": "Contact me !",
+        "contacts": "Контакты",
+        "cases": "Кейсы",
+        "blog": "Блог",
+        "development": "Разработка",
+        "uiux": "UI/UX дизайн",
+        "design": "Бренд и маркетинг дизайн",
+        "gamedev": "Гейм-дев"
     },
-    "posts" : {
+    "langSwitcher": {
+        "en": "English",
+        "ru": "Русский"
+    },
+    "posts": {
         "read_more": "Подробнее"
+    },
+    "categories": {
+        "uiux": "UI/UX design",
+        "design": "Brand & marketing design",
+        "development": "Frontend & backend development",
+        "gamedev": "Game Dev.",
+        "blog": "Blog"
     }
 }

@@ -1,4 +1,5 @@
 <script setup>
+import LangSwitcher from "./LangSwitcher.vue";
 const txt = ({
     text: 'info',
     locales: ["ru", "en"]
@@ -16,11 +17,7 @@ const txt = ({
                     </span>
                 </router-link>
 
-                <!-- <select v-model="$i18n.locale">
-                    <option v-for="(locale, i) in locales" :key="`locale-${i}`" :value="locale">
-                        {{ locale }}
-                    </option>
-                </select> -->
+                <lang-switcher/>
 
                 <router-link :to="{ name: 'Contacts' }" type="button"
                     class="font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 md:order-last text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
@@ -60,7 +57,9 @@ const txt = ({
                                 <use xlink:href="#e" x="2470"></use>
                             </g>
                         </svg>
-                        <span class="hidden sm:block">English</span>
+                        <span class="hidden sm:block">
+                            {{ $t('langSwitcher.en') }}
+                        </span>
                     </button>
 
                     <!-- Dropdown -->
@@ -82,7 +81,7 @@ const txt = ({
                                                 <path fill="#d52b1e" d="M0 341.3h512V512H0z" />
                                             </g>
                                         </svg>
-                                        Русский
+                                        {{ $t('langSwitcher.ru') }}
                                     </div>
                                 </a>
                             </li>
@@ -92,7 +91,9 @@ const txt = ({
                     <button data-collapse-toggle="mobile-menu-language-select" type="button"
                         class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                         aria-controls="mobile-menu-language-select" aria-expanded="false">
-                        <span class="sr-only">Open menu</span>
+                        <span class="sr-only">
+                            {{ $t('header.open_menu') }}
+                        </span>
                         <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -101,6 +102,7 @@ const txt = ({
                         </svg>
                     </button>
                 </div>
+
                 <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1"
                     id="mobile-menu-language-select">
                     <ul
@@ -108,7 +110,8 @@ const txt = ({
 
                         <li>
                             <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
-                                class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Cases
+                                class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                                {{ $t('header.cases') }}
                                 <svg class="ml-1 w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
@@ -126,17 +129,21 @@ const txt = ({
                                     aria-labelledby="dropdownLargeButton">
                                     <li>
                                         <a href="/work/design"
-                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">UI/UX
-                                            Design</a>
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                            {{ $t('header.design') }}
+                                        </a>
                                     </li>
                                     <li>
                                         <a href="/work/layout"
-                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Development
-                                            <br> (front / back)</a>
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                            {{ $t('header.development') }}
+                                        </a>
                                     </li>
                                     <li>
                                         <a href="#"
-                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Game-dev</a>
+                                            class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                            {{ $t('header.gamedev') }}
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -144,13 +151,15 @@ const txt = ({
 
                         <li>
                             <a href="/blog"
-                                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blog</a>
+                                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                                {{ $t('header.blog') }}
+                            </a>
                         </li>
 
                         <li>
                             <router-link :to="{ name : 'Contacts' }"
                                 class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                                Contacts
+                                {{ $t('header.contacts') }}
                             </router-link>
                         </li>
 

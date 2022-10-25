@@ -1,6 +1,28 @@
 {
     "header": {
-        "home": "home"
-       
+        "home": "Дом",
+        "open_menu": "Open menu",
+        "contact_me": "Contact me !",
+        "contacts": "Contacts",
+        "cases": "Cases",
+        "blog": "Blog",
+        "development": "Frontend & backend development",
+        "uiux": "UI/UX design",
+        "design": "Brand & marketing design",
+        "gamedev": "Game Dev."
+    },
+    "langSwitcher": {
+        "en": "English",
+        "ru": "Русский"
+    },
+    "posts": {
+        "read_more": "Read more"
+    },
+    "categories": {
+        "uiux": "UI/UX design",
+        "design": "Brand & marketing design",
+        "development": "Frontend & backend development",
+        "gamedev": "Game Dev.",
+        "blog": "Blog"
     }
 }
