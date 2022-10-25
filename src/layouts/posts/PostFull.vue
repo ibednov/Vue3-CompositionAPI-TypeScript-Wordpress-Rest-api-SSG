@@ -5,13 +5,12 @@ import PostHeaderPost from "../../components/posts/PostHeaderPost.vue";
 import PostBody from '../../components/posts/PostBody.vue';
 
 const route = useRoute();
-const { page, load } = getPageOrPost('posts', route.params.id);
-load();
+const { page, load:loadGetPageOrPost } = getPageOrPost('posts', route.params.id);
+loadGetPageOrPost();
 
 const props = defineProps({
     page: Object
 });
-
 </script>
 
 <template>
@@ -23,8 +22,7 @@ const props = defineProps({
                 What can I do?
             </div>
         </div>
-        <PostBody :page="page"/>
-
+        <PostBody :page="page" />
     </article>
 </template>
 
