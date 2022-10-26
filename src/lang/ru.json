@@ -60,5 +60,10 @@
             "behance": "Behance",
             "cv": "CV"
         }
+    },
+    "etc": {
+        "loader": {
+            "loading": "Загрузка..."
+        }
     }
 }
