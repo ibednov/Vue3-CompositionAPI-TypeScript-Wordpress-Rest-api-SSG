@@ -48,28 +48,28 @@ loadCategories();
 
                     <div class="flex flex-col md:flex-row gap-8 justify-start">
                         <div
-                            class="basis-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-violet-400 dark:from-pink-300 dark:to-violet-300">
+                            class="w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-violet-400 dark:from-pink-300 dark:to-violet-300">
                             {{ $t('posts.full.project.theory') }}
                         </div>
-                        <div class=" flex flex-col md:flex-row grow gap-4 ">
+                        <div class="w-5/6 flex flex-col md:flex-row grow gap-4 ">
                             <PostHeaderField propClass="basis-1/3" :fieldName="$t('posts.full.project.date')"
                                 v-model:fieldValue="page.acf.project_year[0]" />
                             <PostHeaderField propClass="basis-1/3" :fieldName="$t('posts.full.project.client')"
-                            v-model:fieldValue="page.acf.project_client" />
+                                v-model:fieldValue="page.acf.project_client" />
                             <PostHeaderField propClass="basis-1/3" :fieldName="$t('posts.full.project.purpose')"
-                            v-model:fieldValue="page.acf.project_purpose" />
+                                v-model:fieldValue="page.acf.project_purpose" />
                         </div>
 
                     </div>
 
                     <div class="flex flex-col md:flex-row gap-8 justify-start">
                         <div
-                            class="basis-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-lime-600 to-cyan-700 dark:from-lime-300 dark:to-cyan-300 ">
+                            class="w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-lime-600 to-cyan-700 dark:from-lime-300 dark:to-cyan-300 ">
                             {{ $t('posts.full.project.practice') }}
                         </div>
-                        <div class="flex flex-col md:flex-row grow gap-4">
+                        <div class="w-5/6 flex flex-col md:flex-row grow gap-4">
 
-                            <div class="basis-1/3 flex flex-col">
+                            <div class="w-1/3  flex flex-col">
                                 <div class="text-lg font-extralight">
                                     {{ $t('posts.full.project.stack') }}
                                 </div>
@@ -78,25 +78,28 @@ loadCategories();
                                 </div>
                             </div>
 
-                            <div class="basis-2/3 flex flex-col self-end">
+                            <div class="w-2/3  flex flex-col self-end">
                                 <div class="text-lg font-extralight">
                                     {{ $t('posts.full.project.team') }}
                                 </div>
-                                <div class="flex flex-col pb-3 text-lg" v-for="stack in page.acf.project_team">
-                                    <div class="flex flex-row">
-                                        <div class="basis-1/3 font-bold">
+                                <div class="flex flex-col pb-3 text-lg gap-4">
+                                    <div v-for="stack in page.acf.project_team" class="flex flex-col">
+                                        <div class="font-bold">
                                             <div v-for="member in team">
                                                 <div v-if="stack.team_member[0] === member.id">
-                                                    <router-link :to="{ name: 'TeamFull', params: { id: member.id, member: member } }" target="_blank"
+                                                    <router-link
+                                                        :to="{ name: 'TeamFull', params: { id: member.id, member: member } }"
+                                                        target="_blank"
                                                         class="text-fuchsia-700 dark:text-violet-400 hover:text-purple-900 ">
                                                         {{ member.title.rendered }}
                                                     </router-link>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="basis-2/3 font-extralight">
+                                        <div class="font-extralight">
                                             {{ stack.work_skope }}
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -106,11 +109,11 @@ loadCategories();
 
                     <div class="flex flex-col md:flex-row gap-8 justify-start">
                         <div
-                            class="basis-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-indigo-400 dark:from-fuchsia-300 dark:to-indigo-400 ">
+                            class="w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-indigo-400 dark:from-fuchsia-300 dark:to-indigo-400 ">
                             {{ $t('posts.full.project.result') }}
                         </div>
 
-                        <div class=" flex flex-col md:flex-row grow gap-4 content-center">
+                        <div class="w-5/6 flex flex-col md:flex-row grow gap-4 content-center">
 
                             <div class="basis-1/3 flex flex-col content-center">
                                 <a :href="page.acf.project_link" target="_blank"
