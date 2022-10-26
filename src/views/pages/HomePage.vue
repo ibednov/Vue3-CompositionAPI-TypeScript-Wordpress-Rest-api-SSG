@@ -56,7 +56,7 @@ const activeTab = ref('uiux')
 </script>
 
 <template>
-<!-- 
+  <!-- 
   <div>
 
     <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
@@ -122,8 +122,8 @@ const activeTab = ref('uiux')
   </div> -->
 
   <main class="container mx-auto p-4">
-    <tabs variant="pills" v-model="activeTab" class="py-5">
-      <tab name="uiux" title="UI/UX design" class="">
+    <tabs variant="pills" v-model="activeTab" class="py-5 justify-center content-center">
+      <tab name="uiux" title="UI/UX design">
         <KeepAlive>
           <Category :cat="14" />
         </KeepAlive>
