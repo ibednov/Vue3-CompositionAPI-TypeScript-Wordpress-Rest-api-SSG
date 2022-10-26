@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted } from "vue";
 import NavBar from "./components/NavBar.vue";
+import Footer from "./components/Footer.vue";
 
 onMounted(() => {
   import("flowbite");
@@ -8,6 +9,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <NavBar class="p-10 pb-20" />
-    <router-view />
+  <NavBar class="pb-4 md:pb-28" />
+  <router-view />
+  <Footer />
 </template>

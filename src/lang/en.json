@@ -15,6 +15,9 @@
         "gamedev": "Game Dev.",
         "cv":"CV"
     },
+    "footer" : {
+        "rights": "All Rights Reserved."
+    },
     "langs": {
         "en": "English",
         "ru": "Русский"
