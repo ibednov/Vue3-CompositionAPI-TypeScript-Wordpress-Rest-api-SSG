@@ -48,5 +48,17 @@
         "short": {
             "read_more": "Read more"
         }
+    },
+    "pages": {
+        "contacts": {
+            "alex_name": "Alex Bednov",
+            "job_title": "Designer & full-stack developer",
+            "website": "Wesite",
+            "instagram": "Instagram",
+            "telegram": "Telegram",
+            "whatsapp": "WhatsApp",
+            "behance": "Behance",
+            "cv": "CV"
+        }
     }
 }

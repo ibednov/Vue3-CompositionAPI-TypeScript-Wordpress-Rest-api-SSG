@@ -1,8 +1,4 @@
 <script setup>
-// import getPageOrPost from '../../composibles/getPageOrPost.js'
-
-// const { page, load: loadPages } = getPageOrPost('pages', 40);
-// loadPages();
 </script>
 
 <template>
@@ -10,14 +6,14 @@
         class="container mx-auto flex flex-col md:flex-row rounded-xl p-4 md:px-10 md:py-7 bg-purple-300 dark:bg-gradient-to-br dark:from-fuchsia-900 dark:to-purple-900">
         <div class="basis-1/2 order-2 md:order-first py-6 flex flex-col gap-4 self-center md:px-10">
             <div class="text-3xl md:text-6xl uppercase font-extrabold">
-                АЛЕКСЕЙ БЕДНОВ
+                {{ $t('pages.contacts.alex_name')}}
             </div>
             <div class="text-xl md:text-3xl font-extralight">
-                Designer & full-stack developer
+                {{ $t('pages.contacts.job_title')}}
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-4">
+            <div class="flex flex-col md:flex-row md:flex-wrap gap-4 py-4">
                 <a href="https://www.instagram.com/ibednov/" target="_blank" type="button"
-                    class="flex flex-row gap-4 justify-center content-center text-white dark:text-black bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-xl text-sm px-5 py-5 text-center mr-2 mb-2">
+                    class="basis-1/3 grow flex flex-row gap-4 justify-center content-center text-white dark:text-black bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-xl text-sm px-5 py-5 text-center mr-2 mb-2">
                     <div>
                         <svg class="w-6 h-6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -28,11 +24,11 @@
                         </svg>
                     </div>
                     <div class="self-center">
-                        Instagram
+                        {{ $t('pages.contacts.instagram')}}
                     </div>
                 </a>
                 <a href="https://www.behance.net/alepsios" target="_blank" type="button"
-                    class="flex flex-row gap-4 justify-center content-center text-white dark:text-black bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-xl text-sm px-5 py-5 text-center mr-2 mb-2">
+                    class="basis-1/3 grow flex flex-row gap-4 justify-center content-center text-white dark:text-black bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-xl text-sm px-5 py-5 text-center mr-2 mb-2">
                     <div>
                         <svg class="w-6 h-6 " viewBox="0 0 2048 1792" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">
@@ -41,11 +37,11 @@
                         </svg>
                     </div>
                     <div class="self-center">
-                        Behance
+                        {{ $t('pages.contacts.behance')}}
                     </div>
                 </a>
                 <a href="https://t.me/alepsios" target="_blank" type="button"
-                    class="flex flex-row gap-4 justify-center content-center text-white dark:text-black bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-xl text-sm px-5 py-5 text-center mr-2 mb-2">
+                    class="basis-1/3 grow flex flex-row gap-4 justify-center content-center text-white dark:text-black bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-xl text-sm px-5 py-5 text-center mr-2 mb-2">
                     <div>
                         <svg class="w-6 h-6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -53,11 +49,11 @@
                         </svg>
                     </div>
                     <div class="self-center">
-                        Telegram
+                        {{ $t('pages.contacts.telegram')}}
                     </div>
                 </a>
                 <a href="/" type="button"
-                    class="flex flex-row order-first md:order-5 gap-4 justify-center content-center text-white dark:text-black bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-xl text-sm px-5 py-5 text-center mr-2 mb-2">
+                    class="basis-1/3 grow flex flex-row order-first md:order-5 gap-4 justify-center content-center text-white dark:text-black bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-xl text-sm px-5 py-5 text-center mr-2 mb-2">
                     <div>
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
@@ -67,11 +63,11 @@
                         </svg>
                     </div>
                     <div class="self-center">
-                        Сайт
+                        {{ $t('pages.contacts.website')}}
                     </div>
                 </a>
                 <a href="/team/alepsios" type="button"
-                    class="flex flex-row gap-4 md:order-last justify-center content-center text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-xl text-sm px-5 py-5 text-center mr-2 mb-2">
+                    class="basis-1/2 grow flex flex-row gap-4 md:order-last justify-center content-center text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-xl text-sm px-5 py-5 text-center mr-2 mb-2">
                     <div>
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
@@ -81,7 +77,7 @@
                         </svg>
                     </div>
                     <div class="self-center">
-                        CV
+                        {{ $t('pages.contacts.cv')}}
                     </div>
                 </a>
                 <!-- <a href="https://wa.me/qr/JYZOKXUAOVAPP1" target="_blank" type="button"
