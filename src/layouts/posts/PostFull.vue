@@ -1,7 +1,7 @@
 <script setup>
 import { useRoute } from "vue-router";
 import getPageOrPost from '../../composibles/getPageOrPost'
-import PostHeaderPost from "../../components/posts/PostHeaderPost.vue";
+import PostHeaderPost from "../../components/posts/PostHeader.vue";
 import PostBody from '../../components/posts/PostBody.vue';
 
 const route = useRoute();

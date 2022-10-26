@@ -87,10 +87,10 @@ loadCategories();
                                         <div class="basis-1/3 font-bold">
                                             <div v-for="member in team">
                                                 <div v-if="stack.team_member[0] === member.id">
-                                                    <a :href="member.link" target="_blank"
+                                                    <router-link :to="{ name: 'TeamFull', params: { id: member.id, member: member } }" target="_blank"
                                                         class="text-fuchsia-700 dark:text-violet-400 hover:text-purple-900 ">
                                                         {{ member.title.rendered }}
-                                                    </a>
+                                                    </router-link>
                                                 </div>
                                             </div>
                                         </div>
