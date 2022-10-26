@@ -24,8 +24,8 @@
     },
     "categories": {
         "uiux": "UI/UX design",
-        "design": "Brand & marketing design",
-        "development": "Frontend & backend development",
+        "brand": "Brand & marketing design",
+        "dev": "Frontend & backend development",
         "gamedev": "Game Dev.",
         "blog": "Blog"
     },

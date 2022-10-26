@@ -23,11 +23,11 @@
         "ru": "Русский"
     },
     "categories": {
-        "uiux": "UI/UX design",
-        "design": "Brand & marketing design",
-        "development": "Frontend & backend development",
-        "gamedev": "Game Dev.",
-        "blog": "Blog"
+        "uiux": "UI/UX дизайн",
+        "brand": "Дизайн брендов",
+        "dev": "Frontend & backend development",
+        "gamedev": "Гейм-дев",
+        "blog": "Блог"
     },
     "posts": {
         "full": {
