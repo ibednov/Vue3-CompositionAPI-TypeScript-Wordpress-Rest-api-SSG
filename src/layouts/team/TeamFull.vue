@@ -24,7 +24,7 @@ loadGetTeamMember();
         class="flex flex-col text-4xl text-light text-center self-center md:w-2/3 xl:w-1/2 gap-4"
       >
         <div class="text-left">
-          Hi, i'm
+          {{ $t("team.full.hi") }}
           <span
             v-show="store.state.locale === 'ru'"
             class="font-extrabold text-yellow-400"
@@ -48,13 +48,13 @@ loadGetTeamMember();
           .
         </div>
         <div v-if="member.acf.member_job" class="text-right">
-          I'm a
+          {{ $t("team.full.im") }}
           <span class="font-bold text-blue-500">
             {{ member.acf.member_job }} </span
           >.
         </div>
         <div v-if="member.acf.member_city_ru" class="text-left">
-          I'm from
+          {{ $t("team.full.from") }}
           <span
             v-show="store.state.locale === 'ru'"
             class="font-bold text-green-500"
@@ -69,8 +69,10 @@ loadGetTeamMember();
           </span>
         </div>
         <div class="text-right">
-          Let me show you
-          <span class="underline decoration-sky-500">what I can do...</span>
+          {{ $t("team.full.letme") }}
+          <span class="underline decoration-sky-500">
+            {{ $t("team.full.whaticando") }}
+          </span>
         </div>
       </h1>
 
@@ -107,7 +109,7 @@ loadGetTeamMember();
               d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76"
             ></path>
           </svg>
-          Связаться со мной
+          {{ $t("team.full.contact") }}
         </a>
       </div>
     </section>
@@ -116,7 +118,7 @@ loadGetTeamMember();
       <h1
         class="text-3xl uppercase font-bold underline underline-offset-8 decoration-indigo-800 decoration-4 text-center"
       >
-        Languages
+        {{ $t("team.full.lang") }}
       </h1>
       <div class="flex flex-col gap-y-8 sm:flex-row flex-wrap py-10">
         <div
@@ -148,7 +150,7 @@ loadGetTeamMember();
       <h1
         class="text-3xl uppercase font-bold underline underline-offset-8 decoration-green-800 decoration-4 text-center"
       >
-        Hard skills
+        {{ $t("team.full.hardskills") }}
       </h1>
       <div class="flex flex-col sm:flex-row flex-wrap py-10">
         <div
@@ -193,7 +195,7 @@ loadGetTeamMember();
       <h1
         class="text-3xl uppercase font-bold underline underline-offset-8 decoration-indigo-400 decoration-4 text-center"
       >
-        Education
+        {{ $t("team.full.education") }}
       </h1>
       <div class="flex flex-col flex-wrap py-10">
         <div
@@ -254,7 +256,7 @@ loadGetTeamMember();
       <h1
         class="text-3xl uppercase font-bold underline underline-offset-8 decoration-fuchsia-400 decoration-4 text-center"
       >
-        Work experience
+        {{ $t("team.full.workexp") }}
       </h1>
       <div class="flex flex-col flex-wrap py-10">
         <div
@@ -354,7 +356,7 @@ loadGetTeamMember();
         class="flex flex-col text-4xl text-light text-center self-center md:w-2/3 xl:w-1/2 gap-4"
       >
         <div class="text-center">
-          Well, i'm
+          {{ $t("team.full.well") }}
           <span
             v-show="store.state.locale === 'ru'"
             class="font-extrabold text-yellow-400"
@@ -377,9 +379,12 @@ loadGetTeamMember();
           </span>
           .
         </div>
-
-        I think you should
-        <span class="underline decoration-sky-500"> write to me </span>
+        <div>
+          {{ $t("team.full.youshould") }}
+          <span class="underline decoration-sky-500">
+            {{ $t("team.full.writetome") }}
+          </span>
+        </div>
       </h1>
       <div
         v-if="member.acf.member_socials"
@@ -414,7 +419,7 @@ loadGetTeamMember();
               d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76"
             ></path>
           </svg>
-          Связаться со мной
+          {{ $t("team.full.contact") }}
         </a>
       </div>
     </section>
