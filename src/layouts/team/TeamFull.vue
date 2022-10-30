@@ -1,6 +1,9 @@
 <script setup>
 import { useRoute } from "vue-router";
 import getTeamMember from "../../composibles/getTeamMember";
+import { useStore } from "vuex";
+
+const store = useStore();
 
 const route = useRoute();
 
@@ -22,13 +25,27 @@ loadGetTeamMember();
       >
         <div class="text-left">
           Hi, i'm
-          <span class="font-extrabold text-yellow-400">
+          <span
+            v-show="store.state.locale === 'ru'"
+            class="font-extrabold text-yellow-400"
+          >
             {{
               member.acf.member_name_ru
                 ? member.acf.member_name_ru
                 : member.title.rendered
-            }} </span
-          >.
+            }}
+          </span>
+          <span
+            v-show="store.state.locale === 'en'"
+            class="font-extrabold text-yellow-400"
+          >
+            {{
+              member.acf.member_name_en
+                ? member.acf.member_name_en
+                : member.title.rendered
+            }}
+          </span>
+          .
         </div>
         <div v-if="member.acf.member_job" class="text-right">
           I'm a
@@ -36,10 +53,19 @@ loadGetTeamMember();
             {{ member.acf.member_job }} </span
           >.
         </div>
-        <div v-if="member.acf.member_city" class="text-left">
+        <div v-if="member.acf.member_city_ru" class="text-left">
           I'm from
-          <span class="font-bold text-green-500">
-            {{ member.acf.member_city }}
+          <span
+            v-show="store.state.locale === 'ru'"
+            class="font-bold text-green-500"
+          >
+            {{ member.acf.member_city_ru }}
+          </span>
+          <span
+            v-show="store.state.locale === 'en'"
+            class="font-bold text-green-500"
+          >
+            {{ member.acf.member_city_en }}
           </span>
         </div>
         <div class="text-right">
@@ -94,13 +120,23 @@ loadGetTeamMember();
         <div
           v-for="lang in member.acf.member_langs"
           :key="lang.id"
-          class="basis-1/3 grow flex flex-col gap-2"
+          class="basis-1/3 grow"
         >
-          <div class="text-xl font-bold uppercase self-center">
-            {{ lang.lang_group__name }}
+          <div v-show="store.state.locale === 'ru'" class="flex flex-col gap-2">
+            <div class="text-xl font-bold uppercase self-center">
+              {{ lang.lang_group__name_ru }}
+            </div>
+            <div class="font-light self-center">
+              {{ lang.lang_group__level_ru }}
+            </div>
           </div>
-          <div class="font-light self-center">
-            {{ lang.lang_group__level }}
+          <div v-show="store.state.locale === 'en'" class="flex flex-col gap-2">
+            <div class="text-xl font-bold uppercase self-center">
+              {{ lang.lang_group__name_en }}
+            </div>
+            <div class="font-light self-center">
+              {{ lang.lang_group__level_en }}
+            </div>
           </div>
         </div>
       </div>
