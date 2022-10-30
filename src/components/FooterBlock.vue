@@ -19,7 +19,7 @@ const currentDate = new Date();
           {{ $t("footer.rights") }}
         </span>
         <ul
-          class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
+          class="flex flex-wrap items-center self-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
         >
           <li>
             <a href="/" class="mr-4 hover:underline md:mr-6">
