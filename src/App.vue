@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted } from "vue";
 import NavBar from "./components/NavBar.vue";
-import Footer from "./components/Footer.vue";
+import FooterBlock from "./components/FooterBlock.vue";
 
 onMounted(() => {
   import("flowbite");
@@ -11,5 +11,5 @@ onMounted(() => {
 <template>
   <NavBar class="pb-4 md:pb-28" />
   <router-view />
-  <Footer />
+  <FooterBlock />
 </template>

@@ -12,7 +12,8 @@
                 {{ $t('pages.contacts.job_title')}}
             </div>
             <div class="flex flex-col md:flex-row md:flex-wrap gap-4 py-4">
-                <a href="https://www.instagram.com/ibednov/" target="_blank" type="button"
+                <a
+href="https://www.instagram.com/ibednov/" target="_blank" type="button"
                     class="basis-1/3 grow flex flex-row gap-4 justify-center content-center text-white dark:text-black bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-xl text-sm px-5 py-5 text-center mr-2 mb-2">
                     <div>
                         <svg class="w-6 h-6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -27,10 +28,12 @@
                         {{ $t('pages.contacts.instagram')}}
                     </div>
                 </a>
-                <a href="https://www.behance.net/alepsios" target="_blank" type="button"
+                <a
+href="https://www.behance.net/alepsios" target="_blank" type="button"
                     class="basis-1/3 grow flex flex-row gap-4 justify-center content-center text-white dark:text-black bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-xl text-sm px-5 py-5 text-center mr-2 mb-2">
                     <div>
-                        <svg class="w-6 h-6 " viewBox="0 0 2048 1792" fill="currentColor"
+                        <svg
+class="w-6 h-6 " viewBox="0 0 2048 1792" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M1848 339h-511v124h511v-124zm-252 426q-90 0-146 52.5t-62 142.5h408q-18-195-200-195zm16 585q63 0 122-32t76-87h221q-100 307-427 307-214 0-340.5-132t-126.5-347q0-208 130.5-345.5t336.5-137.5q138 0 240.5 68t153 179 50.5 248q0 17-2 47h-658q0 111 57.5 171.5t166.5 60.5zm-1335-50h296q205 0 205-167 0-180-199-180h-302v347zm0-537h281q78 0 123.5-36.5t45.5-113.5q0-144-190-144h-260v294zm-277-509h594q87 0 155 14t126.5 47.5 90 96.5 31.5 154q0 181-172 263 114 32 172 115t58 204q0 75-24.5 136.5t-66 103.5-98.5 71-121 42-134 13h-611v-1260z" />
@@ -40,7 +43,8 @@
                         {{ $t('pages.contacts.behance')}}
                     </div>
                 </a>
-                <a href="https://t.me/alepsios" target="_blank" type="button"
+                <a
+href="https://t.me/alepsios" target="_blank" type="button"
                     class="basis-1/3 grow flex flex-row gap-4 justify-center content-center text-white dark:text-black bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-xl text-sm px-5 py-5 text-center mr-2 mb-2">
                     <div>
                         <svg class="w-6 h-6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -52,12 +56,15 @@
                         {{ $t('pages.contacts.telegram')}}
                     </div>
                 </a>
-                <a href="/" type="button"
+                <a
+href="/" type="button"
                     class="basis-1/3 grow flex flex-row order-first md:order-5 gap-4 justify-center content-center text-white dark:text-black bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-xl text-sm px-5 py-5 text-center mr-2 mb-2">
                     <div>
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        <svg
+class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            <path
+stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9">
                             </path>
                         </svg>
@@ -66,12 +73,15 @@
                         {{ $t('pages.contacts.website')}}
                     </div>
                 </a>
-                <a href="/team/alepsios" type="button"
+                <a
+href="/team/alepsios" type="button"
                     class="basis-1/2 grow flex flex-row gap-4 md:order-last justify-center content-center text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-xl text-sm px-5 py-5 text-center mr-2 mb-2">
                     <div>
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        <svg
+class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            <path
+stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
                             </path>
                         </svg>
