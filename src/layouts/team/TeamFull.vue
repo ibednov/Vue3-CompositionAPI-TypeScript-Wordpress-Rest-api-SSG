@@ -78,7 +78,7 @@ loadGetTeamMember();
 
       <div
         v-if="member.acf.member_socials"
-        class="self-center items-center pt-10 flex flex-row gap-8"
+        class="self-center items-center pt-10 flex flex-col md:flex-row gap-8"
       >
         <div v-for="social in member.acf.member_socials" :key="social.key">
           <a
@@ -388,7 +388,7 @@ loadGetTeamMember();
       </h1>
       <div
         v-if="member.acf.member_socials"
-        class="self-center items-center pt-10 flex flex-row gap-8"
+        class="self-center items-center pt-10 flex flex-col md:flex-row gap-8"
       >
         <div v-for="social in member.acf.member_socials" :key="social.key">
           <a

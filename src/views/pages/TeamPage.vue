@@ -17,7 +17,7 @@ loadTeam();
   <div class="container mx-auto">
     <div
       v-if="team.length"
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center gap-x-14"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-14"
     >
       <TeamShort v-for="member in team" :key="member.id" :member="member" />
     </div>
