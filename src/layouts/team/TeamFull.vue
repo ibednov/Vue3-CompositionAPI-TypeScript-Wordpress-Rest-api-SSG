@@ -73,41 +73,43 @@ loadGetTeamMember();
           <span class="underline decoration-sky-500">what I can do...</span>
         </div>
       </h1>
+
       <div
         v-if="member.acf.member_socials"
-        class="self-center pt-10 flex flex-row gap-8"
+        class="self-center items-center pt-10 flex flex-row gap-8"
       >
         <div v-for="social in member.acf.member_socials" :key="social.key">
           <a
             :href="social.social_link"
             target="_blank"
-            class="text-2xl font-bold uppercase text-indigo-700 hover:text-green-700 underline decoration-4"
+            class="items-center text-2xl font-bold uppercase text-indigo-700 hover:text-green-700 underline decoration-4"
           >
             {{ social.social_name }}
           </a>
         </div>
-      </div>
-      <a
-        :href="'mailto:' + member.acf.member_email"
-        target="_blank"
-        class="flex flex-row gap-4 self-center items-center text-2xl font-bold text-center pt-4 uppercase text-cyan-600 dark:text-cyan-400 hover:text-green-700 underline decoration-4"
-      >
-        <svg
-          class="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+
+        <a
+          :href="'mailto:' + member.acf.member_email"
+          target="_blank"
+          class="flex flex-row gap-4 self-center items-center text-2xl font-bold text-center uppercase text-cyan-600 dark:text-cyan-400 hover:text-green-700 underline decoration-4"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76"
-          ></path>
-        </svg>
-        Связаться со мной
-      </a>
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76"
+            ></path>
+          </svg>
+          Связаться со мной
+        </a>
+      </div>
     </section>
 
     <section class="container mx-auto flex flex-col py-12">
@@ -154,8 +156,17 @@ loadGetTeamMember();
           :key="skills.id"
           class="sm:w-1/2 lg:w-1/3 grow flex flex-col gap-2 px-10 py-5"
         >
-          <div class="text-2xl font-bold uppercase text-center">
+          <div
+            v-show="store.state.locale === 'ru'"
+            class="text-2xl font-bold uppercase text-center"
+          >
             {{ skills.skills_group__name }}
+          </div>
+          <div
+            v-show="store.state.locale === 'en'"
+            class="text-2xl font-bold uppercase text-center"
+          >
+            {{ skills.skills_group__name_en }}
           </div>
           <div class="gap-4 flex flex-col">
             <div
@@ -195,16 +206,41 @@ loadGetTeamMember();
             id="edu_dots"
             class="flex gap-2 flex-col before:bg-gradient-to-br before:from-blue-400 before:to-indigo-400"
           >
-            <div class="text-3xl font-extrabold">
+            <div
+              v-show="store.state.locale === 'ru'"
+              class="text-3xl font-extrabold"
+            >
               {{ edu.education_degree }}
             </div>
             <div
+              v-show="store.state.locale === 'en'"
+              class="text-3xl font-extrabold"
+            >
+              {{ edu.education_degree_en }}
+            </div>
+            <div
+              v-show="store.state.locale === 'ru'"
               class="text-2xl font-medium text-indigo-700 dark:text-indigo-500"
             >
               {{ edu.education_spec }}
             </div>
-            <div class="text-lg font-light">
+            <div
+              v-show="store.state.locale === 'en'"
+              class="text-2xl font-medium text-indigo-700 dark:text-indigo-500"
+            >
+              {{ edu.education_spec_en }}
+            </div>
+            <div
+              v-show="store.state.locale === 'ru'"
+              class="text-lg font-light"
+            >
               {{ edu.education_place }}
+            </div>
+            <div
+              v-show="store.state.locale === 'en'"
+              class="text-lg font-light"
+            >
+              {{ edu.education_place_en }}
             </div>
             <div class="text-lg font-light">
               {{ edu.education_start }} - {{ edu.education_end }}
@@ -231,30 +267,75 @@ loadGetTeamMember();
             id="edu_dots"
             class="flex gap-2 flex-col before:bg-gradient-to-br before:from-blue-400 before:to-fuchsia-400"
           >
-            <div class="text-3xl font-extrabold">
+            <div
+              v-show="store.state.locale === 'ru'"
+              class="text-3xl font-extrabold"
+            >
               {{ work.work_place }}
             </div>
             <div
+              v-show="store.state.locale === 'en'"
+              class="text-3xl font-extrabold"
+            >
+              {{ work.work_place_en }}
+            </div>
+
+            <div
+              v-show="store.state.locale === 'ru'"
               class="text-2xl font-medium text-fuchsia-700 dark:text-fuchsia-400"
             >
               {{ work.work_job }}
             </div>
+            <div
+              v-show="store.state.locale === 'en'"
+              class="text-2xl font-medium text-fuchsia-700 dark:text-fuchsia-400"
+            >
+              {{ work.work_job_en }}
+            </div>
+
             <div class="text-lg font-medium">
               {{ work.work_start }} - {{ work.work_end }}
             </div>
+
             <div
               v-if="work.work_tasks"
+              v-show="store.state.locale === 'ru'"
               class="bg-fuchsia-100 dark:bg-stone-800 p-4 rounded-xl"
             >
               <!-- eslint-disable-next-line vue/no-v-html -->
               <div class="text-lg font-light" v-html="work.work_tasks"></div>
             </div>
             <div
+              v-if="work.work_tasks_en"
+              v-show="store.state.locale === 'en'"
+              class="bg-fuchsia-100 dark:bg-stone-800 p-4 rounded-xl"
+            >
+              <!-- eslint-disable-next-line vue/no-v-html -->
+              <div class="text-lg font-light" v-html="work.work_tasks_en"></div>
+            </div>
+
+            <div
               v-if="work.work_repeater"
               class="bg-stone-300 dark:bg-stone-800 p-4 rounded-xl"
             >
               <div
                 v-for="item in work.work_repeater"
+                v-show="store.state.locale === 'ru'"
+                :key="item.id"
+                class="text-md font-light"
+              >
+                <!-- eslint-disable-next-line vue/no-v-html -->
+                <p v-html="item.repeat" />
+              </div>
+            </div>
+
+            <div
+              v-if="work.work_repeater_en"
+              class="bg-stone-300 dark:bg-stone-800 p-4 rounded-xl"
+            >
+              <div
+                v-for="item in work.work_repeater"
+                v-show="store.state.locale === 'en'"
                 :key="item.id"
                 class="text-md font-light"
               >
@@ -264,6 +345,77 @@ loadGetTeamMember();
             </div>
           </div>
         </div>
+      </div>
+    </section>
+    <section
+      class="container mx-auto p-10 flex flex-col rounded-xl my-10 bg-amber-100 dark:bg-stone-800"
+    >
+      <h1
+        class="flex flex-col text-4xl text-light text-center self-center md:w-2/3 xl:w-1/2 gap-4"
+      >
+        <div class="text-center">
+          Well, i'm
+          <span
+            v-show="store.state.locale === 'ru'"
+            class="font-extrabold text-yellow-400"
+          >
+            {{
+              member.acf.member_name_ru
+                ? member.acf.member_name_ru
+                : member.title.rendered
+            }}
+          </span>
+          <span
+            v-show="store.state.locale === 'en'"
+            class="font-extrabold text-yellow-400"
+          >
+            {{
+              member.acf.member_name_en
+                ? member.acf.member_name_en
+                : member.title.rendered
+            }}
+          </span>
+          .
+        </div>
+
+        I think you should
+        <span class="underline decoration-sky-500"> write to me </span>
+      </h1>
+      <div
+        v-if="member.acf.member_socials"
+        class="self-center items-center pt-10 flex flex-row gap-8"
+      >
+        <div v-for="social in member.acf.member_socials" :key="social.key">
+          <a
+            :href="social.social_link"
+            target="_blank"
+            class="items-center text-2xl font-bold uppercase text-indigo-700 hover:text-green-700 underline decoration-4"
+          >
+            {{ social.social_name }}
+          </a>
+        </div>
+
+        <a
+          :href="'mailto:' + member.acf.member_email"
+          target="_blank"
+          class="flex flex-row gap-4 self-center items-center text-2xl font-bold text-center uppercase text-cyan-600 dark:text-cyan-400 hover:text-green-700 underline decoration-4"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76"
+            ></path>
+          </svg>
+          Связаться со мной
+        </a>
       </div>
     </section>
   </article>
