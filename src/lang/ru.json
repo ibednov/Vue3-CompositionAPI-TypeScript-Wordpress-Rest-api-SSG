@@ -5,7 +5,7 @@
     "header": {
         "home": "Дом",
         "open_menu": "Открыть меню",
-        "contact_me": "Contact me !",
+        "contact_me": "Напишите мне!",
         "contacts": "Контакты",
         "cases": "Кейсы",
         "blog": "Блог",
@@ -65,7 +65,7 @@
         "full": {
             "hi": "Привет, меня зовут ",
             "im":"Я",
-            "from":"Я из",
+            "from":"Из",
             "letme":"Давайте покажу",
             "whaticando":"что я могу...",
             "contact":"Связаться со мной",
