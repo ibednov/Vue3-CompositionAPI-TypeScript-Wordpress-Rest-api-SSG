@@ -18,11 +18,11 @@ loadGetTeamMember();
       class="container mx-auto p-10 flex flex-col rounded-xl my-10 bg-amber-100 dark:bg-stone-800"
     >
       <h1
-        class="flex flex-col text-4xl text-light text-center self-center w-1/2 gap-4"
+        class="flex flex-col text-4xl text-light text-center self-center md:w-2/3 xl:w-1/2 gap-4"
       >
         <div class="text-left">
           Hi, i'm
-          <span class="font-extrabold text-yellow-400 underline decoration-4">
+          <span class="font-extrabold text-yellow-400">
             {{
               member.acf.member_name_ru
                 ? member.acf.member_name_ru
@@ -38,7 +38,7 @@ loadGetTeamMember();
         </div>
         <div v-if="member.acf.member_city" class="text-left">
           I'm from
-          <span class="font-bold text-green-500 underline decoration-4">
+          <span class="font-bold text-green-500">
             {{ member.acf.member_city }}
           </span>
         </div>
@@ -55,7 +55,7 @@ loadGetTeamMember();
           <a
             :href="social.social_link"
             target="_blank"
-            class="text-2xl font-bold uppercase text-indigo-700 hover:text-green-700"
+            class="text-2xl font-bold uppercase text-indigo-700 hover:text-green-700 underline decoration-4"
           >
             {{ social.social_name }}
           </a>
@@ -64,8 +64,22 @@ loadGetTeamMember();
       <a
         :href="'mailto:' + member.acf.member_email"
         target="_blank"
-        class="text-2xl font-bold text-center pt-4 uppercase text-yellow-700 hover:text-green-700"
+        class="flex flex-row gap-4 self-center items-center text-2xl font-bold text-center pt-4 uppercase text-cyan-600 dark:text-cyan-400 hover:text-green-700 underline decoration-4"
       >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76"
+          ></path>
+        </svg>
         Связаться со мной
       </a>
     </section>
@@ -76,7 +90,7 @@ loadGetTeamMember();
       >
         Languages
       </h1>
-      <div class="flex flex-row flex-wrap py-10">
+      <div class="flex flex-col gap-y-8 sm:flex-row flex-wrap py-10">
         <div
           v-for="lang in member.acf.member_langs"
           :key="lang.id"
@@ -98,13 +112,13 @@ loadGetTeamMember();
       >
         Hard skills
       </h1>
-      <div class="flex flex-row flex-wrap py-10">
+      <div class="flex flex-col sm:flex-row flex-wrap py-10">
         <div
           v-for="skills in member.acf.member_skills"
           :key="skills.id"
-          class="basis-1/3 flex flex-col gap-2 px-10 py-5"
+          class="sm:w-1/2 lg:w-1/3 grow flex flex-col gap-2 px-10 py-5"
         >
-          <div class="text-xl font-bold uppercase self-center">
+          <div class="text-2xl font-bold uppercase text-center">
             {{ skills.skills_group__name }}
           </div>
           <div class="gap-4 flex flex-col">
@@ -130,21 +144,27 @@ loadGetTeamMember();
 
     <section class="container mx-auto flex flex-col">
       <h1
-        class="text-3xl uppercase font-bold underline underline-offset-8 decoration-green-800 decoration-4 text-center"
+        class="text-3xl uppercase font-bold underline underline-offset-8 decoration-indigo-400 decoration-4 text-center"
       >
         Education
       </h1>
       <div class="flex flex-col flex-wrap py-10">
         <div
           v-for="edu in member.acf.member_education"
+          id="dots_parent"
           :key="edu.id"
-          class="basis-1/3 flex flex-col gap-2 px-10 py-5 odd:bg-yellow-700 even:bg-stone-500"
+          class="md:w-1/2 flex flex-col mx-1 p-10 relative md:odd:self-start md:odd:text-right md:even:self-end md:even:text-left border-l-8 md:border-l-0 odd:md:border-r-8 even:md:border-l-8 border-indigo-300"
         >
-          <div class="w-1/2 gap-2 flex flex-col even:justify-self-end">
+          <div
+            id="edu_dots"
+            class="flex gap-2 flex-col before:bg-gradient-to-br before:from-blue-400 before:to-indigo-400"
+          >
             <div class="text-3xl font-extrabold">
               {{ edu.education_degree }}
             </div>
-            <div class="text-2xl font-medium text-emerald-800">
+            <div
+              class="text-2xl font-medium text-indigo-700 dark:text-indigo-500"
+            >
               {{ edu.education_spec }}
             </div>
             <div class="text-lg font-light">
@@ -158,116 +178,82 @@ loadGetTeamMember();
       </div>
     </section>
 
-    <!-- <?php if( have_rows('member_education') ): ?> -->
-    <div class="flex flex-col gap-4 timeline text-center py-3">
+    <section class="container mx-auto flex flex-col">
       <h1
-        class="text-3xl uppercase font-bold underline underline-offset-8 decoration-green-800 decoration-4 text-center"
+        class="text-3xl uppercase font-bold underline underline-offset-8 decoration-fuchsia-400 decoration-4 text-center"
       >
-        Education
+        Work experience
       </h1>
-      <!-- <?php while ( have_rows('member_education') ) : the_row(); ?> -->
-      <div class="flex flex-col gap-4">
+      <div class="flex flex-col flex-wrap py-10">
         <div
-          v-for="edu in member.acf.member_education"
-          :key="edu.id"
-          class="w-1/2 rounded timeline-parent py-4 flex flex-col"
+          v-for="work in member.acf.member_work"
+          id="dots_parent"
+          :key="work.id"
+          class="md:w-1/2 flex flex-col mx-1 p-10 relative md:odd:self-start md:odd:text-right md:even:self-end md:even:text-left border-l-8 md:border-l-0 odd:md:border-r-8 even:md:border-l-8 border-fuchsia-300"
         >
-          <div class="timeline-child px-5 gap-2">
+          <div
+            id="edu_dots"
+            class="flex gap-2 flex-col before:bg-gradient-to-br before:from-blue-400 before:to-fuchsia-400"
+          >
             <div class="text-3xl font-extrabold">
-              {{ edu.education_degree }}
+              {{ work.work_place }}
             </div>
-            <div class="text-2xl font-medium text-emerald-800">
-              {{ edu.education_spec }}
+            <div
+              class="text-2xl font-medium text-fuchsia-700 dark:text-fuchsia-400"
+            >
+              {{ work.work_job }}
             </div>
-            <div class="text-lg font-light">
-              {{ edu.education_place }}
+            <div class="text-lg font-medium">
+              {{ work.work_start }} - {{ work.work_end }}
             </div>
-            <div class="text-lg font-light">
-              {{ edu.education_start }} - {{ edu.education_end }}
+            <div
+              v-if="work.work_tasks"
+              class="bg-fuchsia-100 dark:bg-stone-800 p-4 rounded-xl"
+            >
+              <!-- eslint-disable-next-line vue/no-v-html -->
+              <div class="text-lg font-light" v-html="work.work_tasks"></div>
+            </div>
+            <div
+              v-if="work.work_repeater"
+              class="bg-stone-300 dark:bg-stone-800 p-4 rounded-xl"
+            >
+              <div
+                v-for="item in work.work_repeater"
+                :key="item.id"
+                class="text-md font-light"
+              >
+                <!-- eslint-disable-next-line vue/no-v-html -->
+                <p v-html="item.repeat" />
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- <?php endwhile; ?> -->
-    </div>
-    <!-- <?php endif; ?> -->
+    </section>
   </article>
 </template>
 
 <style scoped>
-/* timeline */
-.timeline-parent {
-  display: flex;
-  position: relative;
-  text-align: right;
-}
-
-.timeline-parent:nth-child(2n) {
-  display: flex;
-  flex-direction: row-reverse;
-  text-align: left;
-}
-
-.timeline-parent:nth-child(2n-1) .timeline-child:before {
-  content: "";
-  background: #d9d7fd;
-  width: 0.6rem;
-  position: absolute;
-  right: calc(0% - 0.3rem);
-  top: 0;
-  bottom: 0;
-}
-
-.timeline-parent:nth-child(2n) .timeline-child:before {
-  content: "";
-  background: #d9d7fd;
-  width: 0.6rem;
-  position: absolute;
-  left: calc(0% - 0.3rem);
-  top: 0;
-  bottom: 0;
-}
-
-.timeline-child:after {
-  content: "";
-  background: linear-gradient(to bottom right, #dfddff, #aafbff);
-  padding: 1rem;
-  width: 4rem;
-  height: 4rem;
-  position: absolute;
-  right: -2rem;
-  top: calc(50% - 2rem);
-  border-radius: 2rem;
-}
-
-.timeline-parent:nth-child(2n) .timeline-child:after {
-  content: "";
-  background: linear-gradient(to bottom right, #dfddff, #aafbff);
-  padding: 1rem;
-  width: 4rem;
-  height: 4rem;
-  position: absolute;
-  left: -2rem;
-  top: calc(50% - 2rem);
-  border-radius: 2rem;
-}
-
-.progress-bar {
-  background: linear-gradient(to right, #bfbcf9, #9cb7e8) !important;
-}
-
-.timeline-title:after {
-  content: "";
-  width: 8rem;
-  background: #5d5cd8;
-  bottom: 0.7rem;
-  height: 0.3rem;
-  position: absolute;
-  right: calc(50% - 4rem);
-}
-
-.timeline-title {
-  position: relative;
-  padding: 2rem 0;
+@media (min-width: 768px) {
+  #dots_parent:nth-child(odd) #edu_dots:before {
+    content: "";
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    /* background: #fff; */
+    border-radius: 100%;
+    right: -2.2rem;
+    top: 10%;
+  }
+  #dots_parent:nth-child(even) #edu_dots:before {
+    content: "";
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    /* background: #fff; */
+    border-radius: 100%;
+    left: -2.2rem;
+    top: 10%;
+  }
 }
 </style>
