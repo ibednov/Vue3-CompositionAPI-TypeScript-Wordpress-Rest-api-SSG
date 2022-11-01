@@ -1,11 +1,10 @@
+<!-- eslint-disable vue/require-default-prop -->
 <script setup>
 // eslint-disable-next-line no-unused-vars
 const props = defineProps({
-  // eslint-disable vue/require-default-prop
   fieldValue: Array,
   fieldName: String,
   propClass: String,
-  // eslint-enable
 });
 </script>
 
