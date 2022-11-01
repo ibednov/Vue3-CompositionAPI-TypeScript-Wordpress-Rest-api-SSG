@@ -5,6 +5,7 @@ import SpinnerLoader from "../../components/SpinnerLoader.vue";
 
 // eslint-disable-next-line no-unused-vars
 const props = defineProps({
+  // eslint-disable-next-line vue/require-default-prop
   team: Object,
 });
 
@@ -13,7 +14,9 @@ loadTeam();
 </script>
 
 <template>
-  <h1 class="text-6xl uppercase font-extrabold text-center py-4">Команда</h1>
+  <h1 class="text-6xl uppercase font-extrabold text-center py-4">
+    {{ $t("team.team") }}
+  </h1>
   <div class="container mx-auto">
     <div
       v-if="team.length"

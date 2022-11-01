@@ -62,6 +62,7 @@
         }
     },
     "team": {
+        "team":"Team",
         "full": {
             "hi": "Hi, i'm",
             "im":"I'm a",

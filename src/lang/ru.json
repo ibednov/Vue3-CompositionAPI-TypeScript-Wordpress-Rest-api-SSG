@@ -16,7 +16,7 @@
         "cv": "CV / Резюме"
     },
     "footer": {
-        "rights": "All Rights Reserved."
+        "rights": "Все права защищены."
     },
     "langs": {
         "en": "English",
@@ -62,6 +62,7 @@
         }
     },
     "team": {
+        "team":"Команда",
         "full": {
             "hi": "Привет, меня зовут ",
             "im":"Я",
