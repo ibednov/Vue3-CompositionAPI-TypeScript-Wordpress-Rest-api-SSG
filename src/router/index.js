@@ -16,7 +16,7 @@ const routes = [
     name: "Home",
     component: Home,
     meta: {
-      title: "Home",
+      title: "Alebednov.work / home",
     },
   },
   {
