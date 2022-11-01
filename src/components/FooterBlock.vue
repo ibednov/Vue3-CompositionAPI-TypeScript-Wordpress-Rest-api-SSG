@@ -32,7 +32,7 @@ const currentDate = new Date();
             </a>
           </li>
           <li>
-            <a href="/team/alepsios" class="mr-4 hover:underline md:mr-6">
+            <a href="/team/903" class="mr-4 hover:underline md:mr-6">
               {{ $t("header.cv") }}
             </a>
           </li>
