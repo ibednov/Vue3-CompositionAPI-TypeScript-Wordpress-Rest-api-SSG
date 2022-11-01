@@ -8,11 +8,6 @@
         "contact_me": "Contact me !",
         "contacts": "Contacts",
         "cases": "Cases",
-        "blog": "Blog",
-        "development": "Frontend & backend development",
-        "uiux": "UI/UX design",
-        "design": "Brand & marketing design",
-        "gamedev": "Game Dev.",
         "cv":"CV"
     },
     "footer" : {

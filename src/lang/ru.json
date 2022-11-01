@@ -8,10 +8,6 @@
         "contact_me": "Напишите мне!",
         "contacts": "Контакты",
         "cases": "Кейсы",
-        "blog": "Блог",
-        "development": "Разработка",
-        "uiux": "UI/UX дизайн",
-        "design": "Бренд и маркетинг дизайн",
         "gamedev": "Гейм-дев",
         "cv": "CV / Резюме"
     },
@@ -25,7 +21,7 @@
     "categories": {
         "uiux": "UI/UX дизайн",
         "brand": "Дизайн брендов",
-        "dev": "Frontend & backend development",
+        "dev": "Фронтенд и бэкенд разработка",
         "gamedev": "Гейм-дев",
         "blog": "Блог"
     },
