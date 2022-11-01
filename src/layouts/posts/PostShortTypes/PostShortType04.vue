@@ -16,12 +16,9 @@ const snippet = computed(() => {
   <router-link
     :id="post.acf.short_type"
     :to="{ name: 'PostFull', params: { id: post.id, post: post } }"
-    :class="
-      post.acf.short_bg ? post.acf.short_bg : 'bg-stone-200 dark:bg-stone-900'
-    "
   >
     <img
-      class="object-contain rounded-xl max-h-80 max-w-20 justify-self-center"
+      class="object-contain rounded-xl max-w-full justify-self-center hover:shadow-xl hover:shadow-blue-500/10 hover:dark:shadow-blue-800/10 hover:scale-105 hover:delay-200 hover:duration-200"
       :src="post.featured_image_urls.medium_large[0]"
       :alt="post.title.rendered"
     />

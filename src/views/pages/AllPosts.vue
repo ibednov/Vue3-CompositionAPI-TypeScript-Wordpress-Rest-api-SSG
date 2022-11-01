@@ -21,7 +21,7 @@ loadPosts();
     </h1>
     <div
       v-if="posts.length"
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center gap-8 gap-y-12"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center gap-4 bg-gradient-to-r from-fuchsia-200 to-blue-200 rounded-xl p-10"
     >
       <PostShort
         v-for="post in posts"

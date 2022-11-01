@@ -192,7 +192,10 @@ const options = {
       </ul>
     </div>
 
-    <div id="tabCategoriesContent">
+    <div
+      id="tabCategoriesContent"
+      class="gap-4 bg-gradient-to-r from-fuchsia-200 to-blue-200 rounded-xl p-10"
+    >
       <div id="uiux" class="p-4" role="tabpanel" aria-labelledby="uiux-tab">
         <KeepAlive>
           <Category :cat="14" />
