@@ -13,41 +13,64 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+    meta: {
+      title: "Home",
+    },
   },
   {
     path: "/contacts",
     name: "Contacts",
     component: Contacts,
+    meta: {
+      title: "Contacts",
+    },
   },
   {
     path: "/posts",
     name: "AllPosts",
     component: AllPosts,
     props: true,
+    meta: {
+      title: "AllPosts",
+    },
   },
   {
     path: "/posts/:id",
     name: "PostFull",
     component: PostFull,
     props: true,
+    meta: {
+      title: "PostFull",
+    },
   },
   {
     path: "/team",
     name: "TeamPage",
     component: TeamPage,
     props: true,
+    meta: {
+      title: "TeamPage",
+    },
   },
   {
     path: "/team/:id",
     name: "TeamFull",
     component: TeamFull,
     props: true,
+    meta: {
+      title: "TeamFull",
+    },
   },
 ];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
+});
+
+router.beforeEach((to, from, next) => {
+  document.title = `${to.meta.title}`;
+  next();
 });
 
 export default router;
