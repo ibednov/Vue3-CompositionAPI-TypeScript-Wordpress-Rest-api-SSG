@@ -7,6 +7,7 @@ import AllPosts from "../views/pages/AllPosts.vue";
 import TeamPage from "../views/pages/TeamPage.vue";
 import TeamFull from "../layouts/team/TeamFull.vue";
 import CategoryById from "../views/pages/CategoryById.vue";
+import NotFound from "../views/pages/NotFound.vue";
 
 //router file
 const routes = [
@@ -69,6 +70,14 @@ const routes = [
     props: true,
     meta: {
       title: "Category by id",
+    },
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "404 not found",
+    component: NotFound,
+    meta: {
+      title: "404 Not found",
     },
   },
 ];
