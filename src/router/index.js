@@ -6,6 +6,7 @@ import PostFull from "../layouts/posts/PostFull.vue";
 import AllPosts from "../views/pages/AllPosts.vue";
 import TeamPage from "../views/pages/TeamPage.vue";
 import TeamFull from "../layouts/team/TeamFull.vue";
+import CategoryById from "../views/pages/CategoryById.vue";
 
 //router file
 const routes = [
@@ -59,6 +60,15 @@ const routes = [
     props: true,
     meta: {
       title: "TeamFull",
+    },
+  },
+  {
+    path: "/category/:cat",
+    component: CategoryById,
+    name: "CategoryById",
+    props: true,
+    meta: {
+      title: "Category by id",
     },
   },
 ];
