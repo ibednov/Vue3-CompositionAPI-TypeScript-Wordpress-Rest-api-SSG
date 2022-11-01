@@ -51,11 +51,11 @@ loadCategories();
 
           <div class="flex flex-col md:flex-row gap-8 justify-start">
             <div
-              class="w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-violet-400 dark:from-pink-300 dark:to-violet-300"
+              class="md:w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-violet-400 dark:from-pink-300 dark:to-violet-300"
             >
               {{ $t("posts.full.project.theory") }}
             </div>
-            <div class="w-5/6 flex flex-col md:flex-row grow gap-4">
+            <div class="md:w-5/6 flex flex-col md:flex-row grow gap-4">
               <PostHeaderField
                 :field-value="page.acf.project_year[0]"
                 prop-class="basis-1/3"
@@ -76,12 +76,12 @@ loadCategories();
 
           <div class="flex flex-col md:flex-row gap-8 justify-start">
             <div
-              class="w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-lime-600 to-cyan-700 dark:from-lime-300 dark:to-cyan-300"
+              class="md:w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-lime-600 to-cyan-700 dark:from-lime-300 dark:to-cyan-300"
             >
               {{ $t("posts.full.project.practice") }}
             </div>
-            <div class="w-5/6 flex flex-col md:flex-row grow gap-4">
-              <div class="w-1/3 flex flex-col">
+            <div class="md:w-5/6 flex flex-col md:flex-row grow gap-4">
+              <div class="md:w-1/3 flex flex-col">
                 <div class="text-lg font-extralight">
                   {{ $t("posts.full.project.stack") }}
                 </div>
@@ -94,7 +94,7 @@ loadCategories();
                 </div>
               </div>
 
-              <div class="w-2/3 flex flex-col self-end">
+              <div class="md:w-2/3 flex flex-col md:self-end">
                 <div class="text-lg font-extralight">
                   {{ $t("posts.full.project.team") }}
                 </div>
@@ -131,13 +131,13 @@ loadCategories();
 
           <div class="flex flex-col md:flex-row gap-8 justify-start">
             <div
-              class="w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-indigo-400 dark:from-fuchsia-300 dark:to-indigo-400"
+              class="md:w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-indigo-400 dark:from-fuchsia-300 dark:to-indigo-400"
             >
               {{ $t("posts.full.project.result") }}
             </div>
 
             <div
-              class="w-5/6 flex flex-col md:flex-row grow gap-4 content-center"
+              class="md:w-5/6 flex flex-col md:flex-row grow gap-4 content-center"
             >
               <div class="basis-1/3 flex flex-col content-center">
                 <a

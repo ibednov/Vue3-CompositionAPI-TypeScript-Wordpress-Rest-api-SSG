@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/no-v-html -->
 <script setup>
 import { computed } from "vue";
 import getCategories from "../../../composibles/getCategories.js";
@@ -27,7 +26,7 @@ const snippet = computed(() => {
   >
     <div
       :id="post.acf.short_type"
-      class="hover:bg-white rounded-xl px-5 py-8 hover:shadow-xl hover:shadow-blue-500/10 hover:dark:shadow-blue-800/10 hover:scale-105 hover:delay-200 hover:duration-200 group"
+      class="hover:bg-white hover:dark:bg-indigo-900 rounded-xl px-5 py-8 hover:shadow-xl hover:shadow-blue-500/10 hover:dark:shadow-blue-800/10 hover:scale-105 hover:delay-200 hover:duration-200 group"
     >
       <img
         class="max-h-56 w-full object-cover rounded-xl justify-self-center"
@@ -36,14 +35,16 @@ const snippet = computed(() => {
       />
 
       <div class="text-gray-900 dark:text-gray-200">
-        <h5 class="text-stone-500 pt-3 pb-2">
+        <h5 class="text-stone-500 dark:text-stone-300 pt-3 pb-2">
           <div v-for="category in categories" :key="category.id">
             <a v-if="category.id === post.categories[0]" :href="category.link">
+              <!-- eslint-disable-next-line vue/no-v-html -->
               <div v-html="category.name" />
             </a>
           </div>
         </h5>
 
+        <!-- eslint-disable-next-line vue/no-v-html -->
         <h1
           class="text-3xl font-bold tracking-tight break-word group-hover:text-indigo-500"
           v-html="post.title.rendered"

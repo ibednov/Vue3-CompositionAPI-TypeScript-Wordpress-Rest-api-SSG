@@ -16,7 +16,7 @@ loadPosts();
 <template>
   <div
     v-if="posts.length"
-    class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center gap-8 gap-y-12"
+    class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center gap-4 bg-gradient-to-r from-fuchsia-200 to-blue-200 dark:from-blue-900 dark:to-teal-900 rounded-xl p-10"
   >
     <PostShort
       v-for="post in posts"
