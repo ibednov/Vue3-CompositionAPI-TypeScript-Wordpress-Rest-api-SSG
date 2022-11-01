@@ -1,6 +1,5 @@
 <script setup>
 import Category from "./CategoryById.vue";
-import "flowbite";
 
 // eslint-disable-next-line no-unused-vars
 const tabElements = [
@@ -34,7 +33,7 @@ const tabElements = [
 // options with default values
 // eslint-disable-next-line no-unused-vars
 const options = {
-  defaultTabId: "dev",
+  defaultTabId: "uiux",
   activeClasses:
     "text-blue-600 text-6xl hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-400 border-blue-600 dark:border-blue-500",
   inactiveClasses:
@@ -43,9 +42,6 @@ const options = {
     console.log("tab is shown");
   },
 };
-
-// eslint-disable-next-line no-unused-vars
-const Tabs = new (tabElements, options)();
 </script>
 
 <template>
