@@ -1,46 +1,53 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from "vue-router";
 
-import Home from '../views/pages/HomePage.vue'
-import Contacts from '../views/pages/ContactsPage.vue'
-import PostFull from '../layouts/posts/PostFull.vue'
-import TeamPage from '../views/pages/TeamPage.vue'
-import TeamFull from '../layouts/team/TeamFull.vue'
+import Home from "../views/pages/HomePage.vue";
+import Contacts from "../views/pages/ContactsPage.vue";
+import PostFull from "../layouts/posts/PostFull.vue";
+import AllPosts from "../views/pages/AllPosts.vue";
+import TeamPage from "../views/pages/TeamPage.vue";
+import TeamFull from "../layouts/team/TeamFull.vue";
 
 //router file
 const routes = [
-    {
-        path: "/",
-        name: "Home",
-        component: Home
-    },
-    {
-        path: "/contacts",
-        name: "Contacts",
-        component: Contacts
-    },
-    {
-        path: "/posts/:id",
-        name: "PostFull",
-        component: PostFull,
-        props: true
-    },
-    {
-        path: "/team",
-        name: "TeamPage",
-        component: TeamPage,
-        props: true
-    },
-    {
-        path: "/team/:id",
-        name: "TeamFull",
-        component: TeamFull,
-        props: true
-    },
+  {
+    path: "/",
+    name: "Home",
+    component: Home,
+  },
+  {
+    path: "/contacts",
+    name: "Contacts",
+    component: Contacts,
+  },
+  {
+    path: "/posts",
+    name: "AllPosts",
+    component: AllPosts,
+    props: true,
+  },
+  {
+    path: "/posts/:id",
+    name: "PostFull",
+    component: PostFull,
+    props: true,
+  },
+  {
+    path: "/team",
+    name: "TeamPage",
+    component: TeamPage,
+    props: true,
+  },
+  {
+    path: "/team/:id",
+    name: "TeamFull",
+    component: TeamFull,
+    props: true,
+  },
 ];
 
 const router = createRouter({
-    history: createWebHistory(),
-    routes
-})
+  history: createWebHistory(),
+  routes,
+});
 
-export default router
+export default router;
