@@ -17,7 +17,7 @@ loadPosts();
     <h1
       class="text-5xl uppercase font-extrabold w-full grow py-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-blue-500"
     >
-      Все посты
+      {{ $t("posts.allposts") }}
     </h1>
     <div
       v-if="posts.length"
