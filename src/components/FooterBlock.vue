@@ -28,7 +28,7 @@ const currentDate = new Date();
           </li>
           <li>
             <a href="/" class="mr-4 hover:underline md:mr-6">
-              {{ $t("header.blog") }}
+              {{ $t("categories.blog") }}
             </a>
           </li>
           <li>
