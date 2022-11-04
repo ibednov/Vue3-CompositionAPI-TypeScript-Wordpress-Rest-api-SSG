@@ -9,5 +9,6 @@ module.exports = {
     // "vue/no-unused-vars": "error",
     // Enable vue/script-setup-uses-vars rule
     // "vue/script-setup-uses-vars": "error",
+    // "vue/no-v-html": "error",
   },
 };
