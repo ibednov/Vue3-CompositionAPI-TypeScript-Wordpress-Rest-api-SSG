@@ -1,52 +1,10 @@
 <script setup>
 import Category from "./CategoryById.vue";
-
-// eslint-disable-next-line no-unused-vars
-const tabElements = [
-  {
-    id: "uiux",
-    triggerEl: document.querySelector("#profile-tab-example"),
-    targetEl: document.querySelector("#uiux-example"),
-  },
-  {
-    id: "brand",
-    triggerEl: document.querySelector("#brand-tab-example"),
-    targetEl: document.querySelector("#brand-example"),
-  },
-  {
-    id: "dev",
-    triggerEl: document.querySelector("#dev-tab"),
-    targetEl: document.querySelector("#dev"),
-  },
-  {
-    id: "gamedev",
-    triggerEl: document.querySelector("#gamedev-tab-example"),
-    targetEl: document.querySelector("#gamedev-example"),
-  },
-  {
-    id: "blog",
-    triggerEl: document.querySelector("#blog-tab-example"),
-    targetEl: document.querySelector("#blog-example"),
-  },
-];
-
-// options with default values
-// eslint-disable-next-line no-unused-vars
-const options = {
-  defaultTabId: "uiux",
-  activeClasses:
-    "text-blue-600 text-6xl hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-400 border-blue-600 dark:border-blue-500",
-  inactiveClasses:
-    "text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300",
-  onShow: () => {
-    console.log("tab is shown");
-  },
-};
 </script>
 
 <template>
   <main class="container mx-auto">
-    <div class="mb-4 border-b 0">
+    <div class="mb-4 0">
       <ul
         id="main_tabs"
         class="flex flex-wrap -mb-px text-sm font-medium text-center"
@@ -56,7 +14,7 @@ const options = {
         <li class="mr-2" role="presentation">
           <button
             id="uiux-tab"
-            class="flex flex-row gap-4 p-4 rounded-t-lg border-b-2 text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500"
+            class="flex flex-row gap-4 p-4 rounded-xl py-4 px-7 bg-gradient-to-br from-indigo-700 to-violet-700"
             data-tabs-target="#uiux"
             type="button"
             role="tab"
@@ -137,7 +95,7 @@ const options = {
         <li class="mr-2" role="presentation">
           <button
             id="gamedev-tab"
-            class="flex flex-row gap-4 p-4 rounded-t-lg cursor-not-allowed border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700"
+            class="flex flex-row gap-4 p-4 rounded-t-lg border-b-2 border-transparent active:border-blue-600 dark:border-transparent text-gray-500 dark:text-gray-600 border-gray-100 dark:border-gray-700 cursor-not-allowed"
             data-tabs-target="#gamedev"
             type="button"
             role="tab"
