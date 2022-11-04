@@ -99,8 +99,12 @@ import LangSwitcher from "./LangSwitcher.vue";
                       {{ $t("categories.dev") }}
                     </a>
                   </li>
+
                   <li>
-                    <a href="#" class="block py-2 px-4 text-gray-900">
+                    <a
+                      href="#"
+                      class="block py-2 px-4 cursor-not-allowed text-gray-300 dark:text-gray-900"
+                    >
                       {{ $t("categories.gamedev") }}
                     </a>
                   </li>
@@ -128,7 +132,7 @@ import LangSwitcher from "./LangSwitcher.vue";
 
             <li>
               <a
-                href="/team/alepsios"
+                href="/team/903"
                 class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 {{ $t("header.cv") }}
