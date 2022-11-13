@@ -1,8 +1,10 @@
 <script setup>
 import { inject } from "vue";
 
-// eslint-disable-next-line no-unused-vars
-const props = defineProps(["title"]);
+defineProps({
+  // eslint-disable-next-line vue/require-default-prop
+  title: String,
+});
 const selectedTitle = inject("selectedTitle");
 </script>
 
