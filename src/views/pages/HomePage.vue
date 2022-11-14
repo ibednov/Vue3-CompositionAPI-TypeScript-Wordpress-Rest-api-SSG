@@ -7,29 +7,24 @@ import Category from "./CategoryById.vue";
 <template>
   <main class="container mx-auto">
     <TabsList>
-      <TabSingle title="uiux">
-        {{ $t("categories.uiux") }}
+      <TabSingle :title="$t('categories.uiux')" name="uiux">
         <KeepAlive>
           <Category :cat="14" />
         </KeepAlive>
       </TabSingle>
-      <TabSingle title="brand">
-        {{ $t("categories.brand") }}
+      <TabSingle :title="$t('categories.brand')" name="brand">
         <KeepAlive>
           <Category :cat="87" />
         </KeepAlive>
       </TabSingle>
-      <TabSingle title="dev">
-        {{ $t("categories.dev") }}
+      <TabSingle :title="$t('categories.dev')" name="dev">
         <KeepAlive>
           <Category :cat="13" />
         </KeepAlive>
       </TabSingle>
-      <TabSingle title="gamedev">
-        {{ $t("categories.gamedev") }}
+      <TabSingle :title="$t('categories.gamedev')" name="gamedev" disabled>
       </TabSingle>
-      <TabSingle title="blog">
-        {{ $t("categories.blog") }}
+      <TabSingle :title="$t('categories.blog')" name="blog">
         <KeepAlive>
           <Category :cat="2" />
         </KeepAlive>
