@@ -3,8 +3,8 @@ import { inject } from "vue";
 
 defineProps({
   // eslint-disable-next-line vue/require-default-prop
-  // title: String,
   name: String,
+  // title: String,
 });
 const selectedTitle = inject("selectedTitle");
 </script>
