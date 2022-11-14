@@ -2,13 +2,8 @@
 import { ref, provide, useSlots } from "vue";
 
 const slots = useSlots();
-// const tabTitles = ref(slots.default().map((tab) => tab.props.name));
 const tabsArray = ref(slots.default().map((tab) => tab.props));
 const selectedTitle = ref(tabsArray.value[0].name);
-
-// console.log(tabsArray);
-
-// console.log(selectedTitle);
 
 provide("selectedTitle", selectedTitle);
 </script>
@@ -22,7 +17,6 @@ provide("selectedTitle", selectedTitle);
       @click="selectedTitle = item.name"
     >
       <div
-        class="px-8 py-4 rounded-xl text-center hover:bg-indigo-400 dark:hover:bg-indigo-800"
         class="px-8 py-4 rounded-xl text-center hover:bg-indigo-400 dark:hover:bg-indigo-800 flex flex-row gap-8 justify-center"
         :class="{
           'bg-gradient-to-r from-fuchsia-200 to-blue-400 text-black dark:from-indigo-400 dark:to-violet-400':
