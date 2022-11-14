@@ -78,6 +78,7 @@ import Category from "./CategoryById.vue";
       <TabSingle
         :title="$t('categories.gamedev')"
         name="gamedev"
+        disabled="true"
         icon=" <svg
       id='mdi-gamepad-variant-outline'
       class='w-6 h-6'

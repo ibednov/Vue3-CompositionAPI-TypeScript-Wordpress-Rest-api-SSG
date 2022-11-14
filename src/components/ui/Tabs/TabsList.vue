@@ -10,7 +10,7 @@ provide("selectedTitle", selectedTitle);
 
 <template>
   <div class="flex flex-col md:flex-row gap-4 justify-center mt-4 py-6">
-    <div
+    <button
       v-for="item in tabsArray"
       :key="item.name"
       class="grow px-8 py-4 rounded-xl text-center hover:bg-indigo-400 dark:hover:bg-indigo-800 flex flex-row gap-8 justify-center"
@@ -19,15 +19,18 @@ provide("selectedTitle", selectedTitle);
           selectedTitle == item.name,
         'bg-stone-100 text-black dark:bg-stone-800 dark:text-white':
           !selectedTitle == item.name,
+        'disabled cursor-not-allowed hover:!bg-stone-900': item.disabled,
       }"
+      :disabled="item.disabled"
       @click="selectedTitle = item.name"
+      @click.prevent="item.disabled"
     >
       <!-- eslint-disable-next-line vue/no-v-html -->
       <div v-html="item.icon" />
       <div class="font-light font-xl">
         {{ item.title }}
       </div>
-    </div>
+    </button>
   </div>
 
   <slot />
