@@ -19,7 +19,8 @@ provide("selectedTitle", selectedTitle);
           selectedTitle == item.name,
         'bg-stone-100 text-black dark:bg-stone-800 dark:text-white':
           !selectedTitle == item.name,
-        'disabled cursor-not-allowed hover:!bg-stone-900': item.disabled,
+        'disabled cursor-not-allowed dark:hover:!bg-stone-900 text-stone-300 hover:!bg-transparent':
+          item.disabled,
       }"
       :disabled="item.disabled"
       @click="selectedTitle = item.name"
