@@ -23,6 +23,7 @@ provide("selectedTitle", selectedTitle);
     >
       <div
         class="px-8 py-4 rounded-xl text-center hover:bg-indigo-400 dark:hover:bg-indigo-800"
+        class="px-8 py-4 rounded-xl text-center hover:bg-indigo-400 dark:hover:bg-indigo-800 flex flex-row gap-8 justify-center"
         :class="{
           'bg-gradient-to-r from-fuchsia-200 to-blue-400 text-black dark:from-indigo-400 dark:to-violet-400':
             selectedTitle == item.name,
@@ -31,13 +32,8 @@ provide("selectedTitle", selectedTitle);
           ),
         }"
       >
-        <!-- name : {{ item.name }} -->
-        <!-- <br /> -->
-        <!-- <div v-if="item.name == 'uiux'">uiux</div>
-        <div v-else-if="item.name == 'brand'">brand</div>
-        <div v-else-if="item.name == 'dev'">dev</div>
-        <div v-else-if="item.name == 'gamedev'">gamedev</div>
-        <div v-else>blog</div> -->
+        <!-- eslint-disable-next-line vue/no-v-html -->
+        <div v-html="item.icon" />
         {{ item.title }}
       </div>
     </div>
