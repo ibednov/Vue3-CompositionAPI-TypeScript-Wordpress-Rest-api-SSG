@@ -58,7 +58,6 @@ onMounted(() => {
               <div v-for="category in categories" :key="category.id">
                 <a
                   v-if="category.id === page.categories[0]"
-                  :href="category.link"
                   class="text-fuchsia-700 dark:text-violet-400 hover:text-purple-900"
                 >
                   <!-- eslint-disable-next-line vue/no-v-html -->
@@ -239,7 +238,6 @@ onMounted(() => {
             <div v-for="category in categories" :key="category.id" class="">
               <a
                 v-if="category.id === page.categories[0]"
-                :href="category.link"
                 class="text-fuchsia-700 dark:text-violet-400 hover:text-purple-900"
               >
                 <!-- eslint-disable vue/no-v-html -->
