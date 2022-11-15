@@ -39,6 +39,19 @@
                 "result": "Result",
                 "link": "Link to project",
                 "behance": "Link to Behance"
+            },
+            "blog": {
+                "tags": "Tags",
+                "type_label": "What is this post about ?",
+                "type_value": {
+                    "exp" : "Experience",
+                    "uiux-hacks" : "UI/UX hacks",
+                    "uiux-resources" : "Resources for UI/UX designer",
+                    "frontdev-hacks" : "Front-end hacks",
+                    "guide" : "Guide",
+                    "other" : "Other",
+                    "articles" : "Article"
+                }
             }
         },
         "short": {

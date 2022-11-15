@@ -40,6 +40,19 @@
                 "result": "Результат",
                 "link": "Ссылка на проект",
                 "behance": "Ссылка на Behance"
+            },
+            "blog": {
+                "tags": "Теги",
+                "type_label": "Что это ?",
+                "type_value": {
+                    "exp" : "Опыт",
+                    "uiux-hacks" : "UI/UX фишки",
+                    "uiux-resources" : "Ресурсы для UI/UX дизайнера",
+                    "frontdev-hacks" : "Front-end фишки",
+                    "guide" : "Гайды",
+                    "other" : "Прочее",
+                    "articles" : "Статьи"
+                }
             }
         },
         "short": {
