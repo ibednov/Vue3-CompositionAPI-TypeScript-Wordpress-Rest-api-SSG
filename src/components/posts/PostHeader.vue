@@ -39,7 +39,7 @@ onMounted(() => {
 
 <template>
   <div>
-    <div class="text-4xl md:text-7xl text-center uppercase font-extrabold py-4">
+    <div class="text-4xl md:text-7xl text-center uppercase font-extrabold py-6">
       <!-- eslint-disable-next-line vue/no-v-html -->
       <div v-html="page.title.rendered" />
     </div>
