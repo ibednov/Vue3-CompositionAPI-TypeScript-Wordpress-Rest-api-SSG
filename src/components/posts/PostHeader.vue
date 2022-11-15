@@ -31,7 +31,7 @@ loadCategories();
         class="bg-gradient-to-br from-sky-200 to-fuchsia-200 dark:from-cyan-900 dark:to-indigo-900 px-10 py-4 rounded-xl"
       >
         <div class="flex flex-col py-4 gap-y-4 gap-x-8">
-          <div class="flex flex-row">
+          <div v-if="!(page.categories[0] === 2)" class="flex flex-row">
             <div class="text-lg font-light pr-2">
               {{ $t("posts.full.project.cat") }}
             </div>
@@ -49,7 +49,11 @@ loadCategories();
             </div>
           </div>
 
-          <div class="flex flex-col md:flex-row gap-8 justify-start">
+          <!-- project theory -->
+          <div
+            v-if="!(page.categories[0] === 2)"
+            class="flex flex-col md:flex-row gap-8 justify-start"
+          >
             <div
               class="md:w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-violet-400 dark:from-pink-300 dark:to-violet-300 mix-blend-color-dodge"
             >
@@ -74,7 +78,11 @@ loadCategories();
             </div>
           </div>
 
-          <div class="flex flex-col md:flex-row gap-8 justify-start">
+          <!-- project practice -->
+          <div
+            v-if="!(page.categories[0] === 2)"
+            class="flex flex-col md:flex-row gap-8 justify-start"
+          >
             <div
               class="md:w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-lime-600 to-cyan-700 dark:from-lime-300 dark:to-cyan-300 mix-blend-color-dodge"
             >
@@ -129,7 +137,11 @@ loadCategories();
             </div>
           </div>
 
-          <div class="flex flex-col md:flex-row gap-8 justify-start">
+          <!-- project result -->
+          <div
+            v-if="!(page.categories[0] === 2)"
+            class="flex flex-col md:flex-row gap-8 justify-start"
+          >
             <div
               class="md:w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-indigo-400 dark:from-fuchsia-300 dark:to-indigo-400 mix-blend-color-dodge"
             >
