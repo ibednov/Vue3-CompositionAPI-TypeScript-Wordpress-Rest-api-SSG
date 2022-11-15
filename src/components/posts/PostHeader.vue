@@ -1,4 +1,6 @@
 <script setup>
+import { onMounted } from "vue";
+
 import PostHeaderField from "./PostHeaderField.vue";
 import getTeam from "../../composibles/getTeam.js";
 import getCategories from "../../composibles/getCategories.js";
@@ -16,6 +18,19 @@ loadTeam();
 
 const { categories, load: loadCategories } = getCategories();
 loadCategories();
+
+onMounted(() => {
+  const metaTitle = props.page.yoast_head_json.title;
+  document.title = metaTitle;
+
+  const metaDesc = document.createElement("meta");
+  metaDesc.name = "description";
+  metaDesc.content = props.page.yoast_head_json.description
+    ? props.page.yoast_head_json.description
+    : props.page.yoast_head_json.og_description;
+
+  document.head.appendChild(metaDesc);
+});
 </script>
 
 <template>
