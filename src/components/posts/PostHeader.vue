@@ -28,7 +28,7 @@ loadCategories();
     <!-- full_header -->
     <div class="container mx-auto pb-10">
       <div
-        class="bg-gradient-to-br from-sky-200 to-fuchsia-200 dark:from-red-900 dark:to-fuchsia-900 px-10 py-4 rounded-xl"
+        class="bg-gradient-to-br from-sky-200 to-fuchsia-200 dark:from-cyan-900 dark:to-indigo-900 px-10 py-4 rounded-xl"
       >
         <div class="flex flex-col py-4 gap-y-4 gap-x-8">
           <div class="flex flex-row">
@@ -51,7 +51,7 @@ loadCategories();
 
           <div class="flex flex-col md:flex-row gap-8 justify-start">
             <div
-              class="md:w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-violet-400 dark:from-pink-300 dark:to-violet-300"
+              class="md:w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-violet-400 dark:from-pink-300 dark:to-violet-300 mix-blend-color-dodge"
             >
               {{ $t("posts.full.project.theory") }}
             </div>
@@ -76,7 +76,7 @@ loadCategories();
 
           <div class="flex flex-col md:flex-row gap-8 justify-start">
             <div
-              class="md:w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-lime-600 to-cyan-700 dark:from-lime-300 dark:to-cyan-300"
+              class="md:w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-lime-600 to-cyan-700 dark:from-lime-300 dark:to-cyan-300 mix-blend-color-dodge"
             >
               {{ $t("posts.full.project.practice") }}
             </div>
@@ -131,7 +131,7 @@ loadCategories();
 
           <div class="flex flex-col md:flex-row gap-8 justify-start">
             <div
-              class="md:w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-indigo-400 dark:from-fuchsia-300 dark:to-indigo-400"
+              class="md:w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-indigo-400 dark:from-fuchsia-300 dark:to-indigo-400 mix-blend-color-dodge"
             >
               {{ $t("posts.full.project.result") }}
             </div>
