@@ -3,6 +3,7 @@ import { onMounted } from "vue";
 
 import PostHeaderField from "./PostHeaderField.vue";
 import getTeam from "../../composibles/getTeam.js";
+import getTags from "@/composibles/getTags.js";
 import getCategories from "../../composibles/getCategories.js";
 
 import "../../plugins/wordpress-gutenberg.js";
@@ -12,6 +13,9 @@ const props = defineProps({
   // eslint-disable-next-line vue/require-default-prop
   page: Object,
 });
+
+const { tags, load: loadTags } = getTags();
+loadTags();
 
 const { team, load: loadTeam } = getTeam();
 loadTeam();
