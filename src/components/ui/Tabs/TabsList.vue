@@ -13,13 +13,13 @@ provide("selectedTitle", selectedTitle);
     <button
       v-for="item in tabsArray"
       :key="item.name"
-      class="grow px-8 py-4 rounded-xl text-center hover:bg-indigo-400 dark:hover:bg-indigo-800 flex flex-row gap-8 justify-center"
+      class="grow px-8 py-4 rounded-xl text-center hover:bg-indigo-400 dark:hover:bg-indigo-800 flex flex-row gap-x-3 justify-center"
       :class="{
         'bg-gradient-to-r from-fuchsia-200 to-blue-400 text-black dark:from-indigo-400 dark:to-violet-400':
           selectedTitle == item.name,
         'bg-stone-100 text-black dark:bg-stone-800 dark:text-white':
           !selectedTitle == item.name,
-        'disabled cursor-not-allowed dark:hover:!bg-stone-900 text-stone-300 hover:!bg-transparent':
+        'disabled cursor-not-allowed dark:hover:!bg-stone-900 dark:text-stone-700 text-stone-300 hover:!bg-transparent':
           item.disabled,
       }"
       :disabled="item.disabled"
