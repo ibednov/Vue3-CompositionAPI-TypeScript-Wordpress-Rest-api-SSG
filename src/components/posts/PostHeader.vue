@@ -233,6 +233,50 @@ onMounted(() => {
               </div>
             </div>
           </div>
+
+          <!-- page.info for cat#2 -->
+          <div v-if="page.categories[0] === 2" class="flex flex-col">
+            <div v-for="category in categories" :key="category.id" class="">
+              <a
+                v-if="category.id === page.categories[0]"
+                :href="category.link"
+                class="text-fuchsia-700 dark:text-violet-400 hover:text-purple-900"
+              >
+                <!-- eslint-disable vue/no-v-html -->
+                <div
+                  class="md:w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-lime-600 to-cyan-700 dark:from-lime-300 dark:to-cyan-300 mix-blend-color-dodge"
+                  v-html="category.name"
+                />
+              </a>
+            </div>
+
+            <div class="md:w-5/6 flex flex-col md:flex-row grow gap-2 py-4">
+              <div class="md:w-1/3 flex flex-col">
+                <div class="text-lg font-extralight">
+                  {{ $t("posts.full.blog.tags") }}
+                </div>
+                <div v-for="tag in page.tags" :key="tag">
+                  <div v-for="i in tags" :key="i">
+                    <div v-if="i.id === tag" class="text-lg font-semibold">
+                      {{ i.name }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="md:w-1/3 flex flex-col">
+                <div class="text-lg font-extralight">
+                  {{ $t("posts.full.blog.type_label") }}
+                </div>
+
+                <div class="text-lg font-semibold">
+                  {{
+                    $t("posts.full.blog.type_value." + `${page.acf.blog_type}`)
+                  }}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
