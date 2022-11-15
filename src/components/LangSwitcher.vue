@@ -1,7 +1,13 @@
 <script setup>
 import { useStore } from "vuex";
+import { useLangStore } from "@/pinia/lang";
 
 const store = useStore();
+
+const lang = useLangStore();
+
+console.log(lang.currentLang);
+
 const handleChangeLocaleRu = () => store.dispatch("setLocale", "ru");
 const handleChangeLocaleEn = () => store.dispatch("setLocale", "en");
 </script>
