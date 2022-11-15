@@ -1,4 +1,5 @@
 import { createApp } from "vue";
+import { createPinia } from "pinia";
 
 import router from "./router";
 import store from "./store";
@@ -14,4 +15,6 @@ if ("serviceWorker" in navigator) {
   registerSW();
 }
 
-createApp(App).use(i18n).use(router).use(store).mount("#app");
+const pinia = createPinia();
+
+createApp(App).use(i18n).use(pinia).use(router).use(store).mount("#app");
