@@ -73,7 +73,7 @@ onMounted(() => {
             class="flex flex-col md:flex-row gap-8 justify-start"
           >
             <div
-              class="md:w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-violet-400 dark:from-pink-300 dark:to-violet-300 mix-blend-color-dodge"
+              class="md:w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-violet-400 dark:from-pink-300 dark:to-violet-300 dark:mix-blend-color-dodge"
             >
               {{ $t("posts.full.project.theory") }}
             </div>
@@ -102,7 +102,7 @@ onMounted(() => {
             class="flex flex-col md:flex-row gap-8 justify-start"
           >
             <div
-              class="md:w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-lime-600 to-cyan-700 dark:from-lime-300 dark:to-cyan-300 mix-blend-color-dodge"
+              class="md:w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-lime-600 to-cyan-700 dark:from-lime-300 dark:to-cyan-300 dark:mix-blend-color-dodge"
             >
               {{ $t("posts.full.project.practice") }}
             </div>
@@ -161,7 +161,7 @@ onMounted(() => {
             class="flex flex-col md:flex-row gap-8 justify-start"
           >
             <div
-              class="md:w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-indigo-400 dark:from-fuchsia-300 dark:to-indigo-400 mix-blend-color-dodge"
+              class="md:w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-indigo-400 dark:from-fuchsia-300 dark:to-indigo-400 dark:mix-blend-color-dodge"
             >
               {{ $t("posts.full.project.result") }}
             </div>
@@ -242,7 +242,7 @@ onMounted(() => {
               >
                 <!-- eslint-disable vue/no-v-html -->
                 <div
-                  class="md:w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-lime-600 to-cyan-700 dark:from-lime-300 dark:to-cyan-300 mix-blend-color-dodge"
+                  class="md:w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-lime-600 to-cyan-700 dark:from-lime-300 dark:to-cyan-300 dark:mix-blend-color-dodge"
                   v-html="category.name"
                 />
               </a>
