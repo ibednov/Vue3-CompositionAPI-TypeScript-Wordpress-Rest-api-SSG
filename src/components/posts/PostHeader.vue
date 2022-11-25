@@ -2,11 +2,10 @@
 import { onMounted } from "vue";
 
 import PostHeaderField from "./PostHeaderField.vue";
-import getTeam from "../../composibles/getTeam.js";
+import getTeam from "@/composibles/getTeam.js";
 import getTags from "@/composibles/getTags.js";
-import getCategories from "../../composibles/getCategories.js";
+import getCategories from "@/composibles/getCategories.js";
 
-import "../../plugins/wordpress-gutenberg.js";
 import "@/plugins/wp-gutenberg.js";
 
 // eslint-disable-next-line no-unused-vars
