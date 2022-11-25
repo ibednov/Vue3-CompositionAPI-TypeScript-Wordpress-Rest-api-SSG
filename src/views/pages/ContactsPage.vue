@@ -150,7 +150,7 @@
     <div class="basis-1/2">
       <img
         class="rounded-xl"
-        src="http://127.0.0.1:8080/wp-content/uploads/2021/02/low_IMG_022.webp"
+        src="https://api.alexbednov.work/wp-content/uploads/2021/02/low_IMG_022.webp"
         alt=""
       />
     </div>
