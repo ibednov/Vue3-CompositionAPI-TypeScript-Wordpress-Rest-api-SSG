@@ -138,7 +138,6 @@ onMounted(() => {
                               name: 'TeamFull',
                               params: { id: member.id, member: member },
                             }"
-                            target="_blank"
                             class="text-fuchsia-700 dark:text-violet-400 hover:text-purple-900"
                           >
                             {{ member.title.rendered }}
