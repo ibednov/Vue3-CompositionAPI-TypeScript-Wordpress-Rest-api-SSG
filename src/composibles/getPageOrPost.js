@@ -3,7 +3,7 @@ import axios from "axios";
 
 import "../plugins/wp-stackable.js";
 
-const url = "http://127.0.0.1:8080/wp-json/wp/v2/";
+const url = "https://api.alexbednov.work/wp-json/wp/v2/";
 const getPage = (type, id) => {
   const page = ref([]);
   const load = async () => {

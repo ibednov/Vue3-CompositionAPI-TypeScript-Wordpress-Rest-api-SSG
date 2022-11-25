@@ -1,21 +1,22 @@
 import { ref } from "vue";
-import axios from 'axios'
+import axios from "axios";
 
-const url = "http://127.0.0.1:8080/wp-json/wp/v2/posts?per_page=100&categories="
+const url =
+  "https://api.alexbednov.work/wp-json/wp/v2/posts?per_page=100&categories=";
 
 const getPosts = (cat) => {
-    const posts = ref([]);
+  const posts = ref([]);
 
-    const load = async () => {
-        try {
-            let { data } = await axios(url + cat)
-            posts.value = data
-        } catch (error) {
-            console.log(error)
-        }
+  const load = async () => {
+    try {
+      let { data } = await axios(url + cat);
+      posts.value = data;
+    } catch (error) {
+      console.log(error);
     }
+  };
 
-    return { posts, load }
-}
+  return { posts, load };
+};
 
-export default getPosts
+export default getPosts;

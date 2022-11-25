@@ -1,20 +1,20 @@
 import { ref } from "vue";
-import axios from 'axios'
+import axios from "axios";
 
-import '../plugins/wp-stackable.js'
+import "../plugins/wp-stackable.js";
 
-const url = "http://127.0.0.1:8080/wp-json/wp/v2/pages/"
+const url = "https://api.alexbednov.work/wp-json/wp/v2/pages/";
 const getContacts = (id) => {
-    const contacts = ref([]);
-    const load = async () => {
-        try {
-            let { data } = await axios(url + id)
-            contacts.value = data
-        } catch (error) {
-            console.log(error)
-        }
+  const contacts = ref([]);
+  const load = async () => {
+    try {
+      let { data } = await axios(url + id);
+      contacts.value = data;
+    } catch (error) {
+      console.log(error);
     }
-    return { contacts, load }
-}
+  };
+  return { contacts, load };
+};
 
-export default getContacts
+export default getContacts;
