@@ -1,15 +1,10 @@
-
-
-@import url('./assets/css/tailwind.css');
+@import url("@/assets/css/tailwind.css");
 /* @import url('./assets/css/bg-colors.css'); */
 /* @import url('./card.css'); */
-@import url('./assets/css/timeline.css');
-@import url('./assets/css/other-styles.css');
+@import url("@/assets/css/timeline.css");
+@import url("@/assets/css/other-styles.css");
 
 /* wordpress plugins */
 /* stackable */
-/* @import url('http://127.0.0.1:8080/wp-content/plugins/stackable-ultimate-gutenberg-blocks-premium/dist/frontend_blocks.css'); */
-/* @import url('http://127.0.0.1:8080/wp-content/plugins/stackable-ultimate-gutenberg-blocks-premium/dist/frontend_blocks__premium_only.css'); */
-
-
-
+@import url("@/plugins/wp-stackable.css");
+@import url("@/plugins/wp-gutenberg.css");
