@@ -7,7 +7,7 @@ const routes = [
     path: "/",
     name: "Home",
     component: defineAsyncComponent(() =>
-      import("../views/pages/HomePage.vue")
+      import("@/components/views/pages/HomePage.vue")
     ),
     meta: {
       title: "Alebednov.work / home",
@@ -17,7 +17,7 @@ const routes = [
     path: "/contacts",
     name: "Contacts",
     component: defineAsyncComponent(() =>
-      import("../views/pages/ContactsPage.vue")
+      import("@/components/views/pages/ContactsPage.vue")
     ),
     meta: {
       title: "Contacts",
@@ -27,7 +27,7 @@ const routes = [
     path: "/posts",
     name: "AllPosts",
     component: defineAsyncComponent(() =>
-      import("../views/pages/AllPosts.vue")
+      import("@/components/views/posts/PostsAll.vue")
     ),
     props: true,
     meta: {
@@ -38,7 +38,7 @@ const routes = [
     path: "/posts/:id",
     name: "PostFull",
     component: defineAsyncComponent(() =>
-      import("../layouts/posts/PostFull.vue")
+      import("@/components/views/posts/PostsDisplay/PostFull.vue")
     ),
     props: true,
     meta: {
@@ -49,7 +49,7 @@ const routes = [
     path: "/team",
     name: "TeamPage",
     component: defineAsyncComponent(() =>
-      import("../views/pages/TeamPage.vue")
+      import("@/components/views/team/TeamPage.vue")
     ),
     props: true,
     meta: {
@@ -60,7 +60,7 @@ const routes = [
     path: "/team/:id",
     name: "TeamFull",
     component: defineAsyncComponent(() =>
-      import("../layouts/team/TeamFull.vue")
+      import("@/components/views/team/TeamDisplay/TeamFull.vue")
     ),
     props: true,
     meta: {
@@ -70,7 +70,7 @@ const routes = [
   {
     path: "/category/:cat",
     component: defineAsyncComponent(() =>
-      import("../views/pages/CategoryById.vue")
+      import("@/components/views/posts/PostsByCategory.vue")
     ),
     name: "CategoryById",
     props: true,
@@ -82,7 +82,7 @@ const routes = [
     path: "/:pathMatch(.*)*",
     name: "404 not found",
     component: defineAsyncComponent(() =>
-      import("../views/pages/NotFound.vue")
+      import("@/components/views/pages/ErrorPage.vue")
     ),
     meta: {
       title: "404 Not found",
