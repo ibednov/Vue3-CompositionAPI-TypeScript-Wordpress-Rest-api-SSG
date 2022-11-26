@@ -38,7 +38,9 @@ onMounted(() => {
 
 <template>
   <div>
-    <div class="text-4xl md:text-7xl text-center uppercase font-extrabold py-6">
+    <div
+      class="text-4xl md:text-7xl text-center uppercase font-extrabold py-6 px-2"
+    >
       <!-- eslint-disable-next-line vue/no-v-html -->
       <div v-html="page.title.rendered" />
     </div>
@@ -46,7 +48,7 @@ onMounted(() => {
     <!-- full_header -->
     <div class="container mx-auto pb-10">
       <div
-        class="bg-gradient-to-br from-sky-200 to-fuchsia-200 dark:from-cyan-900 dark:to-indigo-900 px-10 py-4 rounded-xl"
+        class="bg-gradient-to-br from-sky-200 to-fuchsia-200 dark:from-cyan-900 dark:to-indigo-900 px-10 md:py-4 rounded-xl"
       >
         <div class="flex flex-col py-4 gap-y-4 gap-x-8">
           <div v-if="!(page.categories[0] === 2)" class="flex flex-row">

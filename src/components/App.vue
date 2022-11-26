@@ -10,6 +10,6 @@ onMounted(() => {
 
 <template>
   <NavBar class="pb-4 md:pb-28" />
-  <router-view />
+  <router-view class="p-3 md:p-0" />
   <FooterBlock />
 </template>
