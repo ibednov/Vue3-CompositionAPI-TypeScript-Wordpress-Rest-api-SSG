@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from "vue";
-import getCategories from "../../../composibles/getCategories.js";
+import getCategories from "@/composibles/getCategories.js";
 const { categories, load: loadCategories } = getCategories();
 loadCategories();
 const props = defineProps({
@@ -21,13 +21,12 @@ const snippet = computed(() => {
       :id="post.acf.short_type"
       class="rounded-xl px-5 py-8 hover:bg-white hover:dark:bg-stone-900 hover:shadow-xl hover:shadow-blue-500/10 hover:dark:shadow-blue-800/10 hover:scale-105 hover:delay-200 hover:duration-200 group"
     >
-      <div class="flex justify-center">
-        <img
-          class="flex w-2/3 object-contain -mt-12 rounded-xl"
-          :src="post.featured_image_urls.medium_large[0]"
-          :alt="post.title.rendered"
-        />
-      </div>
+      <img
+        class="max-h-56 w-full object-cover rounded-xl justify-self-center"
+        :src="post.featured_image_urls.medium_large[0]"
+        :alt="post.title.rendered"
+      />
+
       <div class="text-gray-900 dark:text-gray-200">
         <div v-if="$route.path == '/posts'">
           <h5 class="text-sm text-stone-500 dark:text-stone-300 pt-3 pb-2">

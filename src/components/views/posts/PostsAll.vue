@@ -1,13 +1,7 @@
 <script setup>
-import PostShort from "../../layouts/posts/PostShort.vue";
-import getPostsAll from "../../composibles/getPostsAll.js";
-import SpinnerLoader from "../../components/SpinnerLoader.vue";
-
-// // eslint-disable-next-line no-unused-vars
-// const props = defineProps({
-//   // eslint-disable-next-line vue/require-default-prop
-//   posts: Object,
-// });
+import PostShort from "./PostsDisplay/PostShort.vue";
+import getPostsAll from "@/composibles/getPostsAll.js";
+import SpinnerLoader from "@/components/ui/layouts/SmallComponents/SpinnerLoader.vue";
 
 const { posts, load: loadPosts } = getPostsAll();
 loadPosts();

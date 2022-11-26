@@ -1,8 +1,8 @@
 <script setup>
 import { useRoute } from "vue-router";
-import getPageOrPost from "../../composibles/getPageOrPost";
-import PostHeaderPost from "../../components/posts/PostHeader.vue";
-import PostBody from "../../components/posts/PostBody.vue";
+import getPageOrPost from "@/composibles/getPageOrPost";
+import PostHeader from "./PostFullDisplay/PostHeader.vue";
+import PostBody from "./PostFullDisplay/PostBody.vue";
 
 const route = useRoute();
 const { page, load: loadGetPageOrPost } = getPageOrPost(
@@ -21,8 +21,8 @@ const props = defineProps({
 <template>
   <article>
     <div class="flex flex-col">
-      <PostHeaderPost v-if="page.type === 'post'" :page="page" />
-      <PostHeaderPost v-else-if="page.type === 'team'" :page="page" />
+      <PostHeader v-if="page.type === 'post'" :page="page" />
+      <PostHeader v-else-if="page.type === 'team'" :page="page" />
       <div v-else>What can I do?</div>
     </div>
     <PostBody :page="page" />

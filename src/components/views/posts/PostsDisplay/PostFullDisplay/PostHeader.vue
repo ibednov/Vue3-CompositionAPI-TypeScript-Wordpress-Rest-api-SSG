@@ -32,7 +32,6 @@ onMounted(() => {
   metaDesc.content = props.page.yoast_head_json.description
     ? props.page.yoast_head_json.description
     : props.page.yoast_head_json.og_description;
-
   document.head.appendChild(metaDesc);
 });
 </script>

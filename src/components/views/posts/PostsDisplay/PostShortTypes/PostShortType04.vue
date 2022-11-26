@@ -1,7 +1,7 @@
 <!-- eslint-disable no-unused-vars -->
 <script setup>
 import { computed } from "vue";
-import getCategories from "../../../composibles/getCategories.js";
+import getCategories from "@/composibles/getCategories.js";
 const { categories, load: loadCategories } = getCategories();
 loadCategories();
 const props = defineProps({
