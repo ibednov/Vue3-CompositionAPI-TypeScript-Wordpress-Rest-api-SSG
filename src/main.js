@@ -6,8 +6,8 @@ import store from "./store";
 
 import { i18n } from "./plugins/i18n.js";
 
-import "./style.css";
-import App from "./App.vue";
+import "@/assets/style.css";
+import App from "@/components/App.vue";
 
 const pinia = createPinia();
 
