@@ -1,5 +1,5 @@
 <script setup>
-import LangSwitcher from "./LangSwitcher.vue";
+import LangSwitcher from "@/components/ui/layouts/SmallComponents/LangSwitcher.vue";
 </script>
 <template>
   <div>
@@ -22,8 +22,7 @@ import LangSwitcher from "./LangSwitcher.vue";
         <router-link
           :to="{ name: 'Contacts' }"
           type="button"
-          class="font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 md:order-last text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          onclick="replain_show(event)"
+          class="md:order-last text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
         >
           {{ $t("header.contact_me") }}
         </router-link>
