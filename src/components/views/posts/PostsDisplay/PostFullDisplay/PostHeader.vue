@@ -247,7 +247,7 @@ onMounted(() => {
             </div>
 
             <div class="md:w-5/6 flex flex-col md:flex-row grow gap-2 py-4">
-              <div class="md:w-1/3 flex flex-col">
+              <div v-if="page.tags.length" class="md:w-1/3 flex flex-col">
                 <div class="text-lg font-extralight">
                   {{ $t("posts.full.blog.tags") }}
                 </div>
