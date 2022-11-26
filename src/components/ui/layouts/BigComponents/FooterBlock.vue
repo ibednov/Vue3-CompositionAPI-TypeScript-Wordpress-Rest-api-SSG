@@ -27,7 +27,7 @@ const currentDate = new Date();
             </a>
           </li>
           <li>
-            <a href="/" class="mr-4 hover:underline md:mr-6">
+            <a href="/category/2" class="mr-4 hover:underline md:mr-6">
               {{ $t("categories.blog") }}
             </a>
           </li>
