@@ -92,5 +92,11 @@
         "loader": {
             "loading": "Loading..."
         }
+    },
+    "error" : {
+        "error" : "error",
+        "not_found" : "Page not found",
+        "try_else" : "Try something else instead.",
+        "maybe_main" : "May we go to the home page?"
     }
 }
