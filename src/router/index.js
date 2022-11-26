@@ -1,20 +1,14 @@
 import { createRouter, createWebHistory } from "vue-router";
-
-import Home from "../views/pages/HomePage.vue";
-import Contacts from "../views/pages/ContactsPage.vue";
-import PostFull from "../layouts/posts/PostFull.vue";
-import AllPosts from "../views/pages/AllPosts.vue";
-import TeamPage from "../views/pages/TeamPage.vue";
-import TeamFull from "../layouts/team/TeamFull.vue";
-import CategoryById from "../views/pages/CategoryById.vue";
-import NotFound from "../views/pages/NotFound.vue";
+import { defineAsyncComponent } from "vue";
 
 //router file
 const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home,
+    component: defineAsyncComponent(() =>
+      import("../views/pages/HomePage.vue")
+    ),
     meta: {
       title: "Alebednov.work / home",
     },
@@ -22,7 +16,9 @@ const routes = [
   {
     path: "/contacts",
     name: "Contacts",
-    component: Contacts,
+    component: defineAsyncComponent(() =>
+      import("../views/pages/ContactsPage.vue")
+    ),
     meta: {
       title: "Contacts",
     },
@@ -30,7 +26,9 @@ const routes = [
   {
     path: "/posts",
     name: "AllPosts",
-    component: AllPosts,
+    component: defineAsyncComponent(() =>
+      import("../views/pages/AllPosts.vue")
+    ),
     props: true,
     meta: {
       title: "AllPosts",
@@ -39,7 +37,9 @@ const routes = [
   {
     path: "/posts/:id",
     name: "PostFull",
-    component: PostFull,
+    component: defineAsyncComponent(() =>
+      import("../layouts/posts/PostFull.vue")
+    ),
     props: true,
     meta: {
       title: "PostFull",
@@ -48,7 +48,9 @@ const routes = [
   {
     path: "/team",
     name: "TeamPage",
-    component: TeamPage,
+    component: defineAsyncComponent(() =>
+      import("../views/pages/TeamPage.vue")
+    ),
     props: true,
     meta: {
       title: "TeamPage",
@@ -57,7 +59,9 @@ const routes = [
   {
     path: "/team/:id",
     name: "TeamFull",
-    component: TeamFull,
+    component: defineAsyncComponent(() =>
+      import("../layouts/team/TeamFull.vue")
+    ),
     props: true,
     meta: {
       title: "TeamFull",
@@ -65,7 +69,9 @@ const routes = [
   },
   {
     path: "/category/:cat",
-    component: CategoryById,
+    component: defineAsyncComponent(() =>
+      import("../views/pages/CategoryById.vue")
+    ),
     name: "CategoryById",
     props: true,
     meta: {
@@ -75,7 +81,9 @@ const routes = [
   {
     path: "/:pathMatch(.*)*",
     name: "404 not found",
-    component: NotFound,
+    component: defineAsyncComponent(() =>
+      import("../views/pages/NotFound.vue")
+    ),
     meta: {
       title: "404 Not found",
     },
