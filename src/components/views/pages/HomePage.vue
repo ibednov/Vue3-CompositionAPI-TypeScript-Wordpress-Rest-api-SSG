@@ -1,7 +1,7 @@
 <script setup>
-import TabSingle from "../../components/ui/Tabs/TabSingle.vue";
-import TabsList from "../../components/ui/Tabs/TabsList.vue";
-import Category from "./CategoryById.vue";
+import TabSingle from "@/components/ui/Tabs/TabSingle.vue";
+import TabsList from "@/components/ui/Tabs/TabsList.vue";
+import Category from "@/components/views/posts/PostsByCategory.vue";
 </script>
 
 <template>
