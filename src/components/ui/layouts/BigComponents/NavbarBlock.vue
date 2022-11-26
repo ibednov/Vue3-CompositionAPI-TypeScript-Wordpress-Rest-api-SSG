@@ -140,10 +140,6 @@ import LangSwitcher from "@/components/ui/layouts/SmallComponents/LangSwitcher.v
           </ul>
         </div>
       </div>
-
-      <div>
-        <!-- {{ $t('header.home') }} -->
-      </div>
     </nav>
   </div>
 </template>
