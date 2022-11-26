@@ -7,9 +7,6 @@ const props = defineProps({
   // eslint-disable-next-line vue/require-default-prop
   member: Object,
 });
-// const snippet = computed(() => {
-//     return props.member + "...";
-// });
 </script>
 
 <template>

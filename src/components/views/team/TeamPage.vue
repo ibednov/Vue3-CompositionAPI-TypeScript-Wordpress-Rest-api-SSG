@@ -1,7 +1,7 @@
 <script setup>
-import getTeam from "../../composibles/getTeam.js";
-import TeamShort from "../../layouts/team/TeamShort.vue";
-import SpinnerLoader from "../../components/SpinnerLoader.vue";
+import getTeam from "@/composibles/getTeam.js";
+import TeamShort from "./TeamDisplay/TeamShort.vue";
+import SpinnerLoader from "@/components/ui/layouts/SmallComponents/SpinnerLoader.vue";
 
 // eslint-disable-next-line no-unused-vars
 const props = defineProps({

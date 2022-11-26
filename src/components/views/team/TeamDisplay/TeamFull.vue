@@ -1,6 +1,6 @@
 <script setup>
 import { useRoute } from "vue-router";
-import getTeamMember from "../../composibles/getTeamMember";
+import getTeamMember from "@/composibles/getTeamMember";
 import { useStore } from "vuex";
 import { onMounted } from "vue";
 
@@ -10,15 +10,19 @@ const route = useRoute();
 const { member, load: loadGetTeamMember } = getTeamMember(route.params.id);
 loadGetTeamMember();
 
+console.log(member);
+
 onMounted(() => {
-  const metaTitle = member.value.yoast_head_json.title;
+  const metaTitle = member.yoast_head_json.title
+    ? member.yoast_head_json.title
+    : member.title.rendered;
   document.title = metaTitle;
 
   const metaDesc = document.createElement("meta");
   metaDesc.name = "description";
-  metaDesc.content = member.value.yoast_head_json.description
-    ? member.value.yoast_head_json.description
-    : member.value.yoast_head_json.og_description;
+  metaDesc.content = member.yoast_head_json.description
+    ? member.yoast_head_json.description
+    : member.yoast_head_json.og_description;
   document.head.appendChild(metaDesc);
 });
 </script>
