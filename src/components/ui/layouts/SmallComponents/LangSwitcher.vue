@@ -56,7 +56,7 @@ const handleChangeLocaleEn = () => store.dispatch('setLocale', 'en');
         </g>
       </svg>
       <span class="hidden sm:block">
-        {{ $t("langs.en") }}
+        {{ $t('langs.en') }}
       </span>
     </button>
     <button
@@ -79,7 +79,7 @@ const handleChangeLocaleEn = () => store.dispatch('setLocale', 'en');
         </g>
       </svg>
       <span class="hidden sm:block">
-        {{ $t("langs.ru") }}
+        {{ $t('langs.ru') }}
       </span>
     </button>
 
@@ -143,7 +143,7 @@ const handleChangeLocaleEn = () => store.dispatch('setLocale', 'en');
                   <use xlink:href="#e" x="2470"></use>
                 </g>
               </svg>
-              {{ $t("langs.en") }}
+              {{ $t('langs.en') }}
             </div>
           </button>
         </li>
@@ -184,7 +184,7 @@ const handleChangeLocaleEn = () => store.dispatch('setLocale', 'en');
                   <path fill="#d52b1e" d="M0 341.3h512V512H0z" />
                 </g>
               </svg>
-              {{ $t("langs.ru") }}
+              {{ $t('langs.ru') }}
             </div>
           </button>
         </li>
@@ -199,7 +199,7 @@ const handleChangeLocaleEn = () => store.dispatch('setLocale', 'en');
       aria-expanded="false"
     >
       <span class="sr-only">
-        {{ $t("header.open_menu") }}
+        {{ $t('header.open_menu') }}
       </span>
       <svg
         class="w-6 h-6"

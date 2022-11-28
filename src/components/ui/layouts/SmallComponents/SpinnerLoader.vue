@@ -17,7 +17,7 @@
         />
       </svg>
       <span class="sr-only">
-        {{ $t("etc.loader.loading") }}
+        {{ $t('etc.loader.loading') }}
       </span>
     </div>
   </div>

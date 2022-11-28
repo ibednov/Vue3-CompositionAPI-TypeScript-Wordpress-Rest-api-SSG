@@ -1,10 +1,10 @@
 <script setup>
-import { onMounted } from "vue";
-import NavBar from "@/components/ui/layouts/BigComponents/NavbarBlock.vue";
-import FooterBlock from "@/components/ui/layouts/BigComponents/FooterBlock.vue";
+import { onMounted } from 'vue';
+import NavBar from '@/components/ui/layouts/BigComponents/NavbarBlock.vue';
+import FooterBlock from '@/components/ui/layouts/BigComponents/FooterBlock.vue';
 
 onMounted(() => {
-  import("flowbite");
+  import('flowbite');
 });
 </script>
 

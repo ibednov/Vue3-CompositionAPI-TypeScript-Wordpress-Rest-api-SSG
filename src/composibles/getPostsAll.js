@@ -1,7 +1,7 @@
-import { ref } from "vue";
-import axios from "axios";
+import { ref } from 'vue';
+import axios from 'axios';
 
-const url = "https://api.alexbednov.work/wp-json/wp/v2/posts?per_page=100";
+const url = 'https://api.alexbednov.work/wp-json/wp/v2/posts?per_page=100';
 const getPage = () => {
   const posts = ref([]);
   const load = async () => {

@@ -1,8 +1,8 @@
-import { ref } from "vue";
-import axios from "axios";
+import { ref } from 'vue';
+import axios from 'axios';
 
 const url =
-  "https://api.alexbednov.work/wp-json/wp/v2/posts?per_page=100&categories=";
+  'https://api.alexbednov.work/wp-json/wp/v2/posts?per_page=100&categories=';
 
 const getPosts = (cat) => {
   const posts = ref([]);

@@ -1,5 +1,5 @@
 // stores/counter.js
-import { defineStore } from "pinia";
+import { defineStore } from 'pinia';
 import { useStorage } from '@vueuse/core';
 
 export const useLangStore = defineStore('lang', {

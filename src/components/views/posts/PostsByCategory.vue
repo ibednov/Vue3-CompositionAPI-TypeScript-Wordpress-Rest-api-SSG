@@ -1,8 +1,8 @@
 <!-- eslint-disable vue/require-default-prop -->
 <script setup>
-import PostShort from "./PostsDisplay/PostShort.vue";
-import getPostsByCat from "@/composibles/getPostsByCat.js";
-import SpinnerLoader from "@/components/ui/layouts/SmallComponents/SpinnerLoader.vue";
+import PostShort from './PostsDisplay/PostShort.vue';
+import getPostsByCat from '@/composibles/getPostsByCat.js';
+import SpinnerLoader from '@/components/ui/layouts/SmallComponents/SpinnerLoader.vue';
 
 const props = defineProps({
   cat: Number,

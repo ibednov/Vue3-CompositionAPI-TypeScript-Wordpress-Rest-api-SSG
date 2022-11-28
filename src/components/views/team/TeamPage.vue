@@ -1,7 +1,7 @@
 <script setup>
-import getTeam from "@/composibles/getTeam.js";
-import TeamShort from "./TeamDisplay/TeamShort.vue";
-import SpinnerLoader from "@/components/ui/layouts/SmallComponents/SpinnerLoader.vue";
+import getTeam from '@/composibles/getTeam.js';
+import TeamShort from './TeamDisplay/TeamShort.vue';
+import SpinnerLoader from '@/components/ui/layouts/SmallComponents/SpinnerLoader.vue';
 
 // eslint-disable-next-line no-unused-vars
 const props = defineProps({
@@ -15,7 +15,7 @@ loadTeam();
 
 <template>
   <h1 class="text-6xl uppercase font-extrabold text-center py-4">
-    {{ $t("team.team") }}
+    {{ $t('team.team') }}
   </h1>
   <div class="container mx-auto">
     <div

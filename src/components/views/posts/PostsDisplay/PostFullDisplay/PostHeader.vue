@@ -1,12 +1,12 @@
 <script setup>
-import { onMounted } from "vue";
+import { onMounted } from 'vue';
 
-import PostHeaderField from "./PostHeaderField.vue";
-import getTeam from "@/composibles/getTeam.js";
-import getTags from "@/composibles/getTags.js";
-import getCategories from "@/composibles/getCategories.js";
+import PostHeaderField from './PostHeaderField.vue';
+import getTeam from '@/composibles/getTeam.js';
+import getTags from '@/composibles/getTags.js';
+import getCategories from '@/composibles/getCategories.js';
 
-import "@/plugins/wp-gutenberg.js";
+import '@/plugins/wp-gutenberg.js';
 
 // eslint-disable-next-line no-unused-vars
 const props = defineProps({
@@ -27,8 +27,8 @@ onMounted(() => {
   const metaTitle = props.page.yoast_head_json.title;
   document.title = metaTitle;
 
-  const metaDesc = document.createElement("meta");
-  metaDesc.name = "description";
+  const metaDesc = document.createElement('meta');
+  metaDesc.name = 'description';
   metaDesc.content = props.page.yoast_head_json.description
     ? props.page.yoast_head_json.description
     : props.page.yoast_head_json.og_description;
@@ -53,7 +53,7 @@ onMounted(() => {
         <div class="flex flex-col py-4 gap-y-4 gap-x-8">
           <div v-if="!(page.categories[0] === 2)" class="flex flex-row">
             <div class="text-lg font-light pr-2">
-              {{ $t("posts.full.project.cat") }}
+              {{ $t('posts.full.project.cat') }}
             </div>
             <div class="text-lg font-bold">
               <div v-for="category in categories" :key="category.id">
@@ -76,7 +76,7 @@ onMounted(() => {
             <div
               class="md:w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-violet-400 dark:from-pink-300 dark:to-violet-300 dark:mix-blend-color-dodge"
             >
-              {{ $t("posts.full.project.theory") }}
+              {{ $t('posts.full.project.theory') }}
             </div>
             <div class="md:w-5/6 flex flex-col md:flex-row grow gap-4">
               <PostHeaderField
@@ -105,12 +105,12 @@ onMounted(() => {
             <div
               class="md:w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-lime-600 to-cyan-700 dark:from-lime-300 dark:to-cyan-300 dark:mix-blend-color-dodge"
             >
-              {{ $t("posts.full.project.practice") }}
+              {{ $t('posts.full.project.practice') }}
             </div>
             <div class="md:w-5/6 flex flex-col md:flex-row grow gap-4">
               <div class="md:w-1/3 flex flex-col">
                 <div class="text-lg font-extralight">
-                  {{ $t("posts.full.project.stack") }}
+                  {{ $t('posts.full.project.stack') }}
                 </div>
                 <div
                   v-for="stack in page.acf.project_stack"
@@ -123,7 +123,7 @@ onMounted(() => {
 
               <div class="md:w-2/3 flex flex-col md:self-end">
                 <div class="text-lg font-extralight">
-                  {{ $t("posts.full.project.team") }}
+                  {{ $t('posts.full.project.team') }}
                 </div>
                 <div class="flex flex-col pb-3 text-lg gap-4">
                   <div
@@ -163,7 +163,7 @@ onMounted(() => {
             <div
               class="md:w-1/6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-indigo-400 dark:from-fuchsia-300 dark:to-indigo-400 dark:mix-blend-color-dodge"
             >
-              {{ $t("posts.full.project.result") }}
+              {{ $t('posts.full.project.result') }}
             </div>
 
             <div
@@ -196,7 +196,7 @@ onMounted(() => {
                       {{ page.acf.project_link_name }}
                     </div>
                     <div v-else>
-                      {{ $t("posts.full.project.link") }}
+                      {{ $t('posts.full.project.link') }}
                     </div>
                   </div>
                 </a>
@@ -225,7 +225,7 @@ onMounted(() => {
                   </div>
                   <div class="text-lg font-semibold">
                     <div>
-                      {{ $t("posts.full.project.behance") }}
+                      {{ $t('posts.full.project.behance') }}
                     </div>
                   </div>
                 </a>
@@ -251,7 +251,7 @@ onMounted(() => {
             <div class="md:w-5/6 flex flex-col md:flex-row grow gap-2 py-4">
               <div v-if="page.tags.length" class="md:w-1/3 flex flex-col">
                 <div class="text-lg font-extralight">
-                  {{ $t("posts.full.blog.tags") }}
+                  {{ $t('posts.full.blog.tags') }}
                 </div>
                 <div v-for="tag in page.tags" :key="tag">
                   <div v-for="i in tags" :key="i">
@@ -264,12 +264,12 @@ onMounted(() => {
 
               <div class="md:w-1/3 flex flex-col">
                 <div class="text-lg font-extralight">
-                  {{ $t("posts.full.blog.type_label") }}
+                  {{ $t('posts.full.blog.type_label') }}
                 </div>
 
                 <div class="text-lg font-semibold">
                   {{
-                    $t("posts.full.blog.type_value." + `${page.acf.blog_type}`)
+                    $t('posts.full.blog.type_value.' + `${page.acf.blog_type}`)
                   }}
                 </div>
               </div>

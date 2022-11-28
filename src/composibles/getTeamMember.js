@@ -1,7 +1,7 @@
-import { ref } from "vue";
-import axios from "axios";
+import { ref } from 'vue';
+import axios from 'axios';
 
-const url = "https://api.alexbednov.work/wp-json/wp/v2/team/";
+const url = 'https://api.alexbednov.work/wp-json/wp/v2/team/';
 const getMember = (id) => {
   const member = ref([]);
   const load = async () => {

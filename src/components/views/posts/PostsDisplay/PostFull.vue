@@ -1,13 +1,13 @@
 <script setup>
-import { useRoute } from "vue-router";
-import getPageOrPost from "@/composibles/getPageOrPost";
-import PostHeader from "./PostFullDisplay/PostHeader.vue";
-import PostBody from "./PostFullDisplay/PostBody.vue";
-import SpinnerLoader from "@/components/ui/layouts/SmallComponents/SpinnerLoader.vue";
+import { useRoute } from 'vue-router';
+import getPageOrPost from '@/composibles/getPageOrPost';
+import PostHeader from './PostFullDisplay/PostHeader.vue';
+import PostBody from './PostFullDisplay/PostBody.vue';
+import SpinnerLoader from '@/components/ui/layouts/SmallComponents/SpinnerLoader.vue';
 
 const route = useRoute();
 const { page, load: loadGetPageOrPost } = getPageOrPost(
-  "posts",
+  'posts',
   route.params.id
 );
 loadGetPageOrPost();

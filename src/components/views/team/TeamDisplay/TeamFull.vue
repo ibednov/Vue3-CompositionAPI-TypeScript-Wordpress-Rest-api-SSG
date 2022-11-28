@@ -1,8 +1,8 @@
 <script setup>
-import { useRoute } from "vue-router";
-import getTeamMember from "@/composibles/getTeamMember";
-import { useStore } from "vuex";
-import { onMounted } from "vue";
+import { useRoute } from 'vue-router';
+import getTeamMember from '@/composibles/getTeamMember';
+import { useStore } from 'vuex';
+import { onMounted } from 'vue';
 
 const store = useStore();
 const route = useRoute();
@@ -18,8 +18,8 @@ onMounted(() => {
     : member.title.rendered;
   document.title = metaTitle;
 
-  const metaDesc = document.createElement("meta");
-  metaDesc.name = "description";
+  const metaDesc = document.createElement('meta');
+  metaDesc.name = 'description';
   metaDesc.content = member.yoast_head_json.description
     ? member.yoast_head_json.description
     : member.yoast_head_json.og_description;
@@ -40,7 +40,7 @@ onMounted(() => {
         class="flex flex-col text-4xl text-light text-center self-center md:w-2/3 xl:w-1/2 gap-4"
       >
         <div class="text-left">
-          {{ $t("team.full.hi") }}
+          {{ $t('team.full.hi') }}
           <span
             v-show="store.state.locale === 'ru'"
             class="font-extrabold text-yellow-400"
@@ -64,13 +64,13 @@ onMounted(() => {
           .
         </div>
         <div v-if="member.acf.member_job" class="text-right">
-          {{ $t("team.full.im") }}
+          {{ $t('team.full.im') }}
           <span class="font-bold text-blue-500">
             {{ member.acf.member_job }} </span
           >.
         </div>
         <div v-if="member.acf.member_city_ru" class="text-left">
-          {{ $t("team.full.from") }}
+          {{ $t('team.full.from') }}
           <span
             v-show="store.state.locale === 'ru'"
             class="font-bold text-green-500"
@@ -85,9 +85,9 @@ onMounted(() => {
           </span>
         </div>
         <div class="text-right">
-          {{ $t("team.full.letme") }}
+          {{ $t('team.full.letme') }}
           <span class="underline decoration-sky-500">
-            {{ $t("team.full.whaticando") }}
+            {{ $t('team.full.whaticando') }}
           </span>
         </div>
       </h1>
@@ -125,7 +125,7 @@ onMounted(() => {
               d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76"
             ></path>
           </svg>
-          {{ $t("team.full.contact") }}
+          {{ $t('team.full.contact') }}
         </a>
       </div>
     </section>
@@ -134,7 +134,7 @@ onMounted(() => {
       <h1
         class="text-3xl uppercase font-bold underline underline-offset-8 decoration-indigo-800 decoration-4 text-center"
       >
-        {{ $t("team.full.lang") }}
+        {{ $t('team.full.lang') }}
       </h1>
       <div class="flex flex-col gap-y-8 sm:flex-row flex-wrap py-10">
         <div
@@ -166,7 +166,7 @@ onMounted(() => {
       <h1
         class="text-3xl uppercase font-bold underline underline-offset-8 decoration-green-800 decoration-4 text-center"
       >
-        {{ $t("team.full.hardskills") }}
+        {{ $t('team.full.hardskills') }}
       </h1>
       <div class="flex flex-col sm:flex-row flex-wrap py-10">
         <div
@@ -211,7 +211,7 @@ onMounted(() => {
       <h1
         class="text-3xl uppercase font-bold underline underline-offset-8 decoration-indigo-400 decoration-4 text-center"
       >
-        {{ $t("team.full.education") }}
+        {{ $t('team.full.education') }}
       </h1>
       <div class="flex flex-col flex-wrap py-10">
         <div
@@ -272,7 +272,7 @@ onMounted(() => {
       <h1
         class="text-3xl uppercase font-bold underline underline-offset-8 decoration-fuchsia-400 decoration-4 text-center"
       >
-        {{ $t("team.full.workexp") }}
+        {{ $t('team.full.workexp') }}
       </h1>
       <div class="flex flex-col flex-wrap py-10">
         <div
@@ -372,7 +372,7 @@ onMounted(() => {
         class="flex flex-col text-4xl text-light text-center self-center md:w-2/3 xl:w-1/2 gap-4"
       >
         <div class="text-center">
-          {{ $t("team.full.well") }}
+          {{ $t('team.full.well') }}
           <span
             v-show="store.state.locale === 'ru'"
             class="font-extrabold text-yellow-400"
@@ -396,9 +396,9 @@ onMounted(() => {
           .
         </div>
         <div>
-          {{ $t("team.full.youshould") }}
+          {{ $t('team.full.youshould') }}
           <span class="underline decoration-sky-500">
-            {{ $t("team.full.writetome") }}
+            {{ $t('team.full.writetome') }}
           </span>
         </div>
       </h1>
@@ -435,7 +435,7 @@ onMounted(() => {
               d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76"
             ></path>
           </svg>
-          {{ $t("team.full.contact") }}
+          {{ $t('team.full.contact') }}
         </a>
       </div>
     </section>
@@ -445,7 +445,7 @@ onMounted(() => {
 <style scoped>
 @media (min-width: 768px) {
   #dots_parent:nth-child(odd) #edu_dots:before {
-    content: "";
+    content: '';
     position: absolute;
     width: 4rem;
     height: 4rem;
@@ -455,7 +455,7 @@ onMounted(() => {
     top: 10%;
   }
   #dots_parent:nth-child(even) #edu_dots:before {
-    content: "";
+    content: '';
     position: absolute;
     width: 4rem;
     height: 4rem;

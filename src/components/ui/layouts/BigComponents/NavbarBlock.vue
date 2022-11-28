@@ -1,5 +1,5 @@
 <script setup>
-import LangSwitcher from "@/components/ui/layouts/SmallComponents/LangSwitcher.vue";
+import LangSwitcher from '@/components/ui/layouts/SmallComponents/LangSwitcher.vue';
 </script>
 <template>
   <div>
@@ -13,7 +13,7 @@ import LangSwitcher from "@/components/ui/layouts/SmallComponents/LangSwitcher.v
           <span
             class="self-center text-sm sm:text-xl font-semibold whitespace-nowrap dark:text-white"
           >
-            {{ $t("global.site_name") }}
+            {{ $t('global.site_name') }}
           </span>
         </router-link>
 
@@ -24,7 +24,7 @@ import LangSwitcher from "@/components/ui/layouts/SmallComponents/LangSwitcher.v
           type="button"
           class="md:order-last text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
         >
-          {{ $t("header.contact_me") }}
+          {{ $t('header.contact_me') }}
         </router-link>
 
         <div
@@ -40,7 +40,7 @@ import LangSwitcher from "@/components/ui/layouts/SmallComponents/LangSwitcher.v
                 data-dropdown-toggle="dropdownNavbar"
                 class="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
               >
-                {{ $t("header.cases") }}
+                {{ $t('header.cases') }}
                 <svg
                   class="ml-1 w-5 h-5"
                   aria-hidden="true"
@@ -79,7 +79,7 @@ import LangSwitcher from "@/components/ui/layouts/SmallComponents/LangSwitcher.v
                       href="/category/14"
                       class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
-                      {{ $t("categories.uiux") }}
+                      {{ $t('categories.uiux') }}
                     </a>
                   </li>
                   <li>
@@ -87,7 +87,7 @@ import LangSwitcher from "@/components/ui/layouts/SmallComponents/LangSwitcher.v
                       href="/category/87"
                       class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
-                      {{ $t("categories.brand") }}
+                      {{ $t('categories.brand') }}
                     </a>
                   </li>
                   <li>
@@ -95,7 +95,7 @@ import LangSwitcher from "@/components/ui/layouts/SmallComponents/LangSwitcher.v
                       href="/category/13"
                       class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
-                      {{ $t("categories.dev") }}
+                      {{ $t('categories.dev') }}
                     </a>
                   </li>
 
@@ -104,7 +104,7 @@ import LangSwitcher from "@/components/ui/layouts/SmallComponents/LangSwitcher.v
                       href="#"
                       class="block py-2 px-4 cursor-not-allowed text-gray-300 dark:text-gray-900"
                     >
-                      {{ $t("categories.gamedev") }}
+                      {{ $t('categories.gamedev') }}
                     </a>
                   </li>
                 </ul>
@@ -116,7 +116,7 @@ import LangSwitcher from "@/components/ui/layouts/SmallComponents/LangSwitcher.v
                 href="/category/2"
                 class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
-                {{ $t("categories.blog") }}
+                {{ $t('categories.blog') }}
               </a>
             </li>
 
@@ -125,7 +125,7 @@ import LangSwitcher from "@/components/ui/layouts/SmallComponents/LangSwitcher.v
                 :to="{ name: 'Contacts' }"
                 class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
-                {{ $t("header.contacts") }}
+                {{ $t('header.contacts') }}
               </router-link>
             </li>
 
@@ -134,7 +134,7 @@ import LangSwitcher from "@/components/ui/layouts/SmallComponents/LangSwitcher.v
                 href="/team/903"
                 class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
-                {{ $t("header.cv") }}
+                {{ $t('header.cv') }}
               </a>
             </li>
           </ul>

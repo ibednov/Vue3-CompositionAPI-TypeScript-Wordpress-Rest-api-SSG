@@ -1,11 +1,11 @@
 <script setup>
-import { inject } from "vue";
+import { inject } from 'vue';
 
 defineProps({
   // eslint-disable-next-line vue/require-default-prop
   name: String,
 });
-const selectedTitle = inject("selectedTitle");
+const selectedTitle = inject('selectedTitle');
 </script>
 
 <template>

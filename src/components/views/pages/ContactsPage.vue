@@ -8,10 +8,10 @@
       class="basis-1/2 order-2 md:order-first py-6 flex flex-col gap-4 self-center md:px-10"
     >
       <div class="text-3xl md:text-6xl uppercase font-extrabold">
-        {{ $t("pages.contacts.alex_name") }}
+        {{ $t('pages.contacts.alex_name') }}
       </div>
       <div class="text-xl md:text-3xl font-extralight">
-        {{ $t("pages.contacts.job_title") }}
+        {{ $t('pages.contacts.job_title') }}
       </div>
       <div class="flex flex-col md:flex-row md:flex-wrap gap-4 py-4">
         <a
@@ -36,7 +36,7 @@
             </svg>
           </div>
           <div class="self-center">
-            {{ $t("pages.contacts.instagram") }}
+            {{ $t('pages.contacts.instagram') }}
           </div>
         </a>
         <a
@@ -58,7 +58,7 @@
             </svg>
           </div>
           <div class="self-center">
-            {{ $t("pages.contacts.behance") }}
+            {{ $t('pages.contacts.behance') }}
           </div>
         </a>
         <a
@@ -79,7 +79,7 @@
             </svg>
           </div>
           <div class="self-center">
-            {{ $t("pages.contacts.telegram") }}
+            {{ $t('pages.contacts.telegram') }}
           </div>
         </a>
         <a
@@ -104,7 +104,7 @@
             </svg>
           </div>
           <div class="self-center">
-            {{ $t("pages.contacts.website") }}
+            {{ $t('pages.contacts.website') }}
           </div>
         </a>
         <a
@@ -129,7 +129,7 @@
             </svg>
           </div>
           <div class="self-center">
-            {{ $t("pages.contacts.cv") }}
+            {{ $t('pages.contacts.cv') }}
           </div>
         </a>
         <!-- <a href="https://wa.me/qr/JYZOKXUAOVAPP1" target="_blank" type="button"

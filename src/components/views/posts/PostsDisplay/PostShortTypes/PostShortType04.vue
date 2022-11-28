@@ -1,7 +1,7 @@
 <!-- eslint-disable no-unused-vars -->
 <script setup>
-import { computed } from "vue";
-import getCategories from "@/composibles/getCategories.js";
+import { computed } from 'vue';
+import getCategories from '@/composibles/getCategories.js';
 const { categories, load: loadCategories } = getCategories();
 loadCategories();
 const props = defineProps({
@@ -9,7 +9,7 @@ const props = defineProps({
   post: Object,
 });
 const snippet = computed(() => {
-  return props.post + "...";
+  return props.post + '...';
 });
 </script>
 <template>

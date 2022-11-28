@@ -1,91 +1,91 @@
-import { createRouter, createWebHistory } from "vue-router";
-import { defineAsyncComponent } from "vue";
+import { createRouter, createWebHistory } from 'vue-router';
+import { defineAsyncComponent } from 'vue';
 
 //router file
 const routes = [
   {
-    path: "/",
-    name: "Home",
+    path: '/',
+    name: 'Home',
     component: defineAsyncComponent(() =>
-      import("@/components/views/pages/HomePage.vue")
+      import('@/components/views/pages/HomePage.vue')
     ),
     meta: {
-      title: "Alebednov.work / home",
+      title: 'Alebednov.work / home',
     },
   },
   {
-    path: "/contacts",
-    name: "Contacts",
+    path: '/contacts',
+    name: 'Contacts',
     component: defineAsyncComponent(() =>
-      import("@/components/views/pages/ContactsPage.vue")
+      import('@/components/views/pages/ContactsPage.vue')
     ),
     meta: {
-      title: "Contacts",
+      title: 'Contacts',
     },
   },
   {
-    path: "/posts",
-    name: "AllPosts",
+    path: '/posts',
+    name: 'AllPosts',
     component: defineAsyncComponent(() =>
-      import("@/components/views/posts/PostsAll.vue")
+      import('@/components/views/posts/PostsAll.vue')
     ),
     props: true,
     meta: {
-      title: "AllPosts",
+      title: 'AllPosts',
     },
   },
   {
-    path: "/posts/:id",
-    name: "PostFull",
+    path: '/posts/:id',
+    name: 'PostFull',
     component: defineAsyncComponent(() =>
-      import("@/components/views/posts/PostsDisplay/PostFull.vue")
+      import('@/components/views/posts/PostsDisplay/PostFull.vue')
     ),
     props: true,
     meta: {
-      title: "PostFull",
+      title: 'PostFull',
     },
   },
   {
-    path: "/team",
-    name: "TeamPage",
+    path: '/team',
+    name: 'TeamPage',
     component: defineAsyncComponent(() =>
-      import("@/components/views/team/TeamPage.vue")
+      import('@/components/views/team/TeamPage.vue')
     ),
     props: true,
     meta: {
-      title: "TeamPage",
+      title: 'TeamPage',
     },
   },
   {
-    path: "/team/:id",
-    name: "TeamFull",
+    path: '/team/:id',
+    name: 'TeamFull',
     component: defineAsyncComponent(() =>
-      import("@/components/views/team/TeamDisplay/TeamFull.vue")
+      import('@/components/views/team/TeamDisplay/TeamFull.vue')
     ),
     props: true,
     meta: {
-      title: "TeamFull",
+      title: 'TeamFull',
     },
   },
   {
-    path: "/category/:cat",
+    path: '/category/:cat',
     component: defineAsyncComponent(() =>
-      import("@/components/views/posts/PostsByCategory.vue")
+      import('@/components/views/posts/PostsByCategory.vue')
     ),
-    name: "CategoryById",
+    name: 'CategoryById',
     props: true,
     meta: {
-      title: "Category by id",
+      title: 'Category by id',
     },
   },
   {
-    path: "/:pathMatch(.*)*",
-    name: "404 not found",
+    path: '/:pathMatch(.*)*',
+    name: '404 not found',
     component: defineAsyncComponent(() =>
-      import("@/components/views/pages/ErrorPage.vue")
+      import('@/components/views/pages/ErrorPage.vue')
     ),
     meta: {
-      title: "404 Not found",
+      title: '404 Not found',
     },
   },
 ];

@@ -7,14 +7,14 @@
     >
       404
       <small>
-        {{ $t("error.error") }}
+        {{ $t('error.error') }}
       </small>
     </h1>
     <h1 class="text-6xl text-center font-extrabold uppercase">
-      {{ $t("error.not_found") }}
+      {{ $t('error.not_found') }}
     </h1>
     <h1 class="text-xl text-center font-light">
-      {{ $t("error.try_else") }}
+      {{ $t('error.try_else') }}
     </h1>
 
     <router-link
@@ -22,7 +22,7 @@
       type="button"
       class="md:w-1/4 self-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
     >
-      {{ $t("error.maybe_main") }}
+      {{ $t('error.maybe_main') }}
     </router-link>
   </div>
 </template>
