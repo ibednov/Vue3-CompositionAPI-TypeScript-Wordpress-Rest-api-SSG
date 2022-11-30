@@ -5,9 +5,8 @@ import { useStore } from 'vuex';
 import { onMounted } from 'vue';
 
 const store = useStore();
-const route = useRoute();
 
-const { member, load: loadGetTeamMember } = getTeamMember(route.params.id);
+const { member, load: loadGetTeamMember } = getTeamMember(useRoute().params.id);
 loadGetTeamMember();
 
 console.log(member);
