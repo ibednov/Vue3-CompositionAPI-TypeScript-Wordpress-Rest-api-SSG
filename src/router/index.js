@@ -79,6 +79,16 @@ const routes = [
     },
   },
   {
+    path: '/test-page',
+    name: 'That Test Page',
+    component: defineAsyncComponent(() =>
+      import('@/components/views/pages/TestPage.vue')
+    ),
+    meta: {
+      title: 'Oh. LOl. That test page',
+    },
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: '404 not found',
     component: defineAsyncComponent(() =>
