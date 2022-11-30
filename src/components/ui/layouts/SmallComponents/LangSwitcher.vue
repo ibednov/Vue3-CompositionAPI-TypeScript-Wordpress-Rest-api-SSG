@@ -1,12 +1,15 @@
 <script setup>
-import { useStore } from 'vuex';
 import { useLangStore } from '@/pinia/lang';
 
-const store = useStore(); // vuex store
 const lang = useLangStore().lang; // pinia store
 
-const handleChangeLocaleRu = () => store.dispatch('setLocale', 'ru');
-const handleChangeLocaleEn = () => store.dispatch('setLocale', 'en');
+const handleChangeLocaleRu = () => {
+  lang.currentLang = 'ru';
+};
+
+const handleChangeLocaleEn = () => {
+  lang.currentLang = 'en';
+};
 </script>
 
 <template>
@@ -192,11 +195,4 @@ const handleChangeLocaleEn = () => store.dispatch('setLocale', 'en');
     </div>
 
 
-  <div class="flex flex-col gap-1 justify-left">
-    <div>
-      {{ lang.currentLang }}
-    </div>
-    <button @click="lang.currentLang = 'ru'">RUS</button>
-    <button @click="lang.currentLang = 'en'">EENG</button>
-  </div>
 </template>
