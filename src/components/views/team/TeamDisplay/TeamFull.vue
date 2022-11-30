@@ -1,7 +1,6 @@
 <script setup>
 import { useRoute } from 'vue-router';
 import getTeamMember from '@/composibles/getTeamMember';
-import { onMounted } from 'vue';
 import { useLangStore } from '@/pinia/lang';
 
 const lang = useLangStore().lang; // pinia store
@@ -9,21 +8,20 @@ const lang = useLangStore().lang; // pinia store
 const { member, load: loadGetTeamMember } = getTeamMember(useRoute().params.id);
 loadGetTeamMember();
 
-console.log(member);
+// const metaUpdate = () => {
+// const metaTitle = member.yoast_head_json.title
+//   ? member.yoast_head_json.title
+//   : member.title.rendered;
+// document.title = metaTitle;
+// const metaDesc = document.createElement('meta');
+// metaDesc.name = 'description';
+// metaDesc.content = member.yoast_head_json.description
+//   ? member.yoast_head_json.description
+//   : member.yoast_head_json.og_description;
+// document.head.appendChild(metaDesc);
+// };
 
-onMounted(() => {
-  const metaTitle = member.yoast_head_json.title
-    ? member.yoast_head_json.title
-    : member.title.rendered;
-  document.title = metaTitle;
-
-  const metaDesc = document.createElement('meta');
-  metaDesc.name = 'description';
-  metaDesc.content = member.yoast_head_json.description
-    ? member.yoast_head_json.description
-    : member.yoast_head_json.og_description;
-  document.head.appendChild(metaDesc);
-});
+// metaUpdate();
 </script>
 
 <template>
