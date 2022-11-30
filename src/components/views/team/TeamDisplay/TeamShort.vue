@@ -1,7 +1,7 @@
 <script setup>
-import { useStore } from 'vuex';
+import { useLangStore } from '@/pinia/lang';
 
-const store = useStore();
+const lang = useLangStore().lang; // pinia store
 // eslint-disable-next-line no-unused-vars
 const props = defineProps({
   // eslint-disable-next-line vue/require-default-prop
@@ -21,14 +21,14 @@ const props = defineProps({
           <div v-html="member.title.rendered" />
         </h3>
         <h1 class="text-3xl font-bold flex flex-col uppercase">
-          <span v-show="store.state.locale === 'ru'" class="font-extrabold">
+          <span v-show="lang.currentLang === 'ru'" class="font-extrabold">
             {{
               member.acf.member_name_ru
                 ? member.acf.member_name_ru
                 : member.title.rendered
             }}
           </span>
-          <span v-show="store.state.locale === 'en'" class="font-extrabold">
+          <span v-show="lang.currentLang === 'en'" class="font-extrabold">
             {{
               member.acf.member_name_en
                 ? member.acf.member_name_en
