@@ -1,10 +1,10 @@
 <script setup>
 import { useRoute } from 'vue-router';
 import getTeamMember from '@/composibles/getTeamMember';
-import { useStore } from 'vuex';
 import { onMounted } from 'vue';
+import { useLangStore } from '@/pinia/lang';
 
-const store = useStore();
+const lang = useLangStore().lang; // pinia store
 
 const { member, load: loadGetTeamMember } = getTeamMember(useRoute().params.id);
 loadGetTeamMember();
@@ -41,7 +41,7 @@ onMounted(() => {
         <div class="text-left">
           {{ $t('team.full.hi') }}
           <span
-            v-show="store.state.locale === 'ru'"
+            v-show="lang.currentLang === 'ru'"
             class="font-extrabold text-yellow-400"
           >
             {{
@@ -51,7 +51,7 @@ onMounted(() => {
             }}
           </span>
           <span
-            v-show="store.state.locale === 'en'"
+            v-show="lang.currentLang === 'en'"
             class="font-extrabold text-yellow-400"
           >
             {{
@@ -71,13 +71,13 @@ onMounted(() => {
         <div v-if="member.acf.member_city_ru" class="text-left">
           {{ $t('team.full.from') }}
           <span
-            v-show="store.state.locale === 'ru'"
+            v-show="lang.currentLang === 'ru'"
             class="font-bold text-green-500"
           >
             {{ member.acf.member_city_ru }}
           </span>
           <span
-            v-show="store.state.locale === 'en'"
+            v-show="lang.currentLang === 'en'"
             class="font-bold text-green-500"
           >
             {{ member.acf.member_city_en }}
@@ -137,24 +137,24 @@ onMounted(() => {
       </h1>
       <div class="flex flex-col gap-y-8 sm:flex-row flex-wrap py-10">
         <div
-          v-for="lang in member.acf.member_langs"
-          :key="lang.id"
+          v-for="item in member.acf.member_langs"
+          :key="item.id"
           class="basis-1/3 grow"
         >
-          <div v-show="store.state.locale === 'ru'" class="flex flex-col gap-2">
+          <div v-show="lang.currentLang === 'ru'" class="flex flex-col gap-2">
             <div class="text-xl font-bold uppercase self-center">
-              {{ lang.lang_group__name_ru }}
+              {{ item.lang_group__name_ru }}
             </div>
             <div class="font-light self-center">
-              {{ lang.lang_group__level_ru }}
+              {{ item.lang_group__level_ru }}
             </div>
           </div>
-          <div v-show="store.state.locale === 'en'" class="flex flex-col gap-2">
+          <div v-show="lang.currentLang === 'en'" class="flex flex-col gap-2">
             <div class="text-xl font-bold uppercase self-center">
-              {{ lang.lang_group__name_en }}
+              {{ item.lang_group__name_en }}
             </div>
             <div class="font-light self-center">
-              {{ lang.lang_group__level_en }}
+              {{ item.lang_group__level_en }}
             </div>
           </div>
         </div>
@@ -174,13 +174,13 @@ onMounted(() => {
           class="sm:w-1/2 lg:w-1/3 grow flex flex-col gap-2 px-10 py-5"
         >
           <div
-            v-show="store.state.locale === 'ru'"
+            v-show="lang.currentLang === 'ru'"
             class="text-2xl font-bold uppercase text-center"
           >
             {{ skills.skills_group__name }}
           </div>
           <div
-            v-show="store.state.locale === 'en'"
+            v-show="lang.currentLang === 'en'"
             class="text-2xl font-bold uppercase text-center"
           >
             {{ skills.skills_group__name_en }}
@@ -224,39 +224,33 @@ onMounted(() => {
             class="flex gap-2 flex-col before:bg-gradient-to-br before:from-blue-400 before:to-indigo-400"
           >
             <div
-              v-show="store.state.locale === 'ru'"
+              v-show="lang.currentLang === 'ru'"
               class="text-3xl font-extrabold"
             >
               {{ edu.education_degree }}
             </div>
             <div
-              v-show="store.state.locale === 'en'"
+              v-show="lang.currentLang === 'en'"
               class="text-3xl font-extrabold"
             >
               {{ edu.education_degree_en }}
             </div>
             <div
-              v-show="store.state.locale === 'ru'"
+              v-show="lang.currentLang === 'ru'"
               class="text-2xl font-medium text-indigo-700 dark:text-indigo-500"
             >
               {{ edu.education_spec }}
             </div>
             <div
-              v-show="store.state.locale === 'en'"
+              v-show="lang.currentLang === 'en'"
               class="text-2xl font-medium text-indigo-700 dark:text-indigo-500"
             >
               {{ edu.education_spec_en }}
             </div>
-            <div
-              v-show="store.state.locale === 'ru'"
-              class="text-lg font-light"
-            >
+            <div v-show="lang.currentLang === 'ru'" class="text-lg font-light">
               {{ edu.education_place }}
             </div>
-            <div
-              v-show="store.state.locale === 'en'"
-              class="text-lg font-light"
-            >
+            <div v-show="lang.currentLang === 'en'" class="text-lg font-light">
               {{ edu.education_place_en }}
             </div>
             <div class="text-lg font-light">
@@ -285,26 +279,26 @@ onMounted(() => {
             class="flex gap-2 flex-col before:bg-gradient-to-br before:from-blue-400 before:to-fuchsia-400"
           >
             <div
-              v-show="store.state.locale === 'ru'"
+              v-show="lang.currentLang === 'ru'"
               class="text-3xl font-extrabold"
             >
               {{ work.work_place }}
             </div>
             <div
-              v-show="store.state.locale === 'en'"
+              v-show="lang.currentLang === 'en'"
               class="text-3xl font-extrabold"
             >
               {{ work.work_place_en }}
             </div>
 
             <div
-              v-show="store.state.locale === 'ru'"
+              v-show="lang.currentLang === 'ru'"
               class="text-2xl font-medium text-fuchsia-700 dark:text-fuchsia-400"
             >
               {{ work.work_job }}
             </div>
             <div
-              v-show="store.state.locale === 'en'"
+              v-show="lang.currentLang === 'en'"
               class="text-2xl font-medium text-fuchsia-700 dark:text-fuchsia-400"
             >
               {{ work.work_job_en }}
@@ -316,7 +310,7 @@ onMounted(() => {
 
             <div
               v-if="work.work_tasks"
-              v-show="store.state.locale === 'ru'"
+              v-show="lang.currentLang === 'ru'"
               class="bg-fuchsia-100 dark:bg-stone-800 p-4 rounded-xl"
             >
               <!-- eslint-disable-next-line vue/no-v-html -->
@@ -324,7 +318,7 @@ onMounted(() => {
             </div>
             <div
               v-if="work.work_tasks_en"
-              v-show="store.state.locale === 'en'"
+              v-show="lang.currentLang === 'en'"
               class="bg-fuchsia-100 dark:bg-stone-800 p-4 rounded-xl"
             >
               <!-- eslint-disable-next-line vue/no-v-html -->
@@ -337,7 +331,7 @@ onMounted(() => {
             >
               <div
                 v-for="item in work.work_repeater"
-                v-show="store.state.locale === 'ru'"
+                v-show="lang.currentLang === 'ru'"
                 :key="item.id"
                 class="text-md font-light"
               >
@@ -352,7 +346,7 @@ onMounted(() => {
             >
               <div
                 v-for="item in work.work_repeater"
-                v-show="store.state.locale === 'en'"
+                v-show="lang.currentLang === 'en'"
                 :key="item.id"
                 class="text-md font-light"
               >
@@ -373,7 +367,7 @@ onMounted(() => {
         <div class="text-center">
           {{ $t('team.full.well') }}
           <span
-            v-show="store.state.locale === 'ru'"
+            v-show="lang.currentLang === 'ru'"
             class="font-extrabold text-yellow-400"
           >
             {{
@@ -383,7 +377,7 @@ onMounted(() => {
             }}
           </span>
           <span
-            v-show="store.state.locale === 'en'"
+            v-show="lang.currentLang === 'en'"
             class="font-extrabold text-yellow-400"
           >
             {{
