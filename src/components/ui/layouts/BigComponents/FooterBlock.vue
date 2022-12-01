@@ -1,7 +1,3 @@
-<script setup>
-const currentDate = new Date();
-</script>
-
 <template>
   <footer class="pb-28 p-8 md:p-12">
     <div class="p-4 md:px-10 md:py-6 rounded-xl bg-white dark:bg-stone-800">
@@ -15,9 +11,10 @@ const currentDate = new Date();
           >
             {{ $t('global.site_name') }}.
           </router-link>
-          ©2018 – {{ currentDate.getFullYear() }}.
+          ©2018 – {{ new Date().getFullYear() }}.
           {{ $t('footer.rights') }}
         </span>
+
         <ul
           class="flex flex-wrap items-center self-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
         >
