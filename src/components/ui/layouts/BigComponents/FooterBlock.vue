@@ -1,6 +1,6 @@
 <template>
   <footer class="pb-28 p-8 md:p-12">
-    <div class="p-4 md:px-10 md:py-6 rounded-xl bg-white dark:bg-stone-800">
+    <div class="p-4 md:px-10 md:py-6 rounded-xl bg-gray-100 dark:bg-stone-800">
       <div
         class="flex flex-col md:flex-row text-center justify-center md:justify-between"
       >
