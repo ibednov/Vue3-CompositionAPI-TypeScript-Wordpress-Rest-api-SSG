@@ -1,18 +1,13 @@
-<script setup>
-import { useLangStore } from '@/pinia/lang';
-
+<script setup lang="ts">
 const lang = useLangStore().lang; // pinia store
-// eslint-disable-next-line no-unused-vars
-const props = defineProps({
-  // eslint-disable-next-line vue/require-default-prop
-  member: Object,
-});
+
+defineProps<{ member: object, }>()
 </script>
 
 <template>
   <div class="p-4 md:p-0">
     <router-link
-      :to="{ name: 'TeamFull', params: { id: member.id, member: member } }"
+      :to="`/team/`+ member?.id"
       class="flex flex-col md:flex-row justify-center gap-4 bg-slate-50 dark:bg-stone-800 rounded-xl py-10 px-4"
     >
       <div class="w-1/2 md:w-2/3 flex flex-col self-center text">

@@ -1,14 +1,10 @@
-<script setup>
-// eslint-disable-next-line no-unused-vars
-const props = defineProps({
-  // eslint-disable-next-line vue/require-default-prop
-  page: Object,
-});
+<script setup lang="ts">
+const props = defineProps<{ post: object, }>()
 </script>
 
 <template>
   <div class="container mx-auto">
     <!-- eslint-disable-next-line vue/no-v-html -->
-    <div v-html="page.content.rendered" />
+    <div class="" v-html="props.post.content?.rendered" />
   </div>
 </template>

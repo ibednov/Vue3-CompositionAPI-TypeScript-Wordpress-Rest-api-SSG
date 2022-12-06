@@ -7,7 +7,6 @@
         "open_menu": "Открыть меню",
         "contact_me": "Напишите мне!",
         "contacts": "Контакты",
-        "cases": "Кейсы",
         "gamedev": "Гейм-дев",
         "cv": "CV / Резюме"
     },
@@ -19,11 +18,14 @@
         "ru": "Русский"
     },
     "categories": {
-        "uiux": "UI/UX дизайн",
-        "brand": "Дизайн брендов",
-        "dev": "Фронтенд и бэкенд разработка",
+        "name": "Категория",
+        "cases":"Кейсы",
+        "uiux-design" : "UI/UX дизайн",
+        "brand-marketing-design": "Дизайн брендов",
+        "development": "Фронтенд и бэкенд разработка",
         "gamedev": "Гейм-дев",
-        "blog": "Блог"
+        "blog": "Блог",
+        "uncategorized" : "Без категории"
     },
     "posts": {
         "allposts":"Все посты",

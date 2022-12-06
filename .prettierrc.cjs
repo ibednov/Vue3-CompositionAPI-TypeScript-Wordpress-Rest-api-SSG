@@ -1,4 +1,4 @@
-// .prettierrc.js
+// .prettierrc.cjs
 module.exports = {
   trailingComma: 'es5',
   tabWidth: 2,

@@ -1,10 +1,10 @@
-<script setup>
+<script setup lang="ts">
 import { inject } from 'vue';
 
-defineProps({
-  // eslint-disable-next-line vue/require-default-prop
-  name: String,
-});
+defineProps<{
+  name: string
+}>()
+
 const selectedTitle = inject('selectedTitle');
 </script>
 

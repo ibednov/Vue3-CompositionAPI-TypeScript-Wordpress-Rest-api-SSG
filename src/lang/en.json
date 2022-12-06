@@ -1,16 +1,15 @@
 {
     "global": {
-        "site_name" : "Alexbednov.work"
+        "site_name": "Alexbednov.work"
     },
     "header": {
         "home": "Дом",
         "open_menu": "Open menu",
         "contact_me": "Contact me !",
         "contacts": "Contacts",
-        "cases": "Cases",
-        "cv":"CV"
+        "cv": "CV"
     },
-    "footer" : {
+    "footer": {
         "rights": "All Rights Reserved."
     },
     "langs": {
@@ -18,14 +17,17 @@
         "ru": "Русский"
     },
     "categories": {
-        "uiux": "UI/UX design",
-        "brand": "Brand & marketing design",
-        "dev": "Frontend & backend development",
+        "name": "Category name:",
+        "uiux-design" : "UI/UX design",
+        "brand-marketing-design":  "Brand & marketing design",
+        "development": "Frontend & backend development",
         "gamedev": "Game Dev.",
-        "blog": "Blog"
+        "blog": "Blog",
+        "cases":"Cases",
+        "uncategorized" : "Uncategorized"
     },
     "posts": {
-        "allposts":"Все посты",
+        "allposts": "Все посты",
         "full": {
             "project": {
                 "cat": "Project category:",
@@ -44,13 +46,13 @@
                 "tags": "Tags",
                 "type_label": "What is this post about ?",
                 "type_value": {
-                    "exp" : "Experience",
-                    "uiux-hacks" : "UI/UX hacks",
-                    "uiux-resources" : "Resources for UI/UX designer",
-                    "frontdev-hacks" : "Front-end hacks",
-                    "guide" : "Guide",
-                    "other" : "Other",
-                    "articles" : "Article"
+                    "exp": "Experience",
+                    "uiux-hacks": "UI/UX hacks",
+                    "uiux-resources": "Resources for UI/UX designer",
+                    "frontdev-hacks": "Front-end hacks",
+                    "guide": "Guide",
+                    "other": "Other",
+                    "articles": "Article"
                 }
             }
         },
@@ -71,21 +73,21 @@
         }
     },
     "team": {
-        "team":"Team",
+        "team": "Team",
         "full": {
             "hi": "Hi, i'm",
-            "im":"I'm a",
-            "from":"I'm from",
-            "letme":"Let me show you",
-            "whaticando":"what I can do...",
-            "contact":"Contact me!",
-            "lang":"Languages",
-            "hardskills":"Hard skills",
-            "education":"Education",
-            "workexp":"Work experience",
-            "well":"Well, i'm",
-            "youshould":"I think you should",
-            "writetome":"write to me"
+            "im": "I'm a",
+            "from": "I'm from",
+            "letme": "Let me show you",
+            "whaticando": "what I can do...",
+            "contact": "Contact me!",
+            "lang": "Languages",
+            "hardskills": "Hard skills",
+            "education": "Education",
+            "workexp": "Work experience",
+            "well": "Well, i'm",
+            "youshould": "I think you should",
+            "writetome": "write to me"
         }
     },
     "etc": {
@@ -93,10 +95,10 @@
             "loading": "Loading..."
         }
     },
-    "error" : {
-        "error" : "error",
-        "not_found" : "Page not found",
-        "try_else" : "Try something else instead.",
-        "maybe_main" : "May we go to the home page?"
+    "error": {
+        "error": "error",
+        "not_found": "Page not found",
+        "try_else": "Try something else instead.",
+        "maybe_main": "May we go to the home page?"
     }
 }

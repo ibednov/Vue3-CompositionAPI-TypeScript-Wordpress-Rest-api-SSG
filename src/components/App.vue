@@ -1,15 +1,17 @@
-<script setup>
-import { onMounted } from 'vue';
-import NavBar from '@/components/ui/layouts/BigComponents/NavbarBlock.vue';
-import FooterBlock from '@/components/ui/layouts/BigComponents/FooterBlock.vue';
-
+<script setup lang="ts">
 onMounted(() => {
   import('flowbite');
 });
+// https://github.com/vueuse/head
+// you can use this to manipulate the document head in any components,
+// they will be rendered correctly in the html results with vite-ssg
+useHead({
+  title: 'Alex Bednov',
+  meta: [
+    { name: 'description', content: 'ваш дизайнер и разработчик' }
+  ],
+})
 </script>
-
 <template>
-  <NavBar class="pb-4 md:pb-28" />
-  <router-view class="p-3 md:p-0" />
-  <FooterBlock />
+  <RouterView class="bg-white dark:bg-stone-900 text-black dark:text-white" />
 </template>

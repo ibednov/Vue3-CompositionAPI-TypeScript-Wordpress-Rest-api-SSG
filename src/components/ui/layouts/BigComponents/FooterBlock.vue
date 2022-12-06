@@ -1,3 +1,6 @@
+<script lang="ts" setup>
+const { t } = useI18n()
+</script>
 <template>
   <footer class="pb-28 p-8 md:p-12">
     <div class="p-4 md:px-10 md:py-6 rounded-xl bg-gray-100 dark:bg-stone-800">
@@ -6,13 +9,13 @@
       >
         <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
           <router-link
-            :to="{ name: 'Home' }"
+            to="/"
             class="hover:underline font-extrabold text-indigo-700"
           >
-            {{ $t('global.site_name') }}.
+            {{ t('global.site_name') }}.
           </router-link>
           ©2018 – {{ new Date().getFullYear() }}.
-          {{ $t('footer.rights') }}
+          {{ t('footer.rights') }}
         </span>
 
         <ul
@@ -20,22 +23,22 @@
         >
           <li>
             <a href="/" class="mr-4 hover:underline md:mr-6">
-              {{ $t('header.cases') }}
+              {{ t('categories.cases') }}
             </a>
           </li>
           <li>
             <a href="/category/2" class="mr-4 hover:underline md:mr-6">
-              {{ $t('categories.blog') }}
+              {{ t('categories.blog') }}
             </a>
           </li>
           <li>
             <a href="/team/903" class="mr-4 hover:underline md:mr-6">
-              {{ $t('header.cv') }}
+              {{ t('header.cv') }}
             </a>
           </li>
           <li>
             <a href="/contacts" class="hover:underline">
-              {{ $t('header.contacts') }}
+              {{ t('header.contacts') }}
             </a>
           </li>
         </ul>

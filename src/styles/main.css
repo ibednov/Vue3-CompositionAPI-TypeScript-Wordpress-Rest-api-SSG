@@ -1,10 +1,7 @@
-@import url("@/assets/css/tailwind.css");
-/* @import url('./assets/css/bg-colors.css'); */
-/* @import url('./card.css'); */
-@import url("@/assets/css/timeline.css");
-@import url("@/assets/css/other-styles.css");
-
 /* wordpress plugins */
 /* stackable */
 @import url("@/plugins/wp-stackable.css");
 @import url("@/plugins/wp-gutenberg.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
