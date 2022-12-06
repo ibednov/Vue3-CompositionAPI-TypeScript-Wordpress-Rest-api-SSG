@@ -1,5 +1,5 @@
 # wordpress-api-vue-front-tailwind
-Based on [vitesse] (https://github.com/antfu/vitesse)
+Based on [vitesse](https://github.com/antfu/vitesse)
 
 ## Stack
 
@@ -12,8 +12,8 @@ Based on [vitesse] (https://github.com/antfu/vitesse)
 - [Vue3] Composition API / setup SFC syntax
 
 #### UI Frameworks
-- [Tailwind] (https://tailwindcss.com/)
-- [Flowbite] (https://flowbite.com/)
+- [Tailwind](https://tailwindcss.com/)
+- [Flowbite](https://flowbite.com/)
 - [UnoCSS](https://github.com/antfu/unocss) - The instant on-demand atomic CSS engine.
 
 #### Icons
