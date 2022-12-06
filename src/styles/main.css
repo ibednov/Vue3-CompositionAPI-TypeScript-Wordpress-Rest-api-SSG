@@ -1,7 +1,9 @@
 /* wordpress plugins */
-/* stackable */
-@import url("@/plugins/wp-stackable.css");
-@import url("@/plugins/wp-gutenberg.css");
+@import './modules/wp-gutenberg.css';
+@import './modules/wp-stackable.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
