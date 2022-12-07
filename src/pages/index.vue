@@ -9,6 +9,25 @@ const { t } = useI18n()
 </script>
 
 <template>
+  <section class="flex flex-col md:hidden text-center">
+    <div class="text-xl font-light">
+      {{ t('home.welcome') }}
+    </div>
+
+    <div class="text-3xl font-bold uppercase text-center underline decoration-sky-600 dark:decoration-sky-500">
+      {{ t('global.site_name') }}
+    </div>
+
+    <div
+      class="text-xl font-light pt-6 pb-2 text-transparent bg-clip-text bg-gradient-to-r to-emerald-800 from-sky-700 dark:to-emerald-600 dark:from-sky-400">
+      {{ t('home.check') }}
+    </div>
+
+    <div class="self-center pb-4 text-emerald-800 dark:text-emerald-500">
+      <div class="i-mingcute:arrow-down-fill text-3xl"></div>
+    </div>
+  </section>
+
   <main class="container mx-auto">
     <TabsList>
       <TabSingle :title="'categories.uiux-design'" name="uiux" icon="i-mingcute:file-code-line">

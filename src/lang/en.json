@@ -1,6 +1,9 @@
 {
     "global": {
         "site_name": "Alexbednov.work"
+    "home": {
+        "welcome": "Welcome to",
+        "check": "Check my works"
     },
     "header": {
         "home": "Дом",

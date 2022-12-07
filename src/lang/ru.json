@@ -1,6 +1,9 @@
 {
     "global": {
         "site_name": "Alexbednov.work"
+    "home": {
+        "welcome": "Добро пожаловать на сайт",
+        "check": "Чекните мои работы ниже"
     },
     "header": {
         "home": "Дом",
