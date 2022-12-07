@@ -8,12 +8,12 @@ const { t } = useI18n()
 // https://github.com/vueuse/head
 // you can use this to manipulate the document head in any components,
 // they will be rendered correctly in the html results with vite-ssg
-useHead({
-  title: t('ssg.home_name'),
-  meta: [
-    { name: 'description', content: t('ssg.home_desc') }
-  ],
-})
+// useHead({
+//   title: t('ssg.home_name'),
+//   meta: [
+//     { name: 'description', content: t('ssg.home_desc') }
+//   ],
+// })
 </script>
 
 <template>
