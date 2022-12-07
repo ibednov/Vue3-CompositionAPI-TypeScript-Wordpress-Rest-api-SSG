@@ -16,6 +16,8 @@ import Unocss from 'unocss/vite'
 // import Shiki from 'markdown-it-shiki'
 import VueMacros from 'unplugin-vue-macros/vite'
 
+// import eslintPlugin from 'vite-plugin-eslint'
+
 export default defineConfig({
   resolve: {
     alias: {
@@ -45,20 +47,15 @@ export default defineConfig({
 
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
-      imports: [
-        'vue',
-        'vue-router',
-        'vue-i18n',
-        // 'vue/macros',
-        '@vueuse/head',
-        '@vueuse/core',
-      ],
+      imports: ['vue', 'vue-router', 'vue-i18n', '@vueuse/head', '@vueuse/core', 'pinia'],
       dts: 'src/auto-imports.d.ts',
-      dirs: [
-        'src/composables',
-        'src/store',
-      ],
+      dirs: ['src/composables', 'src/store'],
       vueTemplate: true,
+      eslintrc: {
+        enabled: false,
+        filepath: 'types/.eslintrc-auto-import.json',
+        globalsPropValue: true,
+      },
     }),
 
     // https://github.com/antfu/unplugin-vue-components
@@ -139,6 +136,8 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-inspect
     // Visit http://localhost:3333/__inspect/ to see the inspector
     Inspect(),
+
+    // eslintPlugin(),
   ],
 
   // // https://github.com/vitest-dev/vitest
