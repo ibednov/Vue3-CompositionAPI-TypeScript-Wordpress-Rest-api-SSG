@@ -7,9 +7,9 @@ Based on [vitesse](https://github.com/antfu/vitesse)
 
 #### Base / Core
 - Node >=14.18
-- [TypeScript]
-- [Vite]
-- [Vue3] Composition API / setup SFC syntax
+- TypeScript
+- Vite
+- Vue3 – Composition API / setup SFC syntax
 
 #### UI Frameworks
 - [Tailwind](https://tailwindcss.com/)
