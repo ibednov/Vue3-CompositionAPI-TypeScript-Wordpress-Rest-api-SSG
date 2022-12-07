@@ -1,31 +1,53 @@
+<script setup lang="ts">
+const router = useRouter()
+const route = useRoute()
+
+console.log(route.name);
+
+</script>
+
 <template>
   <div class="md:mb-26">
     <nav
-      class="bg-stone-100 m-4 md:mt-1 p-2 sm:p-4 rounded-xl dark:bg-gray-900 z-50 fixed bottom-0 left-0 right-0 sm:top-0 sm:bottom-auto">
-      <div class="container-xl flex flex-wrap justify-between items-center mx-auto">
+      class=" bg-stone-100 m-4 md:mt-1 p-2 sm:p-4 rounded-xl dark:bg-gray-900 z-50 fixed bottom-0 left-0 right-0 md:top-0 md:bottom-auto">
+      <div class="container-xl flex flex-wrap justify-between mx-auto">
+
+        <button
+          :class="route.path === '/' ? 'disable text-gray-800 hover:bg-transparent hover:text-gray-800' : 'active'"
+          @click="router.back()" @click.prevent="(route.name === 'index')"
+          class="md:hidden hover:bg-gray-700 hover:text-blue-400 p-2 rounded-xl">
+          <div class="self-center i-mingcute:arrow-left-fill text-2xl" />
+        </button>
+
         <a href="/" class="flex items-center">
-          <span class="self-center text-sm sm:text-xl font-semibold whitespace-nowrap dark:text-white">
+          <div class="md:hidden hover:bg-gray-700 hover:text-blue-400 p-2 rounded-xl">
+            <div class="i-mingcute:home-4-fill text-2xl  " />
+          </div>
+          <span class="hidden md:block self-center text-sm sm:text-xl font-semibold whitespace-nowrap dark:text-white">
             {{ $t('global.site_name') }}
           </span>
+
         </a>
+
+        <a href="/contacts" type="button" class="md:order-last text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-full md:rounded-xl text-sm  p-5 -mt-5 md:mt-0
+          md:px-5 md:py-2.5 text-center mr-2 mb-2">
+          <span class="hidden md:block">{{ $t('header.contact_me') }}</span>
+          <div class="i-mingcute:chat-2-fill text-2xl md:hidden" />
+        </a>
+
         <LangSwitcher />
-        <a href="/contacts" type="button"
-          class="md:order-last text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
-          {{ $t('header.contact_me') }}
-        </a>
         <button data-collapse-toggle="mobile-menu-language-select" type="button"
           class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="mobile-menu-language-select" aria-expanded="false">
           <span class="sr-only">
             {{ $t('header.open_menu') }}
           </span>
-          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"></path>
-          </svg>
+
+          <div class="md:hidden hover:bg-gray-700 hover:text-blue-400 p-2 rounded-xl">
+            <div class="i-mingcute:align-right-fill text-2xl" />
+          </div>
         </button>
+
 
         <div id="mobile-menu-language-select"
           class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1">
