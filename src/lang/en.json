@@ -104,5 +104,9 @@
         "not_found": "Page not found",
         "try_else": "Try something else instead.",
         "maybe_main": "May we go to the home page?"
+    },
+    "ssg": {
+        "home_name": "Main page",
+        "home_desc": "@global.site_desc"
     }
 }
