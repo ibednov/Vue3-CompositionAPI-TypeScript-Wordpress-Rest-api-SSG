@@ -1,4 +1,4 @@
-# wordpress-api-vue-front-tailwind
+# Vue3-CompositionAPI-SFC-TypeScript-Wordpress-Rest-api-Server-Side-Generation-Tailwind-Flowbite
 Based on [vitesse](https://github.com/antfu/vitesse)
 
 ## Stack
