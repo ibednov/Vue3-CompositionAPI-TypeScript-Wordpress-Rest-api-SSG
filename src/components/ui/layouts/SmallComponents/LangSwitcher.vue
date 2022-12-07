@@ -1,54 +1,42 @@
-<script setup>
-import DropDown from '@/components/ui/dropdown/DropDown.vue';
-import FlagRU from '@/components/ui/flags/FlagRU.vue';
-import FlagEN from '@/components/ui/flags/FlagEN.vue';
+<script setup lang="ts">
+const { t, locale } = useI18n()
+const lang = useLangStore()
 
-import { useLangStore } from '@/pinia/lang';
-
-const lang = useLangStore().lang; // pinia store
-
-const handleChangeLocaleRu = () => {
-  lang.currentLang = 'ru';
-};
-
-const handleChangeLocaleEn = () => {
-  lang.currentLang = 'en';
-};
+const changeLang = (name: string) => {
+  lang.changeLang(name)
+  locale.value = name
+  // console.log('store locale: ' + lang.lang);
+  // console.log('i18n locale: ' + locale.value);
+}
 </script>
 
 <template>
-  <DropDown
-    v-if="lang.currentLang == 'en'"
-    @handle-change="handleChangeLocaleRu"
-  >
+  <DropDown v-if="lang.lang == 'en'" @handle-change="changeLang('ru')">
     <template #text>
-      {{ $t('langs.en') }}
+      {{ t('langs.en') }}
     </template>
     <template #icon>
       <FlagEN />
     </template>
 
     <template #drop_text>
-      {{ $t('langs.ru') }}
+      {{ t('langs.ru') }}
     </template>
     <template #drop_icon>
       <FlagRU />
     </template>
   </DropDown>
 
-  <DropDown
-    v-if="lang.currentLang == 'ru'"
-    @handle-change="handleChangeLocaleEn"
-  >
+  <DropDown v-if="lang.lang == 'ru'" @handle-change="changeLang('en')">
     <template #text>
-      {{ $t('langs.ru') }}
+      {{ t('langs.ru') }}
     </template>
     <template #icon>
       <FlagRU />
     </template>
 
     <template #drop_text>
-      {{ $t('langs.en') }}
+      {{ t('langs.en') }}
     </template>
     <template #drop_icon>
       <FlagEN />

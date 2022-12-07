@@ -5,13 +5,13 @@ module.exports = {
     './src/**/*.{vue,js,ts,jsx,tsx}',
     './node_modules/flowbite/**/*.js',
   ],
+  darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {},
   },
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
-    require('flowbite/plugin.js'),
+    require('flowbite/plugin'),
   ],
-  darkMode: 'media', // or 'media' or 'class'
-};
+}

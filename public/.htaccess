@@ -1,38 +1,8 @@
-Options +FollowSymlinks
-Options -Indexes
-
-<IfModule mod_negotiation.c>
-  Options -MultiViews
-</IfModule>
-
-
 <IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteBase /
-    RewriteRule ^index\.html$ - [L]
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule . /index.html [L]
-
-
-    RewriteRule \.(js|css|map|jpe?g|svg|gif|png|eot|ttf|woff2?)(\?.*)?$ - [NC,QSA,L]
-    RewriteRule .* index.html [NC,QSA,L]
-
-
-    <Files "*.js">
-        ForceType text/javascript
-    </Files>
-
-    <FilesMatch "\.js$">
-        ForceType text/javascript
-    </FilesMatch>
-
-    RewriteEngine on
-    RewriteRule ^.*\.js$ - [env=headerjs:1]
-    Header set Content-type text/javascript env=headerjs
-
-    AddType "text/javascript" .js
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
 </IfModule>
-
-FallbackResource /index.html
-

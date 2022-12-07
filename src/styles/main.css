@@ -1,0 +1,7 @@
+/* wordpress plugins */
+@import './modules/wp-gutenberg.css';
+@import './modules/wp-stackable.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
