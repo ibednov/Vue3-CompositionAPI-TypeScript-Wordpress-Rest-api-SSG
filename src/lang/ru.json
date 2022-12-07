@@ -1,7 +1,8 @@
 {
     "global": {
-        "site_name": "Alexbednov.work"
+        "site_name": "Alexbednov.work",
         "site_desc": "Портфолио сайт @:global.site_name – UI/UX дизайнера и fullstack разработчика"
+    },
     "home": {
         "welcome": "Добро пожаловать на сайт",
         "check": "Чекните мои работы ниже"
@@ -23,16 +24,16 @@
     },
     "categories": {
         "name": "Категория",
-        "cases":"Кейсы",
-        "uiux-design" : "UI/UX дизайн",
+        "cases": "Кейсы",
+        "uiux-design": "UI/UX дизайн",
         "brand-marketing-design": "Дизайн брендов",
         "development": "Фронтенд и бэкенд разработка",
         "gamedev": "Гейм-дев",
         "blog": "Блог",
-        "uncategorized" : "Без категории"
+        "uncategorized": "Без категории"
     },
     "posts": {
-        "allposts":"Все посты",
+        "allposts": "Все посты",
         "full": {
             "project": {
                 "cat": "Категория проекта:",
@@ -51,13 +52,13 @@
                 "tags": "Теги",
                 "type_label": "Что это ?",
                 "type_value": {
-                    "exp" : "Опыт",
-                    "uiux-hacks" : "UI/UX фишки",
-                    "uiux-resources" : "Ресурсы для UI/UX дизайнера",
-                    "frontdev-hacks" : "Front-end фишки",
-                    "guide" : "Гайды",
-                    "other" : "Прочее",
-                    "articles" : "Статьи"
+                    "exp": "Опыт",
+                    "uiux-hacks": "UI/UX фишки",
+                    "uiux-resources": "Ресурсы для UI/UX дизайнера",
+                    "frontdev-hacks": "Front-end фишки",
+                    "guide": "Гайды",
+                    "other": "Прочее",
+                    "articles": "Статьи"
                 }
             }
         },
@@ -78,21 +79,21 @@
         }
     },
     "team": {
-        "team":"Команда",
+        "team": "Команда",
         "full": {
             "hi": "Привет, меня зовут ",
-            "im":"Я",
-            "from":"Из",
-            "letme":"Давайте покажу",
-            "whaticando":"что я могу...",
-            "contact":"Связаться со мной",
-            "lang":"Языки",
-            "hardskills":"«Жесткие» навыки",
-            "education":"Образование",
-            "workexp":"Опыт работы",
-            "well":"Итак, я ",
-            "youshould":"Я считаю, что Вы",
-            "writetome":"должны ине написать."
+            "im": "Я",
+            "from": "Из",
+            "letme": "Давайте покажу",
+            "whaticando": "что я могу...",
+            "contact": "Связаться со мной",
+            "lang": "Языки",
+            "hardskills": "«Жесткие» навыки",
+            "education": "Образование",
+            "workexp": "Опыт работы",
+            "well": "Итак, я ",
+            "youshould": "Я считаю, что Вы",
+            "writetome": "должны ине написать."
         }
     },
     "etc": {
@@ -100,11 +101,11 @@
             "loading": "Загрузка..."
         }
     },
-    "error" : {
-        "error" : "ошибка",
-        "not_found" : "Страница не найдена",
-        "try_else" : "Попробуйте что-нибудь другое.",
-        "maybe_main" : "Может перейдем на главную?"
+    "error": {
+        "error": "ошибка",
+        "not_found": "Страница не найдена",
+        "try_else": "Попробуйте что-нибудь другое.",
+        "maybe_main": "Может перейдем на главную?"
     },
     "ssg": {
         "home_name": "Главная страница",

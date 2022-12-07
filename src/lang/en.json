@@ -1,7 +1,8 @@
 {
     "global": {
-        "site_name": "Alexbednov.work"
+        "site_name": "Alexbednov.work",
         "site_desc": "Portfolio website @:global.site_name – UI/UX designer & fullstack developer"
+    },
     "home": {
         "welcome": "Welcome to",
         "check": "Check my works"
@@ -22,13 +23,13 @@
     },
     "categories": {
         "name": "Category name:",
-        "uiux-design" : "UI/UX design",
-        "brand-marketing-design":  "Brand & marketing design",
+        "uiux-design": "UI/UX design",
+        "brand-marketing-design": "Brand & marketing design",
         "development": "Frontend & backend development",
         "gamedev": "Game Dev.",
         "blog": "Blog",
-        "cases":"Cases",
-        "uncategorized" : "Uncategorized"
+        "cases": "Cases",
+        "uncategorized": "Uncategorized"
     },
     "posts": {
         "allposts": "Все посты",
@@ -68,7 +69,7 @@
         "contacts": {
             "alex_name": "Alex Bednov",
             "job_title": "Designer & full-stack developer",
-            "website": "Wesite",
+            "website": "Website",
             "instagram": "Instagram",
             "telegram": "Telegram",
             "whatsapp": "WhatsApp",
