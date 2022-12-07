@@ -11,3 +11,5 @@ cypress/downloads
 dev-dist
 public
 .vscode/sftp.json
+pnpm-lock.yaml
+vite.config.ts.timestamp-1670361330293.mjs
