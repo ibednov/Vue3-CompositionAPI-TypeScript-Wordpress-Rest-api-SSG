@@ -1,6 +1,7 @@
 {
     "global": {
         "site_name": "Alexbednov.work"
+        "site_desc": "Портфолио сайт @:global.site_name – UI/UX дизайнера и fullstack разработчика"
     "home": {
         "welcome": "Добро пожаловать на сайт",
         "check": "Чекните мои работы ниже"
