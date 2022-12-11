@@ -38,7 +38,7 @@ const { t } = useI18n()
 
   <main class="container mx-auto">
     <TabsList>
-      <TabSingle :title="'categories.uiux-design'" name="uiux" icon="i-mingcute:file-code-line">
+      <TabSingle :title="'categories.uiux-design'" name="uiux" icon="i-mingcute:cellphone-line">
         <PostsByCategory :cat="14" />
       </TabSingle>
       <TabSingle :title="'categories.brand-marketing-design'" name="brand" icon="i-mingcute:fire-line">
