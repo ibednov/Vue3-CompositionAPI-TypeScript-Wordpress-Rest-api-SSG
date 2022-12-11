@@ -105,6 +105,7 @@ export default defineConfig({
         name: 'Alex Bednov',
         short_name: 'alexbednov',
         theme_color: '#ffffff',
+        start_url: "",
         icons: [
           {
             src: '/pwa-192x192.png',
