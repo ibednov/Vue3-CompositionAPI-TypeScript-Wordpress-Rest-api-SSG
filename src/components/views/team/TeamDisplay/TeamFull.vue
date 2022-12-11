@@ -12,7 +12,7 @@ const { t } = useI18n()
     </h1>
 
     <section class="container mx-auto p-10 flex flex-col rounded-xl my-10 bg-amber-100 dark:bg-stone-800">
-      <h1 class="flex flex-col text-4xl text-light text-center self-center md:w-2/3 xl:w-1/2 gap-4">
+      <h1 class="flex flex-col text-4xl  text-center self-center md:w-2/3 xl:w-1/2 gap-4">
         <div class="text-left">
           {{ t('team.full.hi') }}
           <span v-show="lang.lang === 'ru'" class="font-extrabold text-yellow-400">
@@ -73,7 +73,7 @@ const { t } = useI18n()
       </div>
     </section>
 
-    <section class="container mx-auto flex flex-col py-12">
+    <section v-if="member.acf?.member_langs" class="container mx-auto flex flex-col py-12">
       <h1
         class="text-3xl uppercase font-bold underline underline-offset-8 decoration-indigo-800 decoration-4 text-center">
         {{ t('team.full.lang') }}
@@ -100,14 +100,14 @@ const { t } = useI18n()
       </div>
     </section>
 
-    <section class="container mx-auto flex flex-col">
+    <section v-if="member.acf?.member_skills" class="container mx-auto flex flex-col">
       <h1
         class="text-3xl uppercase font-bold underline underline-offset-8 decoration-green-800 decoration-4 text-center">
         {{ t('team.full.hardskills') }}
       </h1>
-      <div class="flex flex-col sm:flex-row flex-wrap py-10">
+      <div class="flex flex-col sm:flex-row flex-wrap py-10 justify-center">
         <div v-for="skills in member.acf?.member_skills" :key="skills.id"
-          class="sm:w-1/2 lg:w-1/3  flex flex-col gap-2 px-10 py-5">
+          class="sm:w-1/2 lg:w-1/3 flex flex-col gap-2 px-10 py-5">
           <div v-show="lang.lang === 'ru'" class="text-2xl font-bold uppercase text-center">
             {{ skills.skills_group__name }}
           </div>
@@ -129,7 +129,7 @@ const { t } = useI18n()
       </div>
     </section>
 
-    <section class="container mx-auto flex flex-col">
+    <section v-if="member.acf?.member_education" class="container mx-auto flex flex-col">
       <h1
         class="text-3xl uppercase font-bold underline underline-offset-8 decoration-indigo-400 decoration-4 text-center">
         {{ t('team.full.education') }}
@@ -165,7 +165,7 @@ const { t } = useI18n()
       </div>
     </section>
 
-    <section class="container mx-auto flex flex-col">
+    <section v-if="member.acf?.member_work" class="container mx-auto flex flex-col">
       <h1
         class="text-3xl uppercase font-bold underline underline-offset-8 decoration-fuchsia-400 decoration-4 text-center">
         {{ t('team.full.workexp') }}
@@ -224,7 +224,8 @@ const { t } = useI18n()
       </div>
     </section>
     <section class="container mx-auto p-10 flex flex-col rounded-xl my-10 bg-amber-100 dark:bg-stone-800">
-      <h1 class="flex flex-col text-4xl text-light text-center self-center md:w-2/3 xl:w-1/2 gap-4">
+      <h1 class="flex flex-col text-4xl      Бр1 сдфыы=Эадуч адуч-сщд еуче-4чд еуче-сутеук ыуда-сутеук ьвЖц-2/3 чдЖц-1/2 пфз-4ЭЮ
+      text-center self-center md:w-2/3 xl:w-1/2 gap-4">
         <div class="text-center">
           {{ t('team.full.well') }}
           <span v-show="lang.lang === 'ru'" class="font-extrabold text-yellow-400">
