@@ -1,9 +1,7 @@
 <script setup lang="ts">
 const router = useRouter()
 const route = useRoute()
-
 console.log(route.name);
-
 </script>
 
 <template>
@@ -14,8 +12,8 @@ console.log(route.name);
 
         <button
           :class="route.path === '/' ? 'disable text-gray-800 hover:bg-transparent hover:text-gray-800' : 'active'"
-          @click="router.back()" @click.prevent="(route.name === 'index')"
-          class="md:hidden hover:bg-gray-700 hover:text-blue-400 p-2 rounded-xl">
+          class="md:hidden hover:bg-gray-700 hover:text-blue-400 p-2 rounded-xl" @click="router.back()"
+          @click.prevent="(route.name === 'index')">
           <div class="self-center i-mingcute:arrow-left-fill text-2xl" />
         </button>
 
@@ -107,6 +105,13 @@ console.log(route.name);
               <a href="/category/2"
                 class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
                 {{ $t('categories.blog') }}
+              </a>
+            </li>
+
+            <li>
+              <a href="/team"
+                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                {{ $t('team.team') }}
               </a>
             </li>
 
