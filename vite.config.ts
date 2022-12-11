@@ -103,7 +103,7 @@ export default defineConfig({
       includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
       manifest: {
         name: 'Alex Bednov',
-        short_name: 'alexbednov',
+        short_name: 'Alex Bednov',
         theme_color: '#ffffff',
         start_url: "",
         icons: [
