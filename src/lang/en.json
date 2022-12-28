@@ -62,7 +62,13 @@
             }
         },
         "short": {
-            "read_more": "Read more"
+            "read_more": "Read more",
+            "view": "Post display view:",
+            "masonry": "Masonry (bricks)",
+            "grid": "Grid",
+            "list": "String",
+            "YES": "Congratulations! You found one of the few easter eggs. DM me about it on Instagram.",
+            "hidden_secret": "This is a string, friend. You thought I'd convert all this content to a string. He-he-he. You've been cyberbullied."
         }
     },
     "pages": {

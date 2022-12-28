@@ -8,6 +8,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     App: typeof import('./components/App.vue')['default']
+    copy: typeof import('./components/views/posts/PostsDisplay/PostShortTypes/PostShortType04 copy.vue')['default']
     DropDown: typeof import('./components/ui/dropdown/DropDown.vue')['default']
     FlagEN: typeof import('./components/ui/flags/FlagEN.vue')['default']
     FlagRU: typeof import('./components/ui/flags/FlagRU.vue')['default']
@@ -25,6 +26,8 @@ declare module '@vue/runtime-core' {
     PostShortType02: typeof import('./components/views/posts/PostsDisplay/PostShortTypes/PostShortType02.vue')['default']
     PostShortType03: typeof import('./components/views/posts/PostsDisplay/PostShortTypes/PostShortType03.vue')['default']
     PostShortType04: typeof import('./components/views/posts/PostsDisplay/PostShortTypes/PostShortType04.vue')['default']
+    PostShortTypeList: typeof import('./components/views/posts/PostsDisplay/PostShortTypes/PostShortTypeList.vue')['default']
+    PostsIndex: typeof import('./components/views/posts/PostsDisplay/PostsIndex.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SpinnerLoader: typeof import('./components/ui/layouts/SmallComponents/SpinnerLoader.vue')['default']
